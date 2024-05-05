@@ -88,27 +88,86 @@ function renderCards(jsonData) {
 renderCards(jsonData);
 
 
-function insertFloatingTexts(numInstances) {
-    var container = document.getElementById("container");
+function insertFloatingTexts(categories) {
+    var floating = document.getElementById("floating-texts");
 
-    for (var i = 0; i < numInstances; i++) {
-        // Create the outer div with class "floating-texts"
-        var outerDiv = document.createElement("div");
-        outerDiv.className = "floating-texts";
+    for (var i = 0; i < categories.length; i++) {
 
-        var categories = ["Javascript", "Blender", "Unity", "UIUX Design", "ARVR"];
         categories.forEach(function(category) {
             var categoryDiv = document.createElement("div");
-            categoryDiv.className = "category";
+            categoryDiv.className = "float";
             var categorySpan = document.createElement("span");
-            categorySpan.className = "category-text";
+            categorySpan.className = "float-text";
             categorySpan.textContent = category;
             categoryDiv.appendChild(categorySpan);
-            outerDiv.appendChild(categoryDiv);
+            floating.appendChild(categoryDiv);
         });
 
-        container.appendChild(outerDiv);
     }
 }
 
-insertFloatingTexts(1); 
+var categories = ["Javascript","React", "Blender", "Unity", "UIUX Design", "ARVR", "C++", "Python", "Houdini", "Figma", "Maya"];
+
+insertFloatingTexts(categories); 
+
+function scrollButtons() {
+    var floatingTexts = document.getElementById('floating-texts');
+    var firstButton = floatingTexts.firstElementChild;
+    var buttonHeight = firstButton.offsetHeight ;
+
+    // Move the first button to the bottom
+    floatingTexts.appendChild(firstButton);
+
+    // Reset the transform of all buttons
+    var buttons = document.querySelectorAll('.float');
+    buttons.forEach(function(button) {
+        button.style.transform = 'translateY(-' + buttonHeight - buttonHeight + 'px)';
+    });
+
+    // Calculate the duration for smooth transition
+    var duration = 1000; // 1 second
+    var startTime = null;
+
+    function moveButtons(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = timestamp - startTime;
+
+        // Move each button up by the height of one button
+        buttons.forEach(function(button) {
+            var translateY = Math.max(-buttonHeight, -(progress / duration * buttonHeight));
+            button.style.transform = 'translateY(' + translateY + 'px)';
+        });
+
+        // Continue the animation until all buttons have been scrolled
+        if (progress < duration) {
+            requestAnimationFrame(moveButtons);
+        }
+    }
+
+    // Start the animation
+    requestAnimationFrame(moveButtons);
+}
+
+// Run the scrolling effect every second
+setInterval(scrollButtons, 1000);
+
+function moveText(event) {
+    const text = event.target;
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    const textX = text.offsetLeft + text.offsetWidth / 2;
+    const textY = text.offsetTop + text.offsetHeight / 2;
+    const sensitivity = 0.4; 
+    const deltaX = (mouseX - textX) * sensitivity;
+    const deltaY = (mouseY - textY) * sensitivity;
+
+    text.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+
+    setTimeout(() => {
+        text.style.transform = '';
+    }, 300);
+}
+
+document.getElementById('email-icon').addEventListener('click', function() {
+    window.location.href = 'iverychen@gmail.com';
+});
