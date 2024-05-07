@@ -1,23 +1,27 @@
 const jsonData = [
     {
+        "href": "partiful.html",
         "image": "./assets/partiful.png",
         "eventName": "Partiful Events Page Redesign",
         "description": "Redesigned the Partiful Events Home Page.",
         "categories": ["Prototyping", "UIUX Design", "Figma", "Iterative Design"]
     },
     {
+        "href": "foam.html",
         "image": "./assets/foam_mu.png",
         "eventName": "Foam Web App",
         "description": "Designed the Pinterest for local artists discovery.",
         "categories": ["React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
     },
     {
+        "href": "sf.html",
         "image": "./assets/sf_mu.png",
         "eventName": "FunCheapSF Redesign",
         "description": "Redesigning funcheapsf.com.",
         "categories": [ "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma", "Responsive Design"]
     },
     {
+        "href": "panda.html",
         "image": "./assets/panda.png",
         "eventName": "Panda",
         "description": "Kahoot-style multiplayer game.",
@@ -26,6 +30,11 @@ const jsonData = [
 ];
 
 function createCard(data) {
+
+    const link = document.createElement("a");
+    link.classList.add("link");
+    link.href = data.href; 
+
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -71,7 +80,9 @@ function createCard(data) {
     card.appendChild(img);
     card.appendChild(cardContent);
 
-    return card;
+    link.appendChild(card);
+
+    return link;
 }
 
 // Function to render cards from JSON data
@@ -171,3 +182,47 @@ function moveText(event) {
 document.getElementById('email-icon').addEventListener('click', function() {
     window.location.href = 'iverychen@gmail.com';
 });
+
+function scrollToDiv(divId) {
+    var targetDiv = document.getElementById(divId);
+    var startPosition = window.pageYOffset; // Current scroll position
+    var targetPosition = targetDiv.offsetTop; // Position of the target div
+
+    var distance = targetPosition - startPosition;
+    var duration = 1000; // 1 second (1000 milliseconds)
+
+    // Get the current timestamp
+    var startTime = null || performance.now();
+
+    // Define the animation function
+    function scrollAnimation(currentTime) {
+        if (startTime === null) {
+            startTime = currentTime;
+        }
+
+        // Calculate the elapsed time
+        var elapsedTime = currentTime - startTime;
+
+        // Calculate the new position based on elapsed time and easing function (e.g., quadratic easing)
+        var newPosition = easeInOutQuad(elapsedTime, startPosition, distance, duration);
+
+        // Scroll to the new position
+        window.scrollTo(0, newPosition);
+
+        // Continue the animation if not finished
+        if (elapsedTime < duration) {
+            requestAnimationFrame(scrollAnimation);
+        }
+    }
+
+    // Start the animation
+    requestAnimationFrame(scrollAnimation);
+
+    // Easing function (quadratic easing)
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+}
