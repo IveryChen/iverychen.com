@@ -40,7 +40,9 @@ h2{
 }
 
 .links:hover {
-    color: white;
+    /* color: white; */
+    color:rgb(250, 1, 163);
+
 }
 
 li{

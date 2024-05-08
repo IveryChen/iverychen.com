@@ -237,3 +237,8 @@ function hidePopup() {
     var popup = document.getElementById("popup");
     popup.style.display = "none";
 }
+
+function toggleMenu() {
+    var menu = document.getElementById("dropdown");
+    menu.classList.toggle("show-dropdown");
+}
