@@ -26,253 +26,261 @@
             
             <div class="main-body">
                 <div class="title-card">
-                    <p class="title">FOAM</p>
+                    <p class="title"><a class="links" href="https://foam-phi.vercel.app/" target="_blank">FOAM</a></p>
                     <p class="text-italic">a 24 hr sprint project, April 2024</p>
                 </div>
 
-                <div class="info">
-                    <div class="column">
-                        <h3>Team</h3>
-                        <p>Ivery Chen</p>
+                <div class="all-sections">
+                    <div class="info">
+                        <div class="column">
+                            <h3>Team</h3>
+                            <p>Ivery Chen</p>
+                        </div>
+                        <div class="column">
+                            <h3>Role</h3>
+                            <p>UIUX Design</p>
+                            <p>Front-end Engineering</p>
+                        </div>
+                        <div class="column">
+                            <h3>Tools</h3>
+                            <p>React</p>
+                            <p>HTML</p>
+                            <p>Javascript</p>
+                            <p>CSS</p>
+                            <p>Figma</p>
+                        </div>
                     </div>
-                    <div class="column">
-                        <h3>Role</h3>
-                        <p>UIUX Design</p>
-                        <p>Front-end Engineering</p>
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">01</span> CONTEXT</h2>
+                        <p> 
+                            The goal of this project is to create a site with filtering, aggregator and sorting functionality. For this project, I chose three websites with these features, analysed them, and used the results to inform my own site.
+                        </p>
                     </div>
-                    <div class="column">
-                        <h3>Tools</h3>
-                        <p>React</p>
-                        <p>HTML</p>
-                        <p>Javascript</p>
-                        <p>CSS</p>
-                        <p>Figma</p>
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">02</span> RESEARCH</h2>
+                        <p class="text">
+                            I chose three sites that I use frequently, <span class="definition"><a class="link" href="https://depop.com/">Depop</a></span>, <span class="definition"><a class="link" href="https://www.pinterest.co.uk/">Pinterest</a></span> and <span class="definition"><a class="link" href="https://www.google.com/maps">Google Maps</a></span>, which all offer different ways to like and save liked posts. 
+                            For each site, I found and compared different factors.
+
+                        <div class="table-container">
+                            <table class="table">
+                                <tr>
+                                    <td> </td>
+                                    <th>Depop</th>
+                                    <th>Pinterest</th>
+                                    <th>Google Maps</th>
+                                </tr>
+                                <tr>
+                                    <th>“Like” button</th>
+                                    <td class="tick">✓</td>
+                                    <td class="tick">✓</td>
+                                    <td class="tick">✓</td>
+                                </tr>
+                                <tr>
+                                    <th>“Like” button reacts to hover</th>
+                                    <td class="cross">✗</td>
+                                    <td class="tick">✓</td>
+                                    <td class="tick">✓</td>
+                                </tr>
+                                <tr>
+                                    <th>Drop down menu to “Like”</th>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                    <td class="tick">✓</td>
+                                </tr>
+                                <tr>
+                                    <th>Save to Custom Lists</th>
+                                    <td class="cross">✗</td>
+                                    <td class="tick">✓</td>
+                                    <td class="tick">✓</td>
+                                </tr>
+                                <tr>
+                                    <th>List of Likes</th>
+                                    <td class="tick">✓</td>
+                                    <td class="tick">✓</td>
+                                    <td class="tick">✓</td>
+                                </tr>
+                                <tr>
+                                    <th>Auto Select List to Save to</th>
+                                    <td class="cross">✗</td>
+                                    <td class="tick">✓</td>
+                                    <td class="cross">✗</td>
+                                </tr>
+                                <tr>
+                                    <th>Edit List of Likes</th>
+                                    <td class="tick">✓</td>
+                                    <td class="tick">✓</td>
+                                    <td class="tick">✓</td>
+                                </tr>
+                                <tr>
+                                    <th>Reorder List of Likes</th>
+                                    <td class="cross">✗</td>
+                                    <td class="tick">✓</td>
+                                    <td class="cross">✗</td>
+                                </tr>
+                                <tr>
+                                    <th>Sort List of Likes</th>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                    <td class="tick">✓</td>
+                                </tr>
+                                <tr>
+                                    <th>Add Notes to Liked Item</th>
+                                    <td class="cross">✗</td>
+                                    <td class="cross">✗</td>
+                                    <td class="tick">✓</td>
+                                </tr>
+                                <!-- Repeat the above row 9 more times for a total of 11 rows -->
+                            </table>
+                        </div>
+
+                        <p></p>
+
+                        <div class="container-container">
+                            <div class="container">
+                                <div class="subheading3">Depop</div>
+                                <p class="text">
+                                    <span class="mini-heading">Most successful factor: </span> “Like” Button - By allowing users to express interest with a single click rather than navigating through a dropdown menu, Depop ensures a streamlined user flow.
+                                </p>
+                                <p class="text">
+                                    <span class="mini-heading">Least successful factor: </span> The absence of sorting options for the list of favorites contradicts the principle of organization and clarity. Without the ability to arrange items based on different criteria such as price or artist name, the favorites list becomes difficult to navigate.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="container-container">
+                            <div class="container">
+                                <div class="subheading3">Pinterest</div>
+                                <p class="text">
+                                    <span class="mini-heading">Most successful factor: </span> Save to Custom Lists - Offering the option to save items to custom lists promotes user engagement and organization, aligning with the design principle of customization and personalization
+
+                                </p>
+                                <p class="text">
+                                    <span class="mini-heading">Least successful factor: </span>  Auto Select List to Save to - The automatic selection of lists for saving items, while intended to streamline the process, can frustrate users when it inaccurately predicts their intentions. 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="container-container">
+                            <div class="container">
+                                <div class="subheading3">Google Maps</div>
+                                <p class="text">
+                                    <span class="mini-heading">Most successful factor: </span> Sort List of Favourites - By allowing users to organize their saved items according to factors such as distance or price, Google Maps enhances usability and utility.
+                                </p>
+                                <p class="text">
+                                    <span class="mini-heading">Least successful factor: </span>  Add Notes to Favourited Item - I personally found it to be unnecessary as I did not use the functionality even once. It clutters up the list and detracts from the simplicity of the interface.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="questions">Based on previous analysis, I want to include the following in my design
+                        </p>
+                        <!-- <ul>
+                            <li class="text"> “Like” button </li>
+                            <li class="text"> “Like” button reacts when hovering </li>
+                            <li class="text"> List of Favourites </li>
+                            <li class="text"> Edit List of Favourites </li>
+                            <li class="text"> Sort List of Favourites </li>
+                        </ul> -->
+                        <div>
+                            <p><span class="number">A</span> “Like” button </p>
+                            <p><span class="number">B</span> “Like” button reacts when hovering </p>
+                            <p><span class="number">C</span> List of Favourites </p>
+                            <p><span class="number">D</span> Edit List of Favourites </p>
+                            <p><span class="number">E</span> Sort List of Favourites </p>
+                        </div>
+
+                    </div>
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">03</span> PROCESS</h2>
+
+
+                        <p class="text">
+                            FOAM is a Pinterest-like portfolio site for art students, a local-artist discovery site for clients to keep track of their favourite local artists. 
+                        </p>
+
+                        <p class="text">
+                            As a RISD student, I constantly get asked, </p>
+                        <span class="questions">“Do you know a Graphic designer for a concert campaign?”</span> 
+                        <p class="text">The interface is similar to Pinterest, but it differs in that you can get in touch with real artists behind the work.</p>
+                    
+
+                        <div class="container-container">
+                            <div class="container">
+                                <div class="subheading3">Foam Artist Finder: Pinterest for Local Artists </div>
+                                <p class="text">
+                                    <span class="mini-heading">Filtering categories:</span> Major, Location, Availability
+                                </p>
+                                <p class="text">
+                                    <span class="mini-heading">Sorting feature:</span> Price, Artist Name
+                                </p>
+                                <p class="text">
+                                    <span class="mini-heading">Aggregator section:</span> Favorites gallery
+                                </p>
+                                <p class="text">
+                                    <span class="mini-heading">Item cards:</span> Photograph image, title, major, name, location, availability status
+                                </p>
+                            </div>
+                        </div>
+<!-- 
+                        <p class="text">I will be using filter to filter by Major, Location and Availability. Similarly, I will be sorting by Price and Artist Name. Lastly, aggregation will be used to add favorites to a gallery.
+                        </p> -->
+
+                        <!-- <h2 class="subheading">Part 3: Figma Prototype</h2> -->
+
+                        <p class="text">Next, I created mockups for the Landing and Favourites page in Figma to help with the design process.
+                        </p>
+
+                        <div class="neighbour-image-container">
+                            <div class="image-caption">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/0d13f308-1c73-40cd-a3cb-d083179d2c2a/Landing.png?format=2500w" alt="Figma Prototype of Landing Page">
+                                <p class="text">Figma Prototype of Landing Page </p>
+                            </div>
+                            <div class="image-caption">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/4d17a227-bf53-4ad9-90d3-59529c2f506c/Favourites.png?format=2500w" alt="Figma Prototype of Favourites Page">
+                                <p class="text">Figma Prototype of Favourites Page</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">04</span> SOLUTION: <a class="link" href="https://foam-phi.vercel.app/">Foam</a></h2>
+
+                        <p class="text"> I implemented all the target filter, aggregation and sort functions. All filters appear as drop down menus. I also created a 'select all' checkbox for most menus for easy selection of multiple categories. 
+                        </p>
+
+                        <p class="text"> As an additional fun thing, I created a notification popup animation when a liked item is added. It also indicates which image you liked!
+                        </p>
+
+                        <p class="text"> One surprising challenge is displaying image as landscape or horizontal, and making sure all empty gaps are filled in. To do this, I used column-gap instead of flexbox.
+                        </p>
+
+                        <div class="image-container">
+                            <div class="image-caption">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/84656471-b100-4313-9fc3-e53a4c8b1084/FoamLanding.png?format=2500w" alt="Deployed Landing Page showing Notification popup">
+                                <p class="text">Deployed Landing Page showing Notification popup</p>
+                            </div>
+                            <div class="image-caption">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/f2f2de02-fa3a-4cec-8843-3414a6912b17/FoamLandingExpanded.png?format=2500w" alt="Deployed Landing Page with Filters expanded">
+                                <p class="text">Deployed Landing Page with Filters expanded</p>
+                            </div>
+                            <div class="image-caption">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/9b5beb25-f2db-4897-9244-e87acdc0c1f4/FoamFavourites.png?format=2500w" alt="Deployed Favourites Page">
+                                <p class="text">Deployed Favourites Page</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">05</span> LEARNINGS</h2>
+                        <p class="text"> My biggest takeaway is that there is a lot to learn from competitors' designs, and that little details such as adding a notification pop up adds to the experience. This sprint project that in total took me 24 hrs to create, taught me how to design and prototype quickly, which is a valuable skill for future projects.
+                        </p>
                     </div>
                 </div>
-
-                <div class="section">
-                    <h2 class="subheading">01. CONTEXT</h2>
-                    <p> The goal of this project is to create a site with filtering, aggregator and sorting functionality. For this project, I chose three websites with these features, analysed them, and used the results to inform my own site.
-
-                    </p>
-                    <h2 class="subheading">02. RESEARCH</h2>
-                    <p class="text">
-                        I chose three sites that I use frequently, <span class="definition"><a class="link" href="https://depop.com/">Depop</a></span>, <span class="definition"><a class="link" href="https://www.pinterest.co.uk/">Pinterest</a></span> and <span class="definition"><a class="link" href="https://www.google.com/maps">Google Maps</a></span>, which all offer different ways to like and save liked posts. 
-                        For each site, I found and compared different factors.
-
-                    <div class="table-container">
-                        <table class="table">
-                            <tr>
-                                <td> </td>
-                                <th>Depop</th>
-                                <th>Pinterest</th>
-                                <th>Google Maps</th>
-                            </tr>
-                            <tr>
-                                <th>“Like” button</th>
-                                <td class="tick">✓</td>
-                                <td class="tick">✓</td>
-                                <td class="tick">✓</td>
-                            </tr>
-                            <tr>
-                                <th>“Like” button reacts to hover</th>
-                                <td class="cross">✗</td>
-                                <td class="tick">✓</td>
-                                <td class="tick">✓</td>
-                            </tr>
-                            <tr>
-                                <th>Drop down menu to “Like”</th>
-                                <td class="cross">✗</td>
-                                <td class="cross">✗</td>
-                                <td class="tick">✓</td>
-                            </tr>
-                            <tr>
-                                <th>Save to Custom Lists</th>
-                                <td class="cross">✗</td>
-                                <td class="tick">✓</td>
-                                <td class="tick">✓</td>
-                            </tr>
-                            <tr>
-                                <th>List of Likes</th>
-                                <td class="tick">✓</td>
-                                <td class="tick">✓</td>
-                                <td class="tick">✓</td>
-                            </tr>
-                            <tr>
-                                <th>Auto Select List to Save to</th>
-                                <td class="cross">✗</td>
-                                <td class="tick">✓</td>
-                                <td class="cross">✗</td>
-                            </tr>
-                            <tr>
-                                <th>Edit List of Likes</th>
-                                <td class="tick">✓</td>
-                                <td class="tick">✓</td>
-                                <td class="tick">✓</td>
-                            </tr>
-                            <tr>
-                                <th>Reorder List of Likes</th>
-                                <td class="cross">✗</td>
-                                <td class="tick">✓</td>
-                                <td class="cross">✗</td>
-                            </tr>
-                            <tr>
-                                <th>Sort List of Likes</th>
-                                <td class="cross">✗</td>
-                                <td class="cross">✗</td>
-                                <td class="tick">✓</td>
-                            </tr>
-                            <tr>
-                                <th>Add Notes to Liked Item</th>
-                                <td class="cross">✗</td>
-                                <td class="cross">✗</td>
-                                <td class="tick">✓</td>
-                            </tr>
-                            <!-- Repeat the above row 9 more times for a total of 11 rows -->
-                        </table>
-                    </div>
-
-                    <p></p>
-
-                    <div class="container-container">
-                        <div class="container">
-                            <div class="subheading3">Depop</div>
-                            <p class="text">
-                                <span class="mini-heading">Most successful factor: </span> “Like” Button - By allowing users to express interest with a single click rather than navigating through a dropdown menu, Depop ensures a streamlined user flow.
-                            </p>
-                            <p class="text">
-                                <span class="mini-heading">Least successful factor: </span> The absence of sorting options for the list of favorites contradicts the principle of organization and clarity. Without the ability to arrange items based on different criteria such as price or artist name, the favorites list becomes difficult to navigate.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="container-container">
-                        <div class="container">
-                            <div class="subheading3">Pinterest</div>
-                            <p class="text">
-                                <span class="mini-heading">Most successful factor: </span> Save to Custom Lists - Offering the option to save items to custom lists promotes user engagement and organization, aligning with the design principle of customization and personalization
-
-                            </p>
-                            <p class="text">
-                                <span class="mini-heading">Least successful factor: </span>  Auto Select List to Save to - The automatic selection of lists for saving items, while intended to streamline the process, can frustrate users when it inaccurately predicts their intentions. 
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="container-container">
-                        <div class="container">
-                            <div class="subheading3">Google Maps</div>
-                            <p class="text">
-                                <span class="mini-heading">Most successful factor: </span> Sort List of Favourites - By allowing users to organize their saved items according to factors such as distance or price, Google Maps enhances usability and utility.
-                            </p>
-                            <p class="text">
-                                <span class="mini-heading">Least successful factor: </span>  Add Notes to Favourited Item - I personally found it to be unnecessary as I did not use the functionality even once. It clutters up the list and detracts from the simplicity of the interface.
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="questions">Based on previous analysis, I want to include the following in my design
-                    </p>
-                    <ul>
-                        <li class="text"> “Like” button </li>
-                        <li class="text"> “Like” button reacts when hovering </li>
-                        <li class="text"> List of Favourites </li>
-                        <li class="text"> Edit List of Favourites </li>
-                        <li class="text"> Sort List of Favourites </li>
-                    </ul>
-
-                </div>
-
-                <div class="section">
-                    <h2 class="subheading">03. PROCESS</h2>
-
-
-                    <p class="text">
-                        FOAM is a Pinterest-like portfolio site for art students, a local-artist discovery site for clients to keep track of their favourite local artists. 
-                    </p>
-
-                    <p class="text">
-                        As a RISD student, I constantly get asked, </p>
-                    <span class="questions">“Do you know a Graphic designer for a concert campaign?”</span> 
-                    <p class="text">The interface is similar to Pinterest, but it differs in that you can get in touch with real artists behind the work.</p>
-                   
-
-                    <div class="container-container">
-                        <div class="container">
-                            <div class="subheading3">Foam Artist Finder: Pinterest for Local Artists </div>
-                            <p class="text">
-                                <span class="mini-heading">Filtering categories:</span> Major, Location, Availability
-                            </p>
-                            <p class="text">
-                                <span class="mini-heading">Sorting feature:</span> Price, Artist Name
-                            </p>
-                            <p class="text">
-                                <span class="mini-heading">Aggregator section:</span> Favorites gallery
-                            </p>
-                            <p class="text">
-                                <span class="mini-heading">Item cards:</span> Photograph image, title, major, name, location, availability status
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="text">I will be using filter to filter by Major, Location and Availability. Similarly, I will be sorting by Price and Artist Name. Lastly, aggregation will be used to add favorites to a gallery.
-                    </p>
-
-                </div>
-
-                <div class="section">
-                    <!-- <h2 class="subheading">Part 3: Figma Prototype</h2> -->
-
-                    <p class="text">Next, I created mockups for the Landing and Favourites page in Figma to help with the design process.
-                    </p>
-
-                    <div class="neighbour-image-container">
-                        <div class="image-caption">
-                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/0d13f308-1c73-40cd-a3cb-d083179d2c2a/Landing.png?format=2500w" alt="Figma Prototype of Landing Page">
-                            <p class="text">Figma Prototype of Landing Page </p>
-                        </div>
-                        <div class="image-caption">
-                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/4d17a227-bf53-4ad9-90d3-59529c2f506c/Favourites.png?format=2500w" alt="Figma Prototype of Favourites Page">
-                            <p class="text">Figma Prototype of Favourites Page</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="section">
-                    <h2 class="subheading">04. SOLUTION: <a class="link" href="https://foam-phi.vercel.app/">Foam</a></h2>
-
-                    <p class="text"> I implemented all the target filter, aggregation and sort functions. All filters appear as drop down menus. I also created a 'select all' checkbox for most menus for easy selection of multiple categories. 
-                    </p>
-
-                    <p class="text"> As an additional fun thing, I created a notification popup animation when a liked item is added. It also indicates which image you liked!
-                    </p>
-
-                    <p class="text"> One surprising challenge is displaying image as landscape or horizontal, and making sure all empty gaps are filled in. To do this, I used column-gap instead of flexbox.
-                    </p>
-
-                    <div class="image-container">
-                        <div class="image-caption">
-                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/84656471-b100-4313-9fc3-e53a4c8b1084/FoamLanding.png?format=2500w" alt="Deployed Landing Page showing Notification popup">
-                            <p class="text">Deployed Landing Page showing Notification popup</p>
-                        </div>
-                        <div class="image-caption">
-                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/f2f2de02-fa3a-4cec-8843-3414a6912b17/FoamLandingExpanded.png?format=2500w" alt="Deployed Landing Page with Filters expanded">
-                            <p class="text">Deployed Landing Page with Filters expanded</p>
-                        </div>
-                        <div class="image-caption">
-                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/9b5beb25-f2db-4897-9244-e87acdc0c1f4/FoamFavourites.png?format=2500w" alt="Deployed Favourites Page">
-                            <p class="text">Deployed Favourites Page</p>
-                        </div>
-                    </div>
-
-                    <h2 class="subheading">05. LEARNINGS</h2>
-
-                    <p class="text"> My biggest takeaway is that there is a lot to learn from competitors' designs, and that little details such as adding a notification pop up adds to the experience. This sprint project that in total took me 24 hrs to create, taught me how to design and prototype quickly, which is a valuable skill for future projects.
-                    </p>
-
-                </div>
-
             </div>
             <p class="subtext"> developed by Ivery Chen April 2024</p>
 

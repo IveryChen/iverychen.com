@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap">
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href = "project.css" />
+        <link rel="stylesheet" href = "style.css" />
+        <meta name="author" content="Ivery Chen">
+        <meta name="viewprt" content="width=device-width, initial-scale=1.0"/>
+        <title> Development </title>
+    </head>
+    <body>
+        <header>
+            <div href="index.html" class="logo">IVERY CHEN</div>
+            <label for="menu-toggle" class="menu-toggle">
+                <span class="icon">&#9776;</span> <!-- Menu icon -->
+            </label>
+            <nav class="menu">
+                <a href="index.html" class="menu-item" >WORK</a>
+                <!-- <a href="art.html" class="menu-item">ART</a> -->
+                <a href="about.html" class="menu-item">ABOUT</a>
+                <a href="index.html" class="menu-item">RESUME</a>
+            </nav>
+        </header>
+        <div class="all-contents">
+            
+            <div class="main-body">
+                <div class="title-card" onmouseover="showPopup()" onmouseout="hidePopup()">
+                    <p class="title"><a class="links" href="https://iverychen.github.io/FunCheapSFRedesign/" target="_blank">PARTIFUL</a></p>
+                    <div class="popup" id="popup">Visit Link</div>
+                    <p class="text-italic">a 3 week project, April 2024</p>
+                </div>
+
+                <div class="all-sections">
+
+                    <div class="info">
+                        <div class="column">
+                            <h3>Team</h3>
+                            <p>Ivery Chen</p>
+                            <p>Dave Song</p>
+                            <p>Sohum Sanu</p>
+                            <p>Viviana Wei</p>
+                        </div>
+                        <div class="column">
+                            <h3>Role</h3>
+                            <p>UIUX Design</p>
+                        </div>
+                        <div class="column">
+                            <h3>Tools</h3>
+                            <p>Figma</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">01</span> CONTEXT</h2>
+                        <h2 class="subheading2">Problem</h2>
+                        <p> 
+                            Our team worked with Google Ventures Backed startup, Partiful, to redesign the events page. 
+                            Partiful is a website and app that allows users to create delightful event pages for birthdays, hangouts, and everything in between. Hosts can invite friends and friends-of-friends when they don't have a phone number or socials. Event pages build hype around the party, allowing guests and hosts to interact with each other. The company focuses on simplifying the cultivation of real-world friendships.                        
+                        </p>
+
+
+                        <div class="image-container">
+                            <div class="neighbour-image-container">
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_event1.png"
+                                    alt="Partiful Events Page, Host View, Original Design"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 50%;"
+                                    />                                     
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_event2.png"
+                                    alt="Partiful Events Page, Host View, Original Design"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 50%;"
+                                    />                                   
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text">Partiful Events Page, Host View, Original Design</p>
+                            </div>
+                        </div>
+                      
+
+                        <h2 class="subheading2">Problem Statement</h2>
+                        <p> 
+                            How might we make it easier for hosts and guests to navigate to their past events?
+                        </p>
+                        <h2 class="subheading2">Bullseye Customer Description</h2>
+                        <p> 
+                            <span class="number">A</span> Gen Z + Millennials <br>
+                            <span class="number">B</span> The primary party guest + host in their social groups <br>
+                            <span class="number">C</span> Example event: Greek events, campus club events, birthdays <br>
+                            <span class="number">D</span> Hyper-social and always wanting to meet and connect with new friends <br>
+                        </p>
+                        <h2 class="subheading2">Customer Motivations</h2>
+                        <p> 
+                            Deepening connections with existing and new friends made at recent events
+                            Curious to learn more about people that they met at events
+                            Wants to look back at photos or memories from past events                        
+                        </p>
+                        <h2 class="subheading2">Customer Pain Points</h2>
+                        <p> 
+                            <span class="number">A</span> As a host, it’s difficult to navigate back to a past event to reminisce or utilize helpful Partiful features like Text Blast <br>
+                            <br>
+                            <span class="number">B</span> As a guest, it’s difficult to navigate back to a past event to reminisce, ask for photos, or view already posted photos <br>
+                            <br>
+                            <span class="number">C</span> People want to ask for photos from the event and hosts don’t want this to be a heavy lift <br>
+                            <br>
+                            <span class="number">D</span> It’s difficult to find the people you recently partied with to either look them up on another platform (Instagram) or ask friends about them <br>
+                            <br>
+                        </p>
+                        <h2 class="subheading2">Success Metrics</h2>
+                        <p> 
+                            <span class="number">A</span> More users navigating to past events <br>
+                            <span class="number">B</span> More activity (comments, comment replies, photos) on past events <br>
+                            <span class="number">C</span> Users connecting with one another from past events <br>
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">02</span> RESEARCH</h2>
+                        <p class="text">
+                            We had some questions about how our design should fit into the broader goals of Partiful as a service, particularly in terms of promoting social interaction between users on the app and offering users the ability to upload and view photos taken at an event. Particularly, we wanted to know if we should be thinking about the bigger picture and designing for more connections between users through our design for past events. The founders reiterated to us that their main goal was for us to improve the visibility of past events, but emphasized that we should explore a wide range of solutions and creative ways to solve this problem.
+                        </p>
+                        <p class="text">
+                            The first round of discussion with the founders cleared up a lot of questions we had. In particular, the founder’s assertion that it was very difficult for the average user to navigate to past events as well as the greater goal of improving the app’s learnability was a great starting point for our design. From here, we began brainstorming our initial sketches (2 for each member) and exploring various ways to improve the visibility of past events (both creative and straight-forward solutions.)
+                        </p>
+                        <h2 class="subheading2">The following are my two lo-fi sketches</h2>
+
+                        <div class="image-container">
+                            <!-- <div class="neighbour-image-container"> -->
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_sketch1.png"
+                                    alt="Ivery's sketch 1 for partiful"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                     
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_sketch2.png"
+                                    alt="Ivery's sketch 2 for partiful"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                   
+                                </div>
+                            <!-- </div> -->
+                            <div>
+                                <p class="text">Ivery's initial sketches for partfiul</p>
+                            </div>
+                        </div>
+
+                        <p>
+                            Based on all of our sketches, we developed lo-fi wireframe prototype version 1. 
+                        </p>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">03</span> PROCESS</h2>
+
+                        <h2 class="subheading2">First lo-fi Prototype</h2>
+                        <div class="image-container">
+                            <div class="neighbour-image-container">
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_wireframe1.png"
+                                    alt="Ivery's sketch 1 for partiful"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                     
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_wireframe2.png"
+                                    alt="Ivery's sketch 2 for partiful"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                   
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_wireframe3.png"
+                                    alt="Ivery's sketch 3 for partiful"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                   
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_wireframe4.png"
+                                    alt="Ivery's sketch 4 for partiful"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                   
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text">lo-fi design after consolidating all members' designs</p>
+                            </div>
+                        </div>
+                        <p>
+                            Initially, past events are not seen at first sight. There are five filters, Open Invite, Upcoming, Hosting, Attended and Past Events. To solve this, we redesigned the events landing page by separating the initial 5 buttons into two sections, Upcoming and Past Events. We added a search bar at the top to help users easily find any event. For the Upcoming section, we removed the add event button as there is already an add event button in the nav bar. We designed with in mind different scenarios. If a user has 0 upcoming events, the space would be filled up by Open Invites, making the page full. If a user has many upcoming events, users can still swipe horizontally and after their upcoming events they’ll find open invite events.
+                            <br>
+                            <br>
+                            Underneath that is a list of mutuals. with fire emojis and a number to indicate the number of shared events between the users.
+                            <br>
+                            <br>
+                            Upcoming events can be scrolled horizontally, and Past events can be scrolled vertically. The two scrolling directions are justified by the fact that usually users have fewer upcoming events but many past events. Past events cards are displayed and can be filtered by Host, Attend, and can be sorted by factors like 1 week, 1 month, 1 years, etc. This section is designed for infinite scrolling, we believe that this is the best way of using the iphone vertical space and allowing users to view past events easily, in an instagram-like way.
+                            <br>
+                            <br>
+                            Our design displays past events on first sight. Our design incorporates functionality that provides users with concrete reasons to navigate back to past events, such as the ability to clone past events, and ways to make mutuals more meaningful by highlighting the number of shared events between users. We created pages for the home page as well as the event page. Users can click onto an event and be taken to the event page. We designed for both Host view and Guest view. For the host view, an edit button is now collapsed on the top right corner for intuitive editing. We included a ‘cloning’ button after conducting a user interview with a Partiful host, who mentioned that their pain point is that it is frustrating to add the same invitees from a previous event. An idea arose which is to duplicate an existing party template. This also incentivizes users to return to past events. We moved Text Blast to next to the Guest list, an intuitive place to text invitees.
+                            <br>   
+                            <br> 
+                        </p>
+                        <h2 class="subheading2">Feedback</h2>
+                        <p>
+                            In our previous wire frames, we included ideas about remaking the event page itself, profile page, mutual contacts page. The feedback clearly explained that our scope is solely to focus on past events in the homepage. Therefore, we had to only work on redesigning homepages going forward. We also realized that their main goal with this project is to be creative and design unique ideas for displaying past events. We wanted to work on discoverability. This means that a user can easily see all the actions they can do from the get go, therefore, past events should be easily navigable for the user.
+                        </p>
+                        <!-- <h2 class="subheading2">Wireframe Updates</h2>
+                        <p>
+                            To solve the problems, we redesigned the events landing page by separating the initial 5 buttons into two sections, Upcoming and Past Events. We added a search bar at the top to help users easily find any event. For the Upcoming section, we removed the add event button as there is already an add event button in the nav bar. We designed with in mind different scenarios.
+                        </p> -->
+                    </div>
+
+
+                    <div class="section">
+                        <h2 class="subheading"><span class="number">04</span> SOLUTION</h2>
+                        <p> 
+                            After reworking the lofi, we created a style guide and hifi-prototypes.
+                        </p>
+
+                        <div class="image-container">
+                            <div class="image-caption">
+                                    <img
+                                    src="assets/partiful_styleguide.png"
+                                    alt="Styleguide for Partiful"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                     
+                            </div>
+                            <p class="text">Style Guide</p>
+                        </div>
+
+
+                        <h2 class="subheading2">Basic</h2>
+                        <div class="image-container">
+                            <div class="neighbour-image-container">
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/basic_hifi.png"
+                                    alt="Basic design screen 1"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                     
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/basic_hifi2.png"
+                                    alt="Basic design screen 2"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                   
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/basic_hifi3.png"
+                                    alt="Basic design screen 3"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                   
+                                </div>
+                            </div>
+                            <p class="text">Basic design screens</p>
+                        </div>
+
+                        <p>
+                            The founders thought we handled this version well to split the 5 filters into three categories, which makes more intuitive sense. They prompted us to consider if we want to expose all guest lists from the top level for an upcoming event, as then it would eliminate the need for users to click onto an event. It could be cool for Right Now events to have all the information displayed, but have other upcoming events be smaller cards without all the information displayed. They liked having mutuals displayed on the main page, as it encourages interactions between mutuals (including sending emojis and chatting).
+                        </p>
+
+
+                        <h2 class="subheading2">Feed</h2>
+                        <div class="image-container">
+                            <div class="neighbour-image-container">
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/notif.png"
+                                    alt="Feed design screen 1"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                     
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/notif_past.png"
+                                    alt="Feed design screen 2"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                   
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/notif_expanded_past.png"
+                                    alt="Feed design screen 3"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 100%;"
+                                    />                                   
+                                </div>
+                            </div>
+                            <p class="text">Feed design screens</p>
+                        </div>
+                        <p>
+                            The founders view the feed as a separate page in addition to the main page, but a little too cluttered as the landing page itself. It would be interesting to explore an activities feed. They encouraged us to take this concept and play on the hierarchy of information. They also prompted us to think about other ways to display these notifications - do we need timestamps for each card? What if each event could be ‘pinched’ to expand notifications? They wanted us to explore other gestures for the iOS app. For example, users can tap an event card and underneath there are a bunch of user avatars stacked next to each other, which can be clicked on to expand to see notifications. They do believe that this feed design would incentivise people to click on event cards.
+                        </p>
+
+                        <h2 class="subheading2">Map</h2>
+                        <div class="image-container">
+                            <div class="neighbour-image-container">
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/map-design.png"
+                                    alt="Feed design screen 1"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 80%;"
+                                    />                                     
+                                </div>
+                                <div class="image-caption">
+                                    <img
+                                    src="assets/map_design_past.png"
+                                    alt="Feed design screen 2"
+                                    class="img-responsive img-thumbnail"
+                                    style="max-width: 80%;"
+                                    />                                   
+                                </div>
+                            </div>
+                            <p class="text">Map design screens</p>
+                        </div>
+                        <p>
+                            This proposal was received with enthusiasm, as Grace, one of the designers, had previously pitched a similar idea. They would be interested in seeing how we can combine past events and upcoming events into one map, especially how we would visualize past events as a heat map. They really enjoy the current visualization of events, as it reminds them of a pulsing animation. Perhaps if an event is upcoming it can pulse more than other events.
+                        </p>
+                    </div>
+
+                    <div class="section">
+
+                        <h2 class="subheading"><span class="number">05</span> LEARNINGS</h2>
+                        <p> 
+                            In conclusion, this project was a great experience in learning how to work with a team towards a final goal. We really enjoyed getting to work with Partiful and brainstorming various ideas for their Past Events page, especially because many of us were already familiar with the app, and getting direct feedback from the founders was a great opportunity for us to experience what it may be like working in a real world design team. As a team, working through the steps of sketching, lo-fi wireframes, hi-fi prototyping, then receiving feedback was invaluable to the development of our design skills and ability to work with others.
+                        </p>
+                    </div>
+                </div>
+                </div>
+                <p class="subtext"> developed by Ivery Chen April 2024</p>
+                </div>
+        </div>
+    </body>
+</html>

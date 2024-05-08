@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap">
+    <link rel="stylesheet" href = "project.css" />
+    <link rel="stylesheet" href = "style.css" />
+    <title>FunCheapSF HandIn</title>
+    
+</head>
+<body>
+    <header>
+        <div href="index.html" class="logo">IVERY CHEN</div>
+        <label for="menu-toggle" class="menu-toggle">
+            <span class="icon">&#9776;</span> <!-- Menu icon -->
+        </label>
+        <nav class="menu">
+            <a href="index.html" class="menu-item" >WORK</a>
+            <!-- <a href="art.html" class="menu-item">ART</a> -->
+            <a href="about.html" class="menu-item">ABOUT</a>
+            <a href="index.html" class="menu-item">RESUME</a>
+        </nav>
+    </header>
+    <div class="all-contents">
+        <div class="main-body">
+            <div class="title-card" onmouseover="showPopup()" onmouseout="hidePopup()">
+                <p class="title"><a class="links" href="https://iverychen.github.io/FunCheapSFRedesign/" target="_blank">FUNCHEAPSF</a></p>
+                <div class="popup" id="popup">Visit Link</div>
+                <p class="text-italic">a 2 week project, March 2024</p>
+            </div>
+
+            <div class="all-sections">
+                <div class="info">
+                    <div class="column">
+                        <h3>Team</h3>
+                        <p>Ivery Chen</p>
+                    </div>
+                    <div class="column">
+                        <h3>Role</h3>
+                        <p>UIUX Design</p>
+                        <p>Front-end Engineering</p>
+                    </div>
+                    <div class="column">
+                        <h3>Tools</h3>
+                        <p>HTML</p>
+                        <p>Javascript</p>
+                        <p>CSS</p>
+                        <p>Figma</p>
+                    </div>
+                </div>
+                <!-- <div class="demo-image">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/e20c2a97-91e6-43eb-b83f-92bd03659c57/funcheappage.png?format=2500w" alt="Image of the responsive redesign Image" style="max-width: 100%;">
+                </div> -->
+                <div class="section">
+                    <h2 class="subheading"><span class="number">01</span> CONTEXT</h2>
+                    <p class="text"><a class="link" href="https://sf.funcheap.com/">FunCheapSF</a> is your ultimate guide to budget-friendly entertainment and activities in San Francisco. </p>
+                    <p>
+                        I spent my past two summers in the Bay Area as a student and used the website frequently to find cheap activities to do. One of the things I realized is that there are many problems with the site that makes it difficult to navigate and find the information you need. I decided to redesign the site.
+                    </p>
+
+                    <p>
+                        This is what is currently looks like:
+                    </p>
+
+                    <div class="image-container">
+                        <div class="image-caption">
+                            <img
+                            src="assets/funcheap.png"
+                            alt="FuncheapSF original website"
+                            class="img-responsive img-thumbnail"
+                          />                            
+                          <p class="text">Deployed Landing Page showing Notification popup</p>
+                        </div>
+                    </div>
+
+                    <p class="questions">What were the problems?</p>
+
+                    <div class="card-container">
+                        <div class="boxes" id="card1">
+                            <p class="subheading2">Redundancy</p>
+                            <p class="text">
+                                There are too many ways to access fun cheap events. On the home page, there are sections containing the same information. <span class="bold">Upcoming Fun and Cheap Events</span>, <span class="bold">Funcheap’s Top Picks for this week</span> have many overlapping events, but some have images in the thumbnail but others do not.
+                                
+                                There are filters at the bottom of the page by <span class="bold">Categories</span> and <span class="bold">Locations</span> which is difficult to find. Clicking on a category takes the user to another page. 
+                            </p>
+                        </div>
+
+                        <div class="boxes" id="card2">
+                            <p class="subheading2">Heading Hierarchy & Organisation</p>
+                            <p class="text">
+                                Headings for this website are separated into two columns, making the page look cluttered. The titles are also very long, and some headings are actionable phrases which don't seem suitable as a heading, for example, <span class="bold">Sign up for Funcheap Emails</span>.
+                            </p>
+                        </div>
+
+                        <div class="boxes" id="card3">
+                            <p class="subheading2">Font size & Color</p>
+                            <p class="text">
+                                Large headings are blue with a grey highlight, newsletter categories are also highlighted in grey which makes it difficult to tell at first as a category. A lot of box colours are used to separate out headings from content, dates from description, but overall it doesn’t look very neat.
+                            </p>
+                        </div>
+
+                        <div class="boxes" id="card4">
+                            <p class="subheading2">Accessibility</p>
+                            <p class="text">
+                                I conducted an analysis using <span class="bold">WAVE.webaim.org</span> and detected a couple of problems. There are missing alternative text to several linked images, many images are missing labels and several empty links. This makes it harder for users to find out more information about an event if the link is missing. <span class="bold">WAVE</span> also detected low contrast errors, which didn’t bother me very much personally.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="subheading"><span class="number">03</span> PROCESS</h2>
+                    <p class="text">
+                        I created 9 quick sketches in 9 minutes to roughly plan out initial ideas.
+                    </p>
+
+                    <div class="image-container">
+                        <div class="image-caption">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/0e170353-dd2e-43a7-ab72-3f495a79bd8f/speedy.png?format=2500w" alt="Nine quick sketches of the design" style="max-width: 80%;">                         
+                          <p class="text">Quick Sketches</p>
+                        </div>
+                    </div>
+
+                    <p class="text">
+                        Based on the quick sketch exercises, one design/layout emerged. It contains a logo bar, a filter bar with categories, and a section for event cards to be displayed.
+                    </p>
+
+
+                    <div class="image-container">
+                        <div class="image-caption">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/247b25a3-c976-4d1b-8da6-983565b3d585/final.png?format=2500w" alt="Final sketch of the design" style="max-width: 80%;">
+                            <p class="text">Final Sketch</p>
+                        </div>
+                    </div>
+
+                    <p class="text">
+                        Next, I created low-fidelity wireframes for mobile screen, tablet screen and desktop screen. The wireframes are adapted for the dimensions for the screens and seek to fix problems identified in Part 1.
+
+                    </p>
+
+                    <div class="image-container">
+                        <div class="image-caption">
+                            <img class="large-image" src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/c035eb05-c23e-4c28-84e6-826a635840df/maclow.png?format=2500w" alt="Low fidelity wireframe of the design for the macbook" style="max-width: 93%;">
+                            <p class="text">lo-fi prototype for macbook</p>
+                            <img class="large-image" src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/fd09760d-e14b-4955-9262-49c6801495e3/ipadlow.png?format=2500w" alt="Low fidelity wireframe of the design for the macbook" style="max-width: 93%;">
+                            <p class="text">lo-fi prototype for ipad</p>
+                            <img class="large-image" src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/4b5ccaf8-971f-4a24-b2b0-c272c37adaf2/phonelow.png?format=2500w" alt="Low fidelity wireframe of the design for the macbook" style="max-width: 93%;">
+                            <p class="text">lo-fi prototype for iphone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="subheading"><span class="number">04</span> SOLUTION</h2>
+
+                    <p class="text">
+                        For the style guide, I chose minimal colours as otherwise it was too distracting, and I decided to use yellow and dark navy blue to indicate time of day in the timeline design.
+                    </p>
+
+                    <div class="image-container">
+                        <div class="image-caption">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/2eaa070d-a108-4ca5-a85c-b70e60e7962a/styleguide.png?format=2500w" alt="Low fidelity wireframe of the design for the macbook" style="max-width: 90%;">
+                            <p class="text">Style Guide</p>
+                        </div>
+                    </div>
+
+                    <p class="text">
+                        For the high-fidelity prototypes, I designed for the MacBook, iPad as well as iPhone. 
+                        I designed the time bar filter in the high-fidelity which allows the user to only view events within the range of time they want.
+                    </p>
+                    <div class="image-container">
+                        <div class="image-caption">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/f490ca42-896a-40a7-9ec9-46a6ad722b43/machigh2.png?format=2500w" alt="High fidelity wireframe of the design for the macbook" style="max-width: 90%;">
+                            <p class="text">high-fi prototype for macbook</p>
+                        </div>
+                        <div class="image-caption">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/8acca116-f2ac-4e12-be07-9623f73c035a/ipadhigh2.png?format=2500w" alt="High fidelity wireframe of the design for the macbook" style="max-width: 90%;">
+                            <p class="text">high-fi prototype for ipad</p>
+                        </div>
+                        <div class="image-caption">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d78089c98912c1dcb2e3ab0/97bf49dd-016a-4907-8241-035902c7d287/phonehigh2.png?format=2500w" alt="High fidelity wireframe of the design for the macbook" style="max-width: 90%;">
+                            <p class="text">high-fi prototype for iphone</p>
+                        </div>
+                    </div>            
+
+                    <p class="text">Check out the final coded version of the <a class="link" href="https://iverychen.github.io/FunCheapSFRedesign/">website</a>!</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="subheading"><span class="number">05</span> LEARNINGS</h2>
+                    <p>
+                        In this project, I learned how to design for multiple screens, for mac, ipad and for the iphone. I also learned that it is very useful to analyse the problems of a website by categorising them, because it is easy to dismiss something as bad if they don't look polished at first glance. It is important to justify every judgement for good UX decisions.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <p class="subtext"> developed by Ivery Chen April 2024</p>
+    </div>
+</body>
+</html>

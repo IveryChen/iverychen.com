@@ -162,22 +162,22 @@ function scrollButtons() {
 // Run the scrolling effect every second
 setInterval(scrollButtons, 1000);
 
-function moveText(event) {
-    const text = event.target;
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-    const textX = text.offsetLeft + text.offsetWidth / 2;
-    const textY = text.offsetTop + text.offsetHeight / 2;
-    const sensitivity = 0.4; 
-    const deltaX = (mouseX - textX) * sensitivity;
-    const deltaY = (mouseY - textY) * sensitivity;
+// function moveText(event) {
+//     const text = event.target;
+//     const mouseX = event.clientX;
+//     const mouseY = event.clientY;
+//     const textX = text.offsetLeft + text.offsetWidth / 2;
+//     const textY = text.offsetTop + text.offsetHeight / 2;
+//     const sensitivity = 0.4; 
+//     const deltaX = (mouseX - textX) * sensitivity;
+//     const deltaY = (mouseY - textY) * sensitivity;
 
-    text.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+//     text.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
 
-    setTimeout(() => {
-        text.style.transform = '';
-    }, 300);
-}
+//     setTimeout(() => {
+//         text.style.transform = '';
+//     }, 300);
+// }
 
 document.getElementById('email-icon').addEventListener('click', function() {
     window.location.href = 'iverychen@gmail.com';
@@ -225,4 +225,15 @@ function scrollToDiv(divId) {
         t--;
         return -c / 2 * (t * (t - 2) - 1) + b;
     }
+
+}
+
+function showPopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
+
+function hidePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
 }
