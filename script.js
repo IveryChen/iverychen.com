@@ -20,13 +20,13 @@ const jsonData = [
         "description": "Redesigning funcheapsf.com.",
         "categories": [ "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma", "Responsive Design"]
     },
-    {
-        "href": "panda.html",
-        "image": "./src/assets/panda.png",
-        "eventName": "Panda",
-        "description": "Kahoot-style multiplayer game.",
-        "categories": [ "React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
-    },
+    // {
+    //     "href": "panda.html",
+    //     "image": "./src/assets/panda.png",
+    //     "eventName": "Panda",
+    //     "description": "Kahoot-style multiplayer game.",
+    //     "categories": [ "React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
+    // },
 ];
 
 function createCard(data) {
