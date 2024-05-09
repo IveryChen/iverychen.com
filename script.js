@@ -1,28 +1,28 @@
 const jsonData = [
     {
         "href": "partiful.html",
-        "image": "./assets/partiful.png",
+        "image": "./src/assets/partiful.png",
         "eventName": "Partiful Events Page Redesign",
         "description": "Redesigned the Partiful Events Home Page.",
         "categories": ["Prototyping", "UIUX Design", "Figma", "Iterative Design"]
     },
     {
         "href": "foam.html",
-        "image": "./assets/foam_mu.png",
+        "image": "./src/assets/foam_mu.png",
         "eventName": "Foam Web App",
         "description": "Designed the Pinterest for local artists discovery.",
         "categories": ["React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
     },
     {
         "href": "sf.html",
-        "image": "./assets/sf_mu.png",
+        "image": "./src/assets/sf_mu.png",
         "eventName": "FunCheapSF Redesign",
         "description": "Redesigning funcheapsf.com.",
         "categories": [ "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma", "Responsive Design"]
     },
     {
         "href": "panda.html",
-        "image": "./assets/panda.png",
+        "image": "./src/assets/panda.png",
         "eventName": "Panda",
         "description": "Kahoot-style multiplayer game.",
         "categories": [ "React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
