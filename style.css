@@ -16,6 +16,11 @@ header {
     padding: 0 320px;
 }
 
+a {
+    text-decoration: none;
+    color:#1010ff;
+}
+
 @font-face {
     font-family: 'Cube';
     src: url('./assets') format('woff'),
@@ -27,7 +32,6 @@ header {
     font-weight: 700;
     font-stretch: semi-expanded;
     margin-right: 30px;
-  
 }
 
 .menu-icon{
@@ -502,4 +506,3 @@ header {
     font-weight: 300; 
     color:#514f59;
 }
-

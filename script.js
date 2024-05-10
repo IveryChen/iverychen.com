@@ -242,3 +242,14 @@ function toggleMenu() {
     var menu = document.getElementById("dropdown");
     menu.classList.toggle("show-dropdown");
 }
+
+function changeBlue(){
+    var icon = document.getElementById("link-icon");
+    icon.src = "./src/assets/link_icon_blue.png";
+}
+
+
+function changeWhite(){
+    var icon = document.getElementById("link-icon");
+    icon.src = "./src/assets/link_icon.png";
+}

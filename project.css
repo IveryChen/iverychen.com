@@ -40,9 +40,7 @@ h2{
 }
 
 .links:hover {
-    /* color: white; */
-    color:rgb(250, 1, 163);
-
+    color: white;
 }
 
 li{
@@ -250,13 +248,13 @@ li{
 }
 
 .container {
-    width: 60%; /* Make container width fit the content */
-    padding: 50px; /* Add padding for spacing inside the container */
-    border-radius: 15px; /* Set border radius */
+    width: 60%; 
+    padding: 50px; 
+    border-radius: 15px; 
     margin: 10px;
-    background-color: #f0f0f0; /* Set plain background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for sleek look */
-    text-align: center; /* Center the text horizontally */
+    background-color: #f0f0f0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .mini-heading{
@@ -435,6 +433,10 @@ li{
         1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
+.title:hover {
+    color:white;
+}
+
 .popup {
     display: none;
     position: absolute;
@@ -448,11 +450,6 @@ li{
         0.5px 0.5px 0.5px rgba(255, 255, 255, 0.5);
   }
 
-.title:hover {
-    /* color: white; */
-    color:rgb(202, 45, 110);
-}
-
 .text-italic{
     font-style:italic;
     color: #0101ff;
@@ -460,3 +457,11 @@ li{
     -1px -1px 1px rgba(39, 43, 162, 0.5),
     1px 1px 1px rgba(255, 255, 255, 0.5);
 }
+
+#link-icon{
+    width:88px;
+    height:88px;
+    align-items: center;
+}
+
+

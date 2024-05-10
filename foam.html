@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <div href="index.html" class="logo">IVERY CHEN</div>
+            <a href="index.html" class="logo">IVERY CHEN</a>
             <label for="menu-toggle" class="menu-toggle">
                 <span class="icon">&#9776;</span> <!-- Menu icon -->
             </label>
@@ -26,7 +26,7 @@
             
             <div class="main-body">
                 <div class="title-card">
-                    <p class="title"><a class="links" href="https://foam-phi.vercel.app/" target="_blank">FOAM</a></p>
+                    <p class="title"><a class="links" href="https://foam-phi.vercel.app/" target="_blank" onmouseenter="changeWhite()" onmouseleave="changeBlue()" onmousedown="changeWhite()">FOAM<img id="link-icon" src="./src/assets/link_icon_blue.png"></a></p>
                     <p class="text-italic">a 24 hr sprint project, April 2024</p>
                 </div>
 
@@ -287,5 +287,6 @@
             </div>
 
         </div>
+        <script src="script.js" defer></script>
     </body>
 </html>
