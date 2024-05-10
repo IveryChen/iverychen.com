@@ -14,15 +14,15 @@
 <body>
     <header>
         <a href="index.html" class="logo">IVERY CHEN</a>
-        <label for="menu-toggle" class="menu-toggle">
-            <img class="menu-icon" src="./assets/menu_icon.png">
-            <nav class="dropdown" id="dropdown">
-                <a href="#selected-work" class="menu-item" onclick="scrollToDiv('selected-work')">WORK</a>
-                <!-- <a href="art.html" class="menu-item">ART</a> -->
-                <a href="about.html" class="menu-item">ABOUT</a>
-                <a href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing" class="menu-item" target="_blank">RESUME</a>
-            </nav>
+        <label for="menu-toggle" class="menu-toggle" onclick="toggleDropDown()">
+            <img class="menu-icon" src="./src/assets/menu_icon.png">
         </label>
+        <nav class="dropdown" id="dropdown">
+            <a href="#selected-work" class="menu-item" onclick="scrollToDiv('selected-work')">WORK</a>
+            <!-- <a href="art.html" class="menu-item">ART</a> -->
+            <a href="about.html" class="menu-item">ABOUT</a>
+            <a href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing" class="menu-item" target="_blank">RESUME</a>
+        </nav>
         <nav class="menu" id="menu">
             <a href="#selected-work" class="menu-item" onclick="scrollToDiv('selected-work')">WORK</a>
             <!-- <a href="art.html" class="menu-item">ART</a> -->

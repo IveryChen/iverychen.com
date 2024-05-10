@@ -248,8 +248,12 @@ function changeBlue(){
     icon.src = "./src/assets/link_icon_blue.png";
 }
 
-
 function changeWhite(){
     var icon = document.getElementById("link-icon");
     icon.src = "./src/assets/link_icon.png";
+}
+
+function toggleDropDown(){
+    var dropdown = document.getElementById("dropdown");
+    dropdown.classList.toggle("active"); 
 }
