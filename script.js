@@ -20,13 +20,70 @@ const jsonData = [
         "description": "Redesigning funcheapsf.com.",
         "categories": [ "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma", "Responsive Design"]
     },
-    // {
-    //     "href": "panda.html",
-    //     "image": "./src/assets/panda.png",
-    //     "eventName": "Panda",
-    //     "description": "Kahoot-style multiplayer game.",
-    //     "categories": [ "React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
-    // },
+    {
+        "href": "",
+        "image": "./src/assets/panda.png",
+        "eventName": "Panda",
+        "description": "Kahoot-style multiplayer game.",
+        "categories": [ "React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
+    },
+    {
+        "href": "",
+        "image": "./src/assets/skim.png",
+        "eventName": "Skim",
+        "description": "A Haiku-from-novel game",
+        "categories": [ "Unity", "C#"]
+    },
+    {
+        "href": "",
+        "image": "./src/assets/bayer.png",
+        "eventName": "Bayer VR",
+        "description": "An end-to-end Unity training app to each drone flyers how to operate drones.",
+        "categories": [ "Unity", "C#", 'Substance Painter', 'Blender', 'VR', 'AWS', 'Oculus']
+    },
+    {
+        "href": "",
+        "image": "./src/assets/magritte.png",
+        "eventName": "Magritte VR",
+        "description": "If Magritte had access to VR technology, what would his paintings be like?",
+        "categories": [ "Unity", "C#", 'Blender', 'VR','Oculus']
+    },
+    {
+        "href": "",
+        "image": "./src/assets/nasa_suits.png",
+        "eventName": "NASA SUITS",
+        "description": "Mixed Reality Hololens app for NASA Suits Challenge",
+        "categories": [ "Unity", "C#", 'Hololens', 'MR']
+    },
+    {
+        "href": "",
+        "image": "./src/assets/threedeepro.png",
+        "eventName": "Threedeepro",
+        "description": "A computer vision, on-paper drawing based 3D modelling tool",
+        "categories": [ "Python", "Javascript", "OpenCV", 'Graphics', "OBJ", "websockets"]
+    },
+    {
+        "href": "",
+        "image": "./src/assets/crystal2.png",
+        "eventName": "Procedurally generate crystals",
+        "description": "A tool that generates crystals.",
+        "categories": [ "c++", "QTCreator", "Blender", "OBJ"]
+    },
+    {
+        "href": "",
+        "image": "./src/assets/usd.png",
+        "eventName": "Texture to Material.usd tool",
+        "description": "A tool that takes in models and textures and auto-create usd material files.",
+        "categories": [ "python", "Houdini", "USD"]
+    },
+    {
+        "href": "",
+        "image": "./src/assets/reel.jpg",
+        "eventName": "Tech Artist Reel",
+        "description": "Tech Art Reel",
+        "categories": [ "Maya", "Blender","Houdini", "USD", "Nuke", "Unity", "Katana", "Premiere Pro", "After Effects", "Substance Painter"]
+    },
+
 ];
 
 function createCard(data) {
