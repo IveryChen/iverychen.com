@@ -61,7 +61,8 @@ li{
     display:flex;
     justify-content:center;
     flex-direction:column;
-    width: 60vw;
+    width:90%;
+
     height: auto;
     padding-bottom: 40px;
     margin: 30px;
@@ -76,6 +77,7 @@ li{
     box-shadow:
         0px 5px 5px rgba(39, 43, 162, 0.5),
         1px 1px 1px rgba(255, 255, 255, 0.5);
+    overflow: visible;
 }
 
 .heading-section{
@@ -175,12 +177,12 @@ li{
     align-items: center;
     flex-direction: column;
     border-radius: 30px; 
-    background-color: #d4ded4;
+    /* background-color: #d4ded4; */
     
     /* box-shadow: inset 0px 4px 6px 0px rgba(16, 16, 255, 0.2);  */
-    box-shadow:
+    /* box-shadow:
         0px -3px 3px rgba(39, 43, 162, 0.5),
-        1px 1px 1px rgba(255, 255, 255, 0.5);
+        1px 1px 1px rgba(255, 255, 255, 0.5); */
 }
 
 .number{

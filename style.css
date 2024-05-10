@@ -340,12 +340,12 @@ a {
     border-radius: 30px; 
     align-items: center;
     flex-wrap: wrap;
-    background-color: #d4ded4;
+    /* background-color: #d4ded4; */
 
     /* box-shadow: inset 0px 4px 6px 0px rgba(16, 16, 255, 0.2);  */
-    box-shadow:
+    /* box-shadow:
         0px -3px 3px rgba(39, 43, 162, 0.5),
-        1px 1px 1px rgba(255, 255, 255, 0.5);
+        1px 1px 1px rgba(255, 255, 255, 0.5); */
     
 }
 
