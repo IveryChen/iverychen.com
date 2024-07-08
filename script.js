@@ -1,77 +1,77 @@
 const jsonData = [
     {
         "href": "partiful.html",
-        "image": "./src/assets/partiful.png",
+        "image": "./my-3d-site/src/assets/partiful.png",
         "eventName": "Partiful Events Page Redesign",
         "description": "Redesigned the Partiful Events Home Page.",
         "categories": ["Prototyping", "UIUX Design", "Figma", "Iterative Design"]
     },
     {
         "href": "foam.html",
-        "image": "./src/assets/foam_mu.png",
+        "image": "./my-3d-site/src/assets/foam_mu.png",
         "eventName": "Foam Web App",
         "description": "Designed the Pinterest for local artists discovery.",
         "categories": ["React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
     },
     {
         "href": "sf.html",
-        "image": "./src/assets/sf_mu.png",
+        "image": "./my-3d-site/src/assets/sf_mu.png",
         "eventName": "FunCheapSF Redesign",
         "description": "Redesigning funcheapsf.com.",
         "categories": [ "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma", "Responsive Design"]
     },
     {
         "href": "",
-        "image": "./src/assets/panda.png",
+        "image": "./my-3d-site/src/assets/panda.png",
         "eventName": "Panda",
         "description": "Kahoot-style multiplayer game.",
         "categories": [ "React", "HTML", "Javascript", "CSS", "Prototyping", "UIUX Design", "Figma"]
     },
     {
         "href": "",
-        "image": "./src/assets/skim.png",
+        "image": "./my-3d-site/src/assets/skim.png",
         "eventName": "Skim",
         "description": "A Haiku-from-novel game",
         "categories": [ "Unity", "C#"]
     },
     {
         "href": "",
-        "image": "./src/assets/bayer.png",
+        "image": "./my-3d-site/src/assets/bayer.png",
         "eventName": "Bayer VR",
         "description": "An end-to-end Unity training app to each drone flyers how to operate drones.",
         "categories": [ "Unity", "C#", 'Substance Painter', 'Blender', 'VR', 'AWS', 'Oculus']
     },
     {
         "href": "",
-        "image": "./src/assets/magritte.png",
+        "image": "./my-3d-site/src/assets/magritte.png",
         "eventName": "Magritte VR",
         "description": "If Magritte had access to VR technology, what would his paintings be like?",
         "categories": [ "Unity", "C#", 'Blender', 'VR','Oculus']
     },
     {
         "href": "",
-        "image": "./src/assets/nasa_suits.png",
+        "image": "./my-3d-site/src/assets/nasa_suits.png",
         "eventName": "NASA SUITS",
-        "description": "Mixed Reality Hololens app for NASA Suits Challenge",
+        "description": "Mixed Reality Hololens app for NASA Suits Challenge.",
         "categories": [ "Unity", "C#", 'Hololens', 'MR']
     },
     {
         "href": "",
-        "image": "./src/assets/threedeepro.png",
+        "image": "./my-3d-site/src/assets/threedeepro.png",
         "eventName": "Threedeepro",
         "description": "A computer vision, on-paper drawing based 3D modelling tool",
         "categories": [ "Python", "Javascript", "OpenCV", 'Graphics', "OBJ", "websockets"]
     },
     {
         "href": "",
-        "image": "./src/assets/crystal2.png",
+        "image": "./my-3d-site/src/assets/crystal2.png",
         "eventName": "Procedurally generate crystals",
         "description": "A tool that generates crystals.",
         "categories": [ "c++", "QTCreator", "Blender", "OBJ"]
     },
     {
         "href": "",
-        "image": "./src/assets/usd.png",
+        "image": "./my-3d-site/src/assets/usd.png",
         "eventName": "Texture to Material.usd tool",
         "description": "A tool that takes in models and textures and auto-create usd material files.",
         "categories": [ "python", "Houdini", "USD"]
@@ -302,12 +302,12 @@ function toggleMenu() {
 
 function changeBlue(){
     var icon = document.getElementById("link-icon");
-    icon.src = "./src/assets/link_icon_blue.png";
+    icon.src = "./my-3d-site/src/assets/link_icon_blue.png";
 }
 
 function changeWhite(){
     var icon = document.getElementById("link-icon");
-    icon.src = "./src/assets/link_icon.png";
+    icon.src = "./my-3d-site/src/assets/link_icon.png";
 }
 
 function toggleDropDown(){

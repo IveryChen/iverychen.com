@@ -1,0 +1,6 @@
+my-3d-site/public/lookivery_highres.obj filter=lfs diff=lfs merge=lfs -text
+my-3d-site/src/assets/lookivery.blend filter=lfs diff=lfs merge=lfs -text
+my-3d-site/src/assets/lookivery_final.obj filter=lfs diff=lfs merge=lfs -text
+my-3d-site/src/assets/lookivery.blend1 filter=lfs diff=lfs merge=lfs -text
+my-3d-site/src/assets/lookivery2.obj filter=lfs diff=lfs merge=lfs -text
+my-3d-site/src/assets/lookiveryframe3.obj filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,30 @@
+
+const categoryColours = {
+    "Prototyping": "#FFFF3D",
+    "UIUX Design": "#EB97D9",
+    "Figma": "#6DC2F4",
+    "Frontend": "#F4CE6D",
+    "Computer Vision": "#D7FF97",
+    "Unity": "#6DF4DC",
+    "AR/VR/MR": "#FF97B6",
+    "UX Research": "#D7FF97",
+    "Blender": "#FF9797",
+    "Substance Painter": "#FFF8BB",
+    "Game Design": "#BE97FF",
+    "AWS": "#FFC1FF",
+    "Computer Graphics": "#9F97FF",
+    "Research": "#97C0FF",
+    "Houdini": "#C1C1FF",
+    "Backend": "#A8F46D",
+    "USD": "#97E6FF",
+    "Nuke": "#31B3BB",
+    "Katana": "#C0F0F0",
+    "Maya": "#FFE5FE",
+    "Substance Painter": "#FFF8BB",
+    "Hololens":"#F85D5D",
+    "Oculus":"#22BCFE",
+    "Premiere Pro": "#C1E1FF",
+    "After Effects": "#D1FFC1",
+  };
+
+export default categoryColours;

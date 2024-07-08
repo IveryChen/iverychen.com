@@ -1,0 +1,12 @@
+# Blender 3.6.5 MTL File: 'lookivery2.blend'
+# www.blender.org
+
+newmtl MetallicSmiley
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.600729 0.715870 0.897094
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
