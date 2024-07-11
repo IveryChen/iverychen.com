@@ -2,7 +2,7 @@ const images = {
     lookIvery: require('./assets/lookivery_render12_256.png'),
     lookiveryintro: require('./assets/lookiveryintro.png'),
     intro: require('./assets/intro.png'),
-    partiful: require('./assets/partiful.png'),
+    partiful: require('./assets/partiful_mu.png'),
     foam: require('./assets/foam_mu.png'),
     sf: require('./assets/sf_mu.png'),
     drivealive: require('./assets/drivealive-mu.png'),
