@@ -11,7 +11,51 @@ const jsonData = [
         "tools": "Figma, Loom",
         "eventName": "Partiful Events Page Redesign",
         "description": "Redesigned the Partiful Events Home Page.",
-        "categories": ["Prototyping", "UIUX Design", "Figma"]
+        "categories": ["Prototyping", "UIUX Design", "Figma"],
+        "section1": [
+            {
+                "type": "section-text",
+                "content": "Context",
+            },
+            {
+              "type": "subheading",
+              "content": "How do you redesign the landing page so that more people would navigate to ‘Past Events’?"
+            },
+            {
+              "type": "text",
+              "content": "Our team worked with Google Ventures Backed startup, Partiful, to redesign their events page. Partiful is a website and app that allows users to create delightful event pages for birthdays, hangouts, and everything in between. Hosts can invite friends and friends-of-friends when they don't have a phone number or socials. Event pages build hype around the party, allowing guests and hosts to interact with each other."
+            },
+            {
+              "type": "subheading",
+              "content": "What are some of the existing problems in current design?"
+            },
+            {
+              "type": "image",
+              "content": "partiful_problem"
+            }
+          ],
+        "section2": [
+            {
+                "type": "section-text",
+                "content": "Context",
+            },
+            {
+              "type": "subheading",
+              "content": "How do you redesign the landing page so that more people would navigate to ‘Past Events’?"
+            },
+            {
+              "type": "text",
+              "content": "Our team worked with Google Ventures Backed startup, Partiful, to redesign their events page. Partiful is a website and app that allows users to create delightful event pages for birthdays, hangouts, and everything in between. Hosts can invite friends and friends-of-friends when they don't have a phone number or socials. Event pages build hype around the party, allowing guests and hosts to interact with each other."
+            },
+            {
+              "type": "subheading",
+              "content": "What are some of the existing problems in current design?"
+            },
+            {
+              "type": "image",
+              "content": "partiful_problem"
+            }
+          ]
     },
     {
         "id": 2,

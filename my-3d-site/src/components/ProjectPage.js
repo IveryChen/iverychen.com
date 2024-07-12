@@ -27,29 +27,100 @@ const ProjectPage = () => {
         </div>
       </div>
 
-      <div className="section">
+       {/* Render each section dynamically */}
+       {Object.keys(project).map((key) => {
+        if (key.startsWith('section')) {
+          return (
+            <div key={key} className="section">
+              {project[key].map((section, index) => {
+                switch (section.type) {
+                  case 'section-text':
+                    return (
+                      <h2 key={index} className="section-text">
+                        <span className="italics">0{index + 1}&nbsp;</span>{section.content}
+                      </h2>
+                    );
+                  case 'subheading':
+                    return (
+                      <h2 key={index} className="subheading">
+                        {section.content}
+                      </h2>
+                    );
+                  case 'text':
+                    return (
+                      <div key={index} className="fine-text">
+                        {section.content}
+                      </div>
+                    );
+                  case 'image':
+                    return (
+                      <div key={index} className="image-container">
+                        <img src={images[section.content]} alt={project.eventName} className="title-image" />
+                      </div>
+                    );
+                  default:
+                    return null;
+                }
+              })}
+            </div>
+          );
+        }
+        return null;
+      })}
+
+      {/* <div className="section">
+        {project.section1.map((section, index) => {
+              switch (section.type) {
+                case 'section-text':
+                  return (
+                    <h2 key={index} className="section-text">
+                      <span className="italics">0{index + 1}&nbsp;</span>{section.content}
+                    </h2>
+                  );
+                case 'subheading':
+                  return (
+                    <h2 key={index} className="subheading">
+                      {section.content}
+                    </h2>
+                  );
+                case 'text':
+                  return (
+                    <div key={index} className="fine-text">
+                      {section.content}
+                    </div>
+                  );
+                case 'image':
+                  return (
+                    <div key={index} className="image-container">
+                      <img src={images[section.content]} alt={project.eventName} className="title-image" />
+                    </div>
+                  );
+                default:
+                  return null;
+              }
+        })}
+      </div> */}
+
+  
+
+
+      {/* <div className="section">
         <h2 className="section-text"><span className="italics">01&nbsp;</span> Context </h2>
         <h2 className="subheading">How do you redesign the landing page so that more people would navigate to ‘Past Events’?</h2>
         <div className="fine-text">Our team worked with Google Ventures Backed startup, Partiful, to redesign their events page. Partiful is a website and app that allows users to create delightful event pages for birthdays, hangouts, and everything in between. Hosts can invite friends and friends-of-friends when they don't have a phone number or socials. Event pages build hype around the party, allowing guests and hosts to interact with each other.</div>
         <br></br><br></br>
 
+
         <h2 className="subheading2">What are some of the existing problems in current design?</h2>
-
-        {/* {projectData.sections.map((section, index) => (
-        <div key={index}>
-          <h3>{section.title}</h3>
-          <p>{section.content}</p>
+        <div className="image-container">
+          <img src={images[project.section1Content]} alt={project.eventName} className="title-image" />
         </div>
-      ))} */}
-        {/* <p>{project.section1Content}</p> */}
-        {/* Additional components or customizations based on project type */}
-      </div>
 
-      <div className="section">
+      </div> */}
+
+      {/* <div className="section">
       <h2 className="section-text"><span className="italics">02&nbsp;</span> Research </h2>
-        {/* <p>{project.section2Content}</p> */}
-        {/* Additional components or customizations based on project type */}
-      </div>
+      </div> */}
 
       {/* Add more sections as needed */}
     </div>
