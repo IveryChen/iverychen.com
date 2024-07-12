@@ -24,40 +24,101 @@ const ProjectPage = () => {
             <div className="italics">Team: <span className="normal">{project.team}</span></div>
             <div className="italics">Role: <span className="normal">{project.role}</span></div>
             <div className="italics">Tools: <span className="normal">{project.tools}</span></div>
-        </div>
+        </div> 
       </div>
 
-       {/* Render each section dynamically */}
        {Object.keys(project).map((key) => {
+        let sectionIndex = 0;
         if (key.startsWith('section')) {
+          sectionIndex = key.slice(-1);
+          
           return (
-            <div key={key} className="section">
-              {project[key].map((section, index) => {
+            <div key={sectionIndex} className="section">
+              {project[key].map((section) => {
                 switch (section.type) {
                   case 'section-text':
                     return (
-                      <h2 key={index} className="section-text">
-                        <span className="italics">0{index + 1}&nbsp;</span>{section.content}
+                      <h2 key={sectionIndex} className="section-text">
+                        <span className="italics">0{sectionIndex}&nbsp;</span>{section.content}
                       </h2>
                     );
                   case 'subheading':
                     return (
-                      <h2 key={index} className="subheading">
+                      <h2 key={sectionIndex} className="subheading">
                         {section.content}
                       </h2>
                     );
                   case 'text':
                     return (
-                      <div key={index} className="fine-text">
+                      <div key={sectionIndex} className="fine-text">
                         {section.content}
+                      </div>
+                    );
+                  case 'list':
+                    return (
+                      <div>
+                      <div key={sectionIndex} className="fine-text">
+                        {section.content_list_1}
+                      </div>
+                      <br></br>
+                      <div key={sectionIndex} className="fine-text">
+                        {section.content_list_2}
+                      </div>
+                      <br></br>
+                      <div key={sectionIndex} className="fine-text">
+                        {section.content_list_3}
+                      </div>
                       </div>
                     );
                   case 'image':
                     return (
-                      <div key={index} className="image-container">
-                        <img src={images[section.content]} alt={project.eventName} className="title-image" />
+                      <div key={sectionIndex} className="image-container">
+                        <img src={images[section.content]} alt={section.image_descript} className="normal-image" />
+                        <div className="small-text">{section.image_descript}</div>
                       </div>
                     );
+                  case 'image-text-h-container':
+                    return (
+                        <div className="image-text-container">
+                          <div className="flex-text-container">
+                            <div className="small-text">{section.content_stack_1}</div>
+                            <div className="small-text">{section.content_stack_2}</div>
+                          </div>
+                          <div className="flex-image-container-h">
+                            <img src={images[section.image_stack_h_1]} alt={section.image_stack_h_1} className="normal-image" />
+                            <img src={images[section.image_stack_h_2]} alt={section.image_stack_h_2} className="normal-image" />
+                            <div className="small-text">{section.image_stack_h_descript}</div>
+                          </div>
+                        </div>
+                    );
+                  case 'image-text-v-container':
+                      return (
+                          <div className="image-text-container">
+                            <div className="flex-text-container">
+                              <div className="small-text">{section.content_stack_1}</div>
+                              <div className="small-text">{section.content_stack_2}</div>
+                            </div>
+                            <div className="flex-image-container-v">
+                              <img src={images[section.image_stack_v_1]} alt={section.image_stack_v_1} className="normal-image" />
+                              <img src={images[section.image_stack_v_2]} alt={section.image_stack_v_2} className="normal-image" />
+                              <div className="small-text">{section.image_stack_v_descript}</div>
+                            </div>
+                          </div>
+                    );
+                    case 'image-stack-h-container':
+                      return(
+                      <div className="section-container">
+                        <div className="flex-image-container-h">
+                          <img src={images[section.image_stack_h_1]} alt={section.image_stack_h_1} className="normal-image" />
+                          <img src={images[section.image_stack_h_2]} alt={section.image_stack_h_2} className="normal-image" />
+                          <img src={images[section.image_stack_h_3]} alt={section.image_stack_h_3} className="normal-image" />
+                          <img src={images[section.image_stack_h_4]} alt={section.image_stack_h_4} className="normal-image" />
+                          <img src={images[section.image_stack_h_5]} alt={section.image_stack_h_5} className="normal-image" />
+                        </div>
+                        <div className="small-text">{section.image_stack_h_descript}</div>
+                    </div>
+                      );
+
                   default:
                     return null;
                 }
@@ -68,61 +129,17 @@ const ProjectPage = () => {
         return null;
       })}
 
-      {/* <div className="section">
-        {project.section1.map((section, index) => {
-              switch (section.type) {
-                case 'section-text':
-                  return (
-                    <h2 key={index} className="section-text">
-                      <span className="italics">0{index + 1}&nbsp;</span>{section.content}
-                    </h2>
-                  );
-                case 'subheading':
-                  return (
-                    <h2 key={index} className="subheading">
-                      {section.content}
-                    </h2>
-                  );
-                case 'text':
-                  return (
-                    <div key={index} className="fine-text">
-                      {section.content}
-                    </div>
-                  );
-                case 'image':
-                  return (
-                    <div key={index} className="image-container">
-                      <img src={images[section.content]} alt={project.eventName} className="title-image" />
-                    </div>
-                  );
-                default:
-                  return null;
-              }
-        })}
-      </div> */}
-
-  
-
-
-      {/* <div className="section">
-        <h2 className="section-text"><span className="italics">01&nbsp;</span> Context </h2>
-        <h2 className="subheading">How do you redesign the landing page so that more people would navigate to ‘Past Events’?</h2>
-        <div className="fine-text">Our team worked with Google Ventures Backed startup, Partiful, to redesign their events page. Partiful is a website and app that allows users to create delightful event pages for birthdays, hangouts, and everything in between. Hosts can invite friends and friends-of-friends when they don't have a phone number or socials. Event pages build hype around the party, allowing guests and hosts to interact with each other.</div>
-        <br></br><br></br>
-
-
-        <h2 className="subheading2">What are some of the existing problems in current design?</h2>
-        <div className="image-container">
-          <img src={images[project.section1Content]} alt={project.eventName} className="title-image" />
+      {/* <div className="image-text-container">
+        <div className="flex-text-container">
+          <div className="normal">Individually, we sketched out our own versions of user flow based on client expectations and problems.</div>
+          <div className="normal">We met with founders along each step of the way, modifying lo-fi prototypes as we go.</div>
         </div>
-
+        <div className="flex-image-container">
+          <img src={images['partiful']} alt={"blah"} className="title-image" />
+          <img src={images['partiful']} alt={"blah"} className="title-image" />
+        </div>
       </div> */}
 
-      {/* <div className="section">
-      <h2 className="section-text"><span className="italics">02&nbsp;</span> Research </h2>
-      </div> */}
-
-      {/* Add more sections as needed */}
     </div>
   );
 };

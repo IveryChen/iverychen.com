@@ -31,31 +31,88 @@ const jsonData = [
             },
             {
               "type": "image",
-              "content": "partiful_problem"
+              "content": "partiful_problem",
+              "image_descript": "Original screens"
             }
           ],
         "section2": [
             {
-                "type": "section-text",
-                "content": "Context",
+              "type": "section-text",
+              "content": "Research",
             },
             {
               "type": "subheading",
-              "content": "How do you redesign the landing page so that more people would navigate to ‘Past Events’?"
+              "content": "What are our success metrics?"
+            },
+            {
+              "type": "list",
+              "content_list_1": "A More users navigating to past events",
+              "content_list_2": "B More activity (comments, comment replies, photos) on past events",
+              "content_list_3": "C Users connecting with one another from past events"
+            },
+            {
+              "type": "subheading",
+              "content": "Who are our customers?"
             },
             {
               "type": "text",
-              "content": "Our team worked with Google Ventures Backed startup, Partiful, to redesign their events page. Partiful is a website and app that allows users to create delightful event pages for birthdays, hangouts, and everything in between. Hosts can invite friends and friends-of-friends when they don't have a phone number or socials. Event pages build hype around the party, allowing guests and hosts to interact with each other."
+                "content": "Our customers are Gen Z + Millennials, hyper-social and always wanting to meet and connect with new friends through campus club events, birthdays and other greek events. We want to explore design language that is familiar to GenZ. Some inspiration include Instagram Feed, iPhone notifications and Snapchat SnapMaps."
+            },
+            {
+                "type": "subheading",
+                "content": "Who did we talk to?"
+              },
+              {
+                "type": "text",
+                  "content": "We interviewed Partiful superhosts to ask about their experiences using Partiful, and whether or not they spend much time at all on the app. One of the good insight we gained is that users don’t tend to use Partiful to look at past memories at events, instead, they want to discover new ones in a more effective manner."
+              }
+        ],
+        "section3": [
+            {
+              "type": "section-text",
+              "content": "Process",
+            },
+            {
+              "type": "image-text-v-container",
+              "content_stack_1": "Individually, we sketched out our own versions of user flow based on client expectations and problems.",
+              "content_stack_2": "We met with founders along each step of the way, modifying lo-fi prototypes as we go.",
+              "image_stack_v_1": "partiful_sketch1",
+              "image_stack_v_2": "partiful_sketch2",
+              "image_stack_v_descript": "Lo-fi sketches",
+            },
+            {
+              "type": "image-stack-h-container",
+              "image_stack_h_1": "partiful_wireframe1",
+              "image_stack_h_2": "partiful_wireframe2",
+              "image_stack_h_3": "partiful_wireframe3",
+              "image_stack_h_4": "partiful_wireframe4",
+              "image_stack_h_5": "partiful_wireframe5",
+              "image_stack_h_descript": "Lo-fi prototype",
+            }
+        ],
+        "section4": [
+            {
+              "type": "section-text",
+              "content": "Solution",
             },
             {
               "type": "subheading",
-              "content": "What are some of the existing problems in current design?"
+              "content": "How did we respond to founder feedback?"
             },
             {
-              "type": "image",
-              "content": "partiful_problem"
-            }
-          ]
+              "type": "text",
+              "content": "The founders’ feedback were that we should focus on the landing page instead of extra functionalities. We decided to create three distinct versions of the page based on our inspirations, Instagram feed, iPhone notification and Snapchat Snapmap, to showcase a range of unique ideas."
+            },
+            {
+              "type": "image-text-h-container",
+              "content_stack_1": "Past events are too hidden, the app doesn’t feel like a social media platform. Many users don’t have the app downloaded",
+              "content_stack_2": "To make past events accessible from the landing page, implementing infinite scroll to encourage time-spent in past events and connecting with other users",
+              "image_stack_h_1": "partiful_basic_hifi",
+              "image_stack_h_2": "partiful_basic_hifi2",
+              "image_stack_h_descript": "Basic design",
+            },
+
+        ]
     },
     {
         "id": 2,

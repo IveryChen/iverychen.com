@@ -7,7 +7,6 @@ import AboutPage from './components/AboutPage';
 
 import './App.css';
 
-
 const App = () => {
   return (
     <div className="App">
