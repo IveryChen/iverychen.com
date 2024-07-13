@@ -82,10 +82,14 @@ const ProjectPage = () => {
                       <div className="section-container">
                         <div className="image-text-container">
                               <div className="flex-text-container">
-                                <div className="subheading3">Challenge</div> <br></br>
-                                <div className="small-text">{section.content_stack_1}</div>
-                                <div className="subheading3">Solution</div> <br></br>
-                                <div className="small-text">{section.content_stack_2}</div>
+                                <div className="paragraph">
+                                  <div className="subheading3">Challenge</div> <br></br>
+                                  <div className="small-text">{section.content_stack_1}</div>
+                                </div>
+                                <div className="paragraph">
+                                  <div className="subheading3">Solution</div> <br></br>
+                                  <div className="small-text">{section.content_stack_2}</div>
+                                </div>
                               </div>
 
                               <div>
@@ -100,7 +104,7 @@ const ProjectPage = () => {
                                     />
                                   ))}
                                 </div>
-                                <div className="small-text">{section.descript_image_stack_h}</div>
+                                <div className="caption-text">{section.descript_image_stack_h}</div>
                               </div>
                           </div>
                       </div>
@@ -122,14 +126,18 @@ const ProjectPage = () => {
                                       />
                                     ))}
                                   </div>
-                                  <div className="small-text">{section.descript_image_stack_h}</div>
+                                  <div className="caption-text">{section.descript_image_stack_h}</div>
                                 </div>
 
                                 <div className="flex-text-container">
-                                  <div className="subheading3">Challenge</div> <br></br>
-                                  <div className="small-text">{section.content_stack_1}</div>
-                                  <div className="subheading3">Solution</div> <br></br>
-                                  <div className="small-text">{section.content_stack_2}</div>
+                                  <div className="paragraph">
+                                   <div className="subheading3">Challenge</div> <br></br>
+                                   <div className="small-text">{section.content_stack_1}</div>
+                                  </div>
+                                  <div className="paragraph">
+                                   <div className="subheading3">Solution</div> <br></br>
+                                   <div className="small-text">{section.content_stack_2}</div>
+                                  </div>
                                 </div>
                             </div>
                         </div>
