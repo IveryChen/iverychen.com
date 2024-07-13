@@ -77,20 +77,63 @@ const ProjectPage = () => {
                         <div className="small-text">{section.image_descript}</div>
                       </div>
                     );
-                  case 'image-text-h-container':
+                  case 'image-text-h-container-left':
                     return (
+                      <div className="section-container">
                         <div className="image-text-container">
-                          <div className="flex-text-container">
-                            <div className="small-text">{section.content_stack_1}</div>
-                            <div className="small-text">{section.content_stack_2}</div>
+                              <div className="flex-text-container">
+                                <div className="subheading3">Challenge</div> <br></br>
+                                <div className="small-text">{section.content_stack_1}</div>
+                                <div className="subheading3">Solution</div> <br></br>
+                                <div className="small-text">{section.content_stack_2}</div>
+                              </div>
+
+                              <div>
+                                <div className="flex-image-container-h">
+                                  {Object.keys(section).filter(key => key.startsWith('image_stack_h_')).map((imgKey, idx) => (
+                                    <img
+                                      key={idx}
+                                      src={images[section[imgKey]]}
+                                      alt={section[imgKey]}
+                                      className="normal-image"
+                                      style={{ width: `${100 / section.num_images}%` }}
+                                    />
+                                  ))}
+                                </div>
+                                <div className="small-text">{section.descript_image_stack_h}</div>
+                              </div>
                           </div>
-                          <div className="flex-image-container-h">
-                            <img src={images[section.image_stack_h_1]} alt={section.image_stack_h_1} className="normal-image" />
-                            <img src={images[section.image_stack_h_2]} alt={section.image_stack_h_2} className="normal-image" />
-                            <div className="small-text">{section.image_stack_h_descript}</div>
-                          </div>
-                        </div>
+                      </div>
                     );
+                    case 'image-text-h-container-right':
+                      return (
+                        <div className="section-container">
+                          <div className="image-text-container">
+  
+                                <div>
+                                  <div className="flex-image-container-h">
+                                    {Object.keys(section).filter(key => key.startsWith('image_stack_h_')).map((imgKey, idx) => (
+                                      <img
+                                        key={idx}
+                                        src={images[section[imgKey]]}
+                                        alt={section[imgKey]}
+                                        className="normal-image"
+                                        style={{ width: `${100 / section.num_images}%` }}
+                                      />
+                                    ))}
+                                  </div>
+                                  <div className="small-text">{section.descript_image_stack_h}</div>
+                                </div>
+
+                                <div className="flex-text-container">
+                                  <div className="subheading3">Challenge</div> <br></br>
+                                  <div className="small-text">{section.content_stack_1}</div>
+                                  <div className="subheading3">Solution</div> <br></br>
+                                  <div className="small-text">{section.content_stack_2}</div>
+                                </div>
+                            </div>
+                        </div>
+                      );
                   case 'image-text-v-container':
                       return (
                           <div className="image-text-container">
@@ -101,23 +144,28 @@ const ProjectPage = () => {
                             <div className="flex-image-container-v">
                               <img src={images[section.image_stack_v_1]} alt={section.image_stack_v_1} className="normal-image" />
                               <img src={images[section.image_stack_v_2]} alt={section.image_stack_v_2} className="normal-image" />
-                              <div className="small-text">{section.image_stack_v_descript}</div>
+                              <div className="small-text">{section.descript_image_stack_v_}</div>
                             </div>
                           </div>
                     );
                     case 'image-stack-h-container':
                       return(
                       <div className="section-container">
-                        <div className="flex-image-container-h">
-                          <img src={images[section.image_stack_h_1]} alt={section.image_stack_h_1} className="normal-image" />
-                          <img src={images[section.image_stack_h_2]} alt={section.image_stack_h_2} className="normal-image" />
-                          <img src={images[section.image_stack_h_3]} alt={section.image_stack_h_3} className="normal-image" />
-                          <img src={images[section.image_stack_h_4]} alt={section.image_stack_h_4} className="normal-image" />
-                          <img src={images[section.image_stack_h_5]} alt={section.image_stack_h_5} className="normal-image" />
-                        </div>
-                        <div className="small-text">{section.image_stack_h_descript}</div>
+                          <div className="flex-image-container-h">
+                              {Object.keys(section).filter(key => key.startsWith('image_stack_h_')).map((imgKey, idx) => (
+                                <img
+                                  key={idx}
+                                  src={images[section[imgKey]]}
+                                  alt={section[imgKey]}
+                                  className="normal-image"
+                                  style={{ maxWidth: `calc(100% / ${section.num_images})` }}
+                                />
+                              ))}
+                            </div>
+                        <div className="small-text">{section.descript_image_stack_h}</div>
                     </div>
                       );
+                    
 
                   default:
                     return null;
