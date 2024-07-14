@@ -4,7 +4,7 @@ const jsonData = [
         "path": "partiful",
         "image": "partiful",
         "title": "PARTIFUL",
-        "duration": "a 3 weeks project", 
+        "duration": "a 3 week project", 
         "time": "April 2024",
         "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
         "role": "UIUX Design",
@@ -223,28 +223,158 @@ const jsonData = [
         "path": "sf",
         "image": "sf",
         "title": "FUNCHEAPSF",
-        "duration": "a 3 weeks project", 
-        "time": "April 2024",
-        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "role": "UIUX Design",
-        "tools": "Figma, Loom",
+        "duration": "a 2 week project", 
+        "time": "March 2024",
+        "team": "Ivery Chen",
+        "role": "UIUX Design, Frontend Engineering",
+        "tools": "Figma, HTML, Javascript, CSS",
         "eventName": "FunCheapSF Redesign",
         "description": "Redesigning funcheapsf.com.",
-        "categories": [ "Frontend", "Prototyping", "UIUX Design", "Figma", "Javascript", "HTML", "CSS"]
+        "categories": [ "Frontend", "Prototyping", "UIUX Design", "Figma", "Javascript", "HTML", "CSS"],
+        "section1": [
+          {
+              "type": "section-text",
+              "content": "Context",
+          },
+          {
+            "type": "subheading",
+            "content": "How do you redesign and improve a website, such as funcheapsf.com, and make it responsive?"
+          },
+          {
+            "type": "text",
+            "content": "FunCheapSF is your ultimate guide to budget-friendly entertainment and activities in San Francisco. I spent my  two summers in the Bay Area as a student and used the website frequently to find cheap activities to do. One of the things I realized is that there are many problems with the site that makes it difficult to navigate and find the information you need."
+          },
+          {
+            "type": "subheading",
+            "content": "What are some of the existing problems in current design?"
+          },
+          {
+            "type": "image",
+            "content": "sf_problem",
+            "image_descript": "Original screen"
+          }
+        ],
+        "section2": [
+          {
+            "type": "section-text",
+            "content": "Research",
+          },
+          {
+            "type": "subheading",
+            "content": "What are my success metrics?"
+          },
+          {
+            "type": "list",
+            "content_list_1": "A Reduce visual clutter and repetition",
+            "content_list_2": "B Implement filter functionality for better search experience",
+            "content_list_3": "C Reorganise object hierarchy",
+            "content_list_4": "D Design uniform event template",
+            "content_list_5": "E Design for responsive screens, for laptop, iPad and iPhone",
+          },
+          {
+            "type": "subheading",
+            "content": "What sites did I reference?"
+          },
+          {
+            "type": "text",
+            "content": "In general, I looked at websites that also allow for search for events, such as TripAdvisor. I also looked at websites that had a lot of categories of things and learned from how they organised filters around that."
+          }
+        ],
+        "section3": [
+          {
+            "type": "section-text",
+            "content": "Process",
+          },
+          {
+            "type": "image-text-v-container",
+            "content_stack_1": "I did a speed sketch  to get some rough ideas on a page.",
+            "content_stack_2": "Based on the quick sketch exercises, one design/layout emerged. It contains a logo bar, a filter bar with categories, and a section for event cards to be displayed.",
+            "image_stack_v_1": "sf_speedy1",
+            "image_stack_v_2": "sf_speedy2",
+            "descript_image_stack_v": "Pen and paper sketches",
+          },
+          {
+            "type": "image-stack-v-container",
+            "image_stack_v_1": "sf_maclow",
+            "image_stack_v_2": "sf_ipadlow",
+            "image_stack_v_3": "sf_phonelow",
+            "num_images": 3,
+            "descript_image_stack_v": "Lo-fi prototype",
+          }
+        ],  
+        "section4": [
+          {
+              "type": "section-text",
+              "content": "Solution",
+          },
+          {
+            "type": "subheading",
+            "content": "What colour palette should I choose?"
+          },
+          {
+            "type": "text",
+            "content": "For the style guide, I chose minimal colours as otherwise it was too distracting, and I decided to use yellow and dark navy blue to indicate time of day in the timeline design."
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "sf_styleguide",
+            "num_images": 1,
+            "descript_image_stack_h": "Styleguide",
+          },
+          {
+            "type": "image-text-v-container",
+            "content_stack_1": "Reduce visual clutter and repetition with a side bar for main headings and separate out newsletter and city guide to its own page",
+            "content_stack_2": "Implement filter functionality for better search experience",
+            "image_stack_v_1": "sf_phonehigh2",
+            "image_stack_v_2": "sf_ipadhigh2",
+            "image_stack_v_3": "sf_machigh2",
+            "descript_image_stack_v": "Final Designs",
+          },
+        ],
     },
     {
         "id": 4,
         "path": "drivealive",
         "image": "drivealive",
         "title": "DRIVEALIVE",
-        "duration": "a 3 weeks project", 
-        "time": "April 2024",
-        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "role": "UIUX Design",
-        "tools": "Figma, Loom",
+        "duration": "a 3 week project", 
+        "time": "May 2024",
+        "team": " Ivery Chen, Dave Song, Hadley Dalton, Healey Koch",
+        "role": "UIUX Design, Frontend Engineering",
+        "tools": "Figma, Python, Javascript",
         "eventName": "DriveAlive",
         "description": "A Computer Vision project that detects driver drowsiness.",
-        "categories": [ "Frontend", "Prototyping", "UIUX Design", "Figma", "Computer Vision", "Python"]
+        "categories": [ "Frontend", "Prototyping", "UIUX Design", "Figma", "Computer Vision", "Python"],
+        "section1": [
+          {
+              "type": "section-text",
+              "content": "Context",
+          },
+          {
+            "type": "subheading",
+            "content": "How to design an interface that detects drowsy driving?"
+          },
+          {
+            "type": "list",
+            "content_list_1": "Drowsy driving ranks among the top causes of traffic accidents, significantly affecting road safety. Providing early warnings to sleepy drivers could prevent numerous accidents on the roads. ",
+            "content_list_2": "According to data collected by the U.S. Department of Transportation over the past decade, car accidents, including both injuries and fatalities, are increasing. It is imperative that we use our abilities as software engineers to promote safer driving. ",
+            "content_list_3": "For our purpose, we want to create a site that allows one to upload/stream a video and it suggests whether someone is drowsy driving or not. "
+          }
+        ],
+        "section2": [
+          {
+              "type": "section-text",
+              "content": "Research",
+          },
+          {
+            "type": "subheading",
+            "content": "How do we determine what makes someone ‘drowsy’?"
+          },
+          {
+            "type": "text",
+            "content": "We determine how many drowsy blinks one exhibits in a short, seconds-long clip. First, the system identifies the face area in every frame of the video within each second. Then, it pinpoints the eye area using a facial landmarks detector. Next, it calculates and analyzes the eye aspect ratio for each frame. Afterward, three types of classifiers—linear SVM and sequential neural network—are used to enhance accuracy. The data is then classified to determine whether the driver's eyes are open or closed. The system detects closed eyes for a set period within each second, tallying the amount of drowsy blinks persisting within or throughout the seconds. The amount of drowsy blinks per minute is then quantified. More than even one drowsy blink should urge you to reconsider driving."
+          }
+        ],
     },
     {
         "id": 5,

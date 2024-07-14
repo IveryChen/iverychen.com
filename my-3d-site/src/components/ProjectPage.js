@@ -57,17 +57,11 @@ const ProjectPage = () => {
                   case 'list':
                     return (
                       <div>
-                      <div key={sectionIndex} className="fine-text">
-                        {section.content_list_1}
-                      </div>
-                      <br></br>
-                      <div key={sectionIndex} className="fine-text">
-                        {section.content_list_2}
-                      </div>
-                      <br></br>
-                      <div key={sectionIndex} className="fine-text">
-                        {section.content_list_3}
-                      </div>
+                        {Object.keys(section).filter(key => key.startsWith('content_list_')).map((content, idx) => (
+                          <div key={idx} className="fine-text" >
+                            {section[content]}
+                          </div>
+                        ))}
                       </div>
                     );
                   case 'image':
@@ -159,8 +153,9 @@ const ProjectPage = () => {
                                   style={{ maxWidth: `calc(100% / ${section.num_images})` }}
                                 />
                               ))}
-                              <div className="small-text">{section.descript_image_stack_v_}</div>
+                              <div className="small-text">{section.descript_image_stack_v_}</div>    
                             </div>
+                            
                           </div>
                     );
                     case 'image-stack-h-container':
@@ -178,6 +173,23 @@ const ProjectPage = () => {
                               ))}
                             </div>
                         <div className="small-text">{section.descript_image_stack_h}</div>
+                    </div>
+                      );
+                    case 'image-stack-v-container':
+                      return(
+                      <div className="section-container">
+                          <div className="flex-image-container-v">
+                              {Object.keys(section).filter(key => key.startsWith('image_stack_v_')).map((imgKey, idx) => (
+                                <img
+                                  key={idx}
+                                  src={images[section[imgKey]]}
+                                  alt={section[imgKey]}
+                                  className="normal-image"
+                                  style={{ maxHeight: `calc(100% / ${section.num_images})` }}
+                                />
+                              ))}
+                            </div>
+                        <div className="small-text">{section.descript_image_stack_v}</div>
                     </div>
                       );
                     
