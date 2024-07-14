@@ -150,8 +150,15 @@ const ProjectPage = () => {
                               <div className="small-text">{section.content_stack_2}</div>
                             </div>
                             <div className="flex-image-container-v">
-                              <img src={images[section.image_stack_v_1]} alt={section.image_stack_v_1} className="normal-image" />
-                              <img src={images[section.image_stack_v_2]} alt={section.image_stack_v_2} className="normal-image" />
+                              {Object.keys(section).filter(key => key.startsWith('image_stack_v_')).map((imgKey, idx) => (
+                                <img
+                                  key={idx}
+                                  src={images[section[imgKey]]}
+                                  alt={section[imgKey]}
+                                  className="normal-image"
+                                  style={{ maxWidth: `calc(100% / ${section.num_images})` }}
+                                />
+                              ))}
                               <div className="small-text">{section.descript_image_stack_v_}</div>
                             </div>
                           </div>

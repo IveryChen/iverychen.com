@@ -20,7 +20,7 @@ const NavBar = () => {
         <img className="menu-icon" src="/assets/menu_icon.png" alt="Menu" />
       </label>
       <nav className="dropdown" id="dropdown">
-       <Link to="/#selected-work" className="menu-item" onClick={() => scrollToDiv('selected-work')}>work</Link>
+        <Link to="/#selected-work" className="menu-item" onClick={() => scrollToDiv('selected-work')}>work</Link>
         <Link to="/about" className="menu-item">about</Link>
         <a href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing" className="menu-item" target="_blank" rel="noopener noreferrer">resume</a>
       </nav>

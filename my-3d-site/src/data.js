@@ -131,7 +131,6 @@ const jsonData = [
               "num_images": 2,
               "descript_image_stack_h": "Map-based design",
             },
-
         ]
     },
     {
@@ -139,14 +138,85 @@ const jsonData = [
         "path": "foam",
         "image": "foam",
         "title": "FOAM",
-        "duration": "a 3 weeks project", 
+        "duration": "a 24 hr sprint project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen",
+        "role": "UIUX Design, Frontend Engineering",
+        "tools": "Figma, React, HTML, Javascript, CSS",
         "eventName": "Foam Web App",
         "description": "Designed the Pinterest for local artists discovery.",
-        "categories": ["Frontend", "Prototyping", "UIUX Design", "Figma", "React", "Javascript", "HTML", "CSS"]
+        "categories": ["Frontend", "Prototyping", "UIUX Design", "Figma", "React", "Javascript", "HTML", "CSS"],
+        "section1": [
+          {
+              "type": "section-text",
+              "content": "Context",
+          },
+          {
+            "type": "subheading",
+            "content": "How do you design a site for local-artist gig discovery?"
+          },
+          {
+            "type": "text",
+            "content": "FOAM is a Pinterest-like portfolio site for art students, a local-artist discovery site for clients to keep track of their favourite local artists. As a RISD student, I constantly get asked, “Do you know a Graphic designer for a concert campaign?” The interface is similar to Pinterest, but it differs in that you can get in touch with real artists behind the work. The site would allow for filtering, aggregating and sorting. "
+          }
+        ],
+        "section2": [
+          {
+              "type": "section-text",
+              "content": "Research",
+          },
+          {
+            "type": "subheading",
+            "content": "What are some of the things I like from other sites that have these functionality?"
+          },
+          {
+            "type": "text",
+            "content": "FOAM is a Pinterest-like portfolio site for art students, a local-artist discovery site for clients to keep track of their favourite local artists. As a RISD student, I constantly get asked, “Do you know a Graphic designer for a concert campaign?” The interface is similar to Pinterest, but it differs in that you can get in touch with real artists behind the work. The site would allow for filtering, aggregating and sorting. "
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "foam_compare",
+            "num_images": 1,
+            "descript_image_stack_h": "Comparison Table between features",
+          }
+        ],
+        "section3": [
+          {
+            "type": "section-text",
+            "content": "Process",
+          },
+          {
+            "type": "image-text-v-container",
+            "content_stack_1": "Next, I created mockups for the Landing and Favourites page in Figma to help with the design process.",
+            "image_stack_v_1": "foam_figma_favourites",
+            "image_stack_v_2": "foam_figma_landing",
+            "descript_image_stack_v": "Figma prototype",
+          },
+        ],
+        "section4": [
+          {
+              "type": "section-text",
+              "content": "Solution",
+          },
+          {
+            "type": "text",
+            "content": "I implemented all the target filter, aggregation and sort functions. All filters appear as drop down menus. I also created a 'select all' checkbox for most menus for easy selection of multiple categories. "
+          },
+          {
+            "type": "text",
+            "content": "As an additional fun thing, I created a notification popup animation when a liked item is added. It also indicates which image you liked! "
+          },
+          {
+            "type": "text",
+            "content": "One surprising challenge is displaying image as landscape or horizontal, and making sure all empty gaps are filled in. To do this, I used column-gap instead of flexbox."
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "foam_landing",
+            "num_images": 1,
+            "descript_image_stack_h": "Final implemented website",
+          }
+        ],
     },
     {
         "id": 3,
@@ -155,9 +225,9 @@ const jsonData = [
         "title": "FUNCHEAPSF",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "FunCheapSF Redesign",
         "description": "Redesigning funcheapsf.com.",
         "categories": [ "Frontend", "Prototyping", "UIUX Design", "Figma", "Javascript", "HTML", "CSS"]
@@ -169,9 +239,9 @@ const jsonData = [
         "title": "DRIVEALIVE",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "DriveAlive",
         "description": "A Computer Vision project that detects driver drowsiness.",
         "categories": [ "Frontend", "Prototyping", "UIUX Design", "Figma", "Computer Vision", "Python"]
@@ -183,9 +253,9 @@ const jsonData = [
         "title": "BAYER",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "Bayer VR",
         "description": "An end-to-end Unity training app to each drone flyers how to operate drones.",
         "categories": [ "Unity", "AR/VR/MR", "UX Research", "Blender", "Substance Painter", "AWS", "Oculus", "C#"]
@@ -197,9 +267,9 @@ const jsonData = [
         "title": "PANDA",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "Panda",
         "description": "Kahoot-style multiplayer game.",
         "categories": [ "Frontend", "Backend", "Prototyping", "UIUX Design", "React", "Javascript", "HTML", "CSS"]
@@ -211,9 +281,9 @@ const jsonData = [
         "title": "SKIM",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "Skim",
         "description": "A Haiku-from-novel game",
         "categories": [ "Unity", "Game Design", "C#", "MQTT"]
@@ -225,9 +295,9 @@ const jsonData = [
         "title": "MAGRITTE VR",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "Magritte VR",
         "description": "If Magritte had access to VR technology, what would his paintings be like?",
         "categories": [ "Unity", "AR/VR/MR", "Blender", "C#"]
@@ -239,9 +309,9 @@ const jsonData = [
         "title": "NASA SUITS",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "NASA SUITS",
         "description": "Mixed Reality Hololens app for NASA Suits Challenge.",
         "categories": [ "Unity", "AR/VR/MR", "Blender", "Hololens", "C#"]
@@ -253,9 +323,9 @@ const jsonData = [
         "title": "THREEDEEPRO",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "Threedeepro",
         "description": "A computer vision, on-paper drawing based 3D modelling tool",
         "categories": [ "Backend", "Prototyping", "Research", "Computer Vision", "Computer Graphics", "Python", "Javascript"]
@@ -267,9 +337,9 @@ const jsonData = [
         "title": "CRYSTAL GEN",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "Procedurally generate crystals",
         "description": "A tool that generates crystals.",
         "categories": [ "Backend", "Computer Graphics", "C++", "QTCreator"]
@@ -281,9 +351,9 @@ const jsonData = [
         "title": "USD MATERIAL TOOL",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "Texture to Material.usd tool",
         "description": "A tool that takes in models and textures and auto-create usd material files.",
         "categories": [ "Backend", "Prototyping", "Computer Graphics", "USD", "Python"]
@@ -295,9 +365,9 @@ const jsonData = [
         "title": "TECH ART REEL",
         "duration": "a 3 weeks project", 
         "time": "April 2024",
-        "Team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "Role": "UIUX Design",
-        "Tools": "Figma, Loom",
+        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "role": "UIUX Design",
+        "tools": "Figma, Loom",
         "eventName": "Tech Artist Reel",
         "description": "Tech Art Reel",
         "categories": ["Blender", "Maya","Houdini", "Substance Painter", "Nuke", "Unity", "Katana", "Premiere Pro", "After Effects"]
