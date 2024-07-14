@@ -106,14 +106,16 @@ const MainPage = () => {
     <div className="main-page">
       <div className="intro">
         <div className="intro-container">
-          <img src={images.lookiveryintro} alt="lookivery in custom balloon render"></img>
+          <div className="graphic-container">
+            <img src={images.lookIvery} alt="Balloon rendering of Look Ivery"></img>
+          </div>
+          <div className="graphic-text-container">
+            <img src={images.intro} alt="Intro image"></img>
+          </div>
+          {/* <img src={images.lookiveryintro} alt="lookivery in custom balloon render"></img> */}
+          {/* <img src={images.lookiveryintro} alt="lookivery in custom balloon render"></img> */}
         </div>
-        {/* <div className="graphic-container">
-          <img src={images.lookIvery} alt="Balloon rendering of Look Ivery"></img>
-        </div>
-        <div className="intro-container">
-          <img src={images.intro} alt="Intro image"></img>
-        </div> */}
+       
       </div>
 
       <div className="filter-bar">

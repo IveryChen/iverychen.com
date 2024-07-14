@@ -375,20 +375,148 @@ const jsonData = [
             "content": "We determine how many drowsy blinks one exhibits in a short, seconds-long clip. First, the system identifies the face area in every frame of the video within each second. Then, it pinpoints the eye area using a facial landmarks detector. Next, it calculates and analyzes the eye aspect ratio for each frame. Afterward, three types of classifiers—linear SVM and sequential neural network—are used to enhance accuracy. The data is then classified to determine whether the driver's eyes are open or closed. The system detects closed eyes for a set period within each second, tallying the amount of drowsy blinks persisting within or throughout the seconds. The amount of drowsy blinks per minute is then quantified. More than even one drowsy blink should urge you to reconsider driving."
           }
         ],
+        "section3": [
+          {
+            "type": "section-text",
+            "content": "Process",
+          },
+          {
+            "type": "list",
+            "content_list_1": "1. Trained a CNN on images of open and closed eyes",
+            "content_list_2": "2. Used Haarcascades to locate the face and isolate the eyes, which were then sent to the CNN for classification",
+            "content_list_3": "3. If the eyes were closed for 15 frames (or half a second) it was counted as a “drowsy” blink "
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "drivealive_archi",
+            "num_images": 1,
+            "descript_image_stack_h": "Model Architecture",
+          }
+        ],
+        "section4": [
+          {
+              "type": "section-text",
+              "content": "Solution",
+          },
+          {
+            "type": "text",
+            "content": "We created a web page with UI to what the real product would look like."
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "drivealive_interface",
+            "num_images": 1,
+            "descript_image_stack_h": "Model Architecture",
+          }
+        ]
     },
     {
         "id": 5,
         "path": "bayer",
         "image": "bayer",
         "title": "BAYER",
-        "duration": "a 3 weeks project", 
-        "time": "April 2024",
-        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
-        "role": "UIUX Design",
-        "tools": "Figma, Loom",
+        "duration": "a 3 month internship", 
+        "time": "May 2022",
+        "team": " Ivery Chen, Joshua Robinson (Tech support), Brenda Teakert (PM), Jason Sankovitch (Manager)",
+        "role": "Unity Engineer, Technical Artist, Programmer, VR UX Design",
+        "tools": "Unity, Substance Painter, AWS, Oculus Desktop, Blender",
         "eventName": "Bayer VR",
         "description": "An end-to-end Unity training app to each drone flyers how to operate drones.",
-        "categories": [ "Unity", "AR/VR/MR", "UX Research", "Blender", "Substance Painter", "AWS", "Oculus", "C#"]
+        "categories": [ "Unity", "AR/VR/MR", "UX Research", "Blender", "Substance Painter", "AWS", "Oculus", "C#"],
+        "section1": [
+          {
+              "type": "section-text",
+              "content": "Context",
+          },
+          {
+            "type": "subheading",
+            "content": "How do you design a VR educational app to train drone flyers how to assemble drones? "
+          },
+          {
+            "type": "text",
+            "content": "Bayer’s Crop Design division put in a request - many UAV flyers felt like they needed a tool to help them train new flyers that would reduce time spent for trainers travelling to and fro. They wanted a VR training app that can take care of a large part of the training. When I was onboarded, the app was merely an idea. My role was to implement from start to finish an entire VR app. The project aims to design a cost-effective, flexible and sustainable module for UAV flyers."
+          }
+        ],
+        "section2": [
+          {
+              "type": "section-text",
+              "content": "Research",
+          },
+          {
+            "type": "subheading",
+            "content" : "What do the customers really need?",
+          },
+          {
+            "type": "text",
+            "content": "To decide what goes into the module, I conducted research with the UAV flyers at Bayer. Some of the highlights are:"
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "bayer_research",
+            "num_images": 1,
+            "descript_image_stack_h": "Interview questions and results",
+          }
+        ],
+        "section3": [
+          {
+            "type": "section-text",
+            "content": "Process",
+          },
+          {
+            "type": "text",
+            "content": "Next, I retopologised the M300 model inside Blender, reduced total drone poly count from 600,000 to 20,000. I also remodelled parts so drone can be assembled, twisted, folded in VR. I brought everything into Substance Painter and created realistic materials ready to import into Unity."
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "bayer_process",
+            "num_images": 1,
+            "descript_image_stack_h": "Modelled, retopologised and shaded assets",
+          },
+          {
+            "type": "subheading",
+            "content": "How does the experience unfold?",
+          },
+          {
+            "type": "text",
+            "content": "Before I wrote any code, I brought everything into Unity. I tested out the models to see if they are ‘functional’, foldable and constructable in VR. I then created a storyboard to plan out the beat of the experience."
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "bayer_storyboard",
+            "num_images": 1,
+            "descript_image_stack_h": "Interview questions and results",
+          }
+        ],
+        "section4": [
+          {
+              "type": "section-text",
+              "content": "Solution",
+          },
+          {
+            "type": "subheading",
+            "content": "What are the challenges of UX design in VR?",
+          },
+          {
+            "type": "text",
+            "content": "The experience is controlled by a tablet. This is a continuation of design made by Tristan Lassiter, my hiring manager, on previous VR projects."
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "bayer_ux",
+            "num_images": 1,
+            "descript_image_stack_h": "UX design using colour and highlight",
+          },
+          {
+            "type": "text",
+            "content": "Since the headsets we are using do not support HandTracking 2.0, I came up with alternative ways to imitate small motions with clunky hand controllers."
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "bayer_uxchart",
+            "num_images": 1,
+            "descript_image_stack_h": "Three ways to suggest twist movement",
+          }
+        ]
     },
     {
         "id": 6,
@@ -396,8 +524,8 @@ const jsonData = [
         "image": "panda",
         "title": "PANDA",
         "duration": "a 3 weeks project", 
-        "time": "April 2024",
-        "team": "Ivery Chen, Dave Song, Sohum Sanu, Viviana Wei",
+        "time": "April 2021",
+        "team": "Ivery Chen, ",
         "role": "UIUX Design",
         "tools": "Figma, Loom",
         "eventName": "Panda",
