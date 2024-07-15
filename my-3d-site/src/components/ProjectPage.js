@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import jsonData from '../data'; 
 import images from '../imageImports'; 
 
@@ -19,6 +19,9 @@ const ProjectPage = () => {
         <div className="italics">{project.duration}, <span className="normal">{project.time}</span></div>
         <div className="image-container">
           <img src={images[project.image]} alt={project.eventName} className="title-image" />
+          <div className="image-overlay"> 
+            <a href={project.deployed} className="overlay-text" target="_blank" rel="noopener noreferrer">{project.title.toLowerCase()} <span>↗</span> </a>
+          </div>
         </div>
         <div className="extra-info-container">
             <div className="italics">Team: <span className="normal">{project.team}</span></div>
@@ -203,17 +206,6 @@ const ProjectPage = () => {
         }
         return null;
       })}
-
-      {/* <div className="image-text-container">
-        <div className="flex-text-container">
-          <div className="normal">Individually, we sketched out our own versions of user flow based on client expectations and problems.</div>
-          <div className="normal">We met with founders along each step of the way, modifying lo-fi prototypes as we go.</div>
-        </div>
-        <div className="flex-image-container">
-          <img src={images['partiful']} alt={"blah"} className="title-image" />
-          <img src={images['partiful']} alt={"blah"} className="title-image" />
-        </div>
-      </div> */}
 
     </div>
   );

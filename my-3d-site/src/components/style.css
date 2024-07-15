@@ -650,6 +650,41 @@ a {
     padding:7px;
     height:auto;
     border-radius:inherit;
+    transition: filter 0.3s ease-out;
+}
+
+.image-overlay {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.overlay-text {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+    font-weight: 800;
+    align-items: left;
+    text-align: left;
+    font-size: 28px;
+    margin:10px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+.overlay-text span {
+    font-size: 20px;
+  }
+
+.image-container:hover .title-image {
+    filter: blur(5px); 
+}
+  
+.image-container:hover .image-overlay {
+    opacity: 1; 
 }
 
 .normal-image{
