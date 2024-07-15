@@ -1,6 +1,8 @@
 const images = {
     lookIvery: require('./assets/lookivery_render12_256.png'),
     lookiveryintro: require('./assets/lookiveryintro.png'),
+    lookivery2: require('./assets/lookivery2.png'),
+    ivery: require('./assets/ivery.png'),
     intro: require('./assets/intro.png'),
     menu_icon:  require('./assets/menu_icon.png'),
     partiful: require('./assets/partiful_mu.png'),

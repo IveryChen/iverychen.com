@@ -14,7 +14,7 @@ const MainPage = () => {
             <img src={images.lookIvery} alt="Balloon rendering of Look Ivery"></img>
           </div>
           <div className="graphic-text-container">
-            <img src={images.intro} alt="Intro image"></img>
+            <img src={images.lookivery2} alt="Intro image"></img>
           </div>
         </div>
        
