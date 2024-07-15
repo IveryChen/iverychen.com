@@ -187,8 +187,9 @@ a {
     flex-direction: column;
     overflow:hidden;
     border-radius:20px;
-    max-width: max(30%, 400px);
-    max-height: max(30%, 400px);
+    max-width: 350px;
+    min-width: 400px;
+    max-height: 500px;
     object-fit: contain;
 }
 
@@ -197,8 +198,9 @@ a {
 }
 
 .about-description-image img{
-    max-width: max(30%, 400px);
+    max-width: max(30%, 350px);
     max-height: max(30%, 400px);
+    border-radius: 20px;
 }
 
 .about-subsection{
