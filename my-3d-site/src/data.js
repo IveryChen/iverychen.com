@@ -188,8 +188,8 @@ const jsonData = [
           {
             "type": "image-text-v-container",
             "content_stack_1": "Next, I created mockups for the Landing and Favourites page in Figma to help with the design process.",
-            "image_stack_v_1": "foam_figma_favourites",
-            "image_stack_v_2": "foam_figma_landing",
+            "image_stack_v_1": "foam_figma_favourite",
+            "image_stack_v_2": "foam_figma_landing_page",
             "descript_image_stack_v": "Figma prototype",
           },
         ],
