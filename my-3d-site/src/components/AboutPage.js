@@ -8,7 +8,7 @@ function AboutPage() {
         <section className="about-section">
           <div className="about-description">
             <div className="about-description-image">
-              <img src={images.ivery} alt="Description" />
+              <img src={images["ivery"]} alt="Ivery's profile pic" />
             </div>
             <div className="about-description-text">
               <h2 className="heading">LOOK</h2>
