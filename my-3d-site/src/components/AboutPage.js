@@ -48,6 +48,15 @@ function AboutPage() {
             </div>
           </div>
         </section>
+
+        <section className="about-section">
+          <div className="title-image-container">
+            <img src={images["smiley_balloon"]} alt={"smiley balloon"} className="title-image" />
+          </div>
+        </section>
+
+
+
       </div>
     );
   }

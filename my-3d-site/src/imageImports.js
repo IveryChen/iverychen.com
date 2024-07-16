@@ -49,7 +49,7 @@ const images = {
     sf_speedy1:require('./assets/sf_speedy1.png'),
     sf_speedy2:require('./assets/sf_speedy2.png'),
     sf_styleguide:require('./assets/sf_styleguide.png'),
-    smiley:require('./assets/smiley.png'),
+    smiley_balloon:require('./assets/smiley_balloon.png'),
     drivealive: require('./assets/drivealive-mu.png'),
     drivealive_archi: require('./assets/drivealive_archi.png'),
     drivealive_interface: require('./assets/drivealive_interface.png'),
