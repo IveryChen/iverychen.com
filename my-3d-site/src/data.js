@@ -115,7 +115,7 @@ const jsonData = [
               "descript_image_stack_h": "Basic design",
             },
             {
-              "type": "image-text-h-container-right",
+              "type": "image-text-h-container-left",
               "content_stack_1": "The app doesn’t have a ‘viral factor’ that incentivises users to open and browse through the app",
               "content_stack_2": "To make Partiful feel more like a social media platform, we created a feed version that aims to encourage users to shift their focus from events alone to the attendees",
               "image_stack_h_1": "partiful_notif_past",

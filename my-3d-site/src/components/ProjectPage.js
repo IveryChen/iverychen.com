@@ -17,7 +17,7 @@ const ProjectPage = () => {
       <div className="title-card">
         <h1 className="heading">{project.title}</h1>
         <div className="italics">{project.duration}, <span className="normal">{project.time}</span></div>
-        <div className="image-container">
+        <div className="title-image-container">
           <img src={images[project.image]} alt={project.eventName} className="title-image" />
           <div className="image-overlay"> 
             <a href={project.deployed} className="overlay-text" target="_blank" rel="noopener noreferrer">{project.title.toLowerCase()} <span>↗</span> </a>
@@ -42,7 +42,7 @@ const ProjectPage = () => {
                   case 'section-text':
                     return (
                       <h2 key={sectionIndex} className="section-text">
-                        <span className="italics">0{sectionIndex}&nbsp;</span>{section.content}
+                        <span className="italics-section-text">0{sectionIndex}&nbsp;</span>{section.content}
                       </h2>
                     );
                   case 'subheading':
