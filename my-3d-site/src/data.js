@@ -657,8 +657,8 @@ const jsonData = [
         "categories": [ "Unity", "AR/VR/MR", "Blender", "C#"],
         "section1": [
           {
-              "type": "section-text",
-              "content": "Context",
+            "type": "section-text",
+            "content": "Context",
           },
           {
             "type": "subheading",

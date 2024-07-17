@@ -7,8 +7,8 @@ const VimeoVideoComponent = ({ section }) => {
     <div>
       <iframe
         src={`https://player.vimeo.com/video/${videos[section.content]}`}
-        width="560"
-        height="315"
+        // width="560"
+        // height="315"
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture"
         allowFullScreen

@@ -75,7 +75,7 @@ a {
 .menu-icon{
     width:30px;
     height:30px;
-    padding:20px;
+    padding:5px;
     position: relative;
     filter: sepia(0.99) hue-rotate(-10deg) saturate(1.2);
 }
@@ -698,7 +698,7 @@ a {
     height:40%;
     width:100%;
     max-width:1000px;
-    min-width:550px;
+    min-width:420px;
     overflow:hidden;
     border-radius:20px;
 }
@@ -712,7 +712,7 @@ a {
     flex-direction: column;
     height:40%;
     width:100%;
-    min-width:400px;
+    min-width:300px;
     overflow:hidden;
     border-radius:20px;
 }
@@ -780,7 +780,8 @@ a {
     align-items: center;
     flex-direction: row;
     height:auto;
-    width:auto;
+    width:100%;
+    max-width:250px;
     border-radius:5px;
 }
 
@@ -867,7 +868,7 @@ a {
     margin-top:4px;
     display:flex;
     max-width:900px;
-    min-width:60%;
+    min-width:300px;
     justify-content: flex-start;
     align-items: left;
 }
@@ -910,6 +911,7 @@ a {
 }
 
 .fine-text{
+    max-width:100%;
     color: #656565;
     font-style: normal;
     font-weight: 400;
@@ -1106,11 +1108,11 @@ a {
     }
     .flex-image-container-v{
         margin:0px;
-        width:110%;
+        width:90%;
     }
     .flex-image-container-h{
         margin:0px;
-        width:100%;
+        width:90%;
     }
     .flex-image-container-h img{
         padding:3px;
@@ -1129,20 +1131,34 @@ a {
     }
     .fine-text{
         font-size:14px;
+        margin-left:20px;
+        margin-right:20px;
+
     }
     .section{
-        padding-left: 30px;
+        /* padding-left: 30px;
         padding-right: 30px;
         margin-left: 30px;
-        margin-right:30px;
+        margin-right: 30px; */
+        max-width:360px;
     }
     .subheading{
         font-size:24px;
+        margin-left:20px;
     }
     .small-text{
         font-size: 80%;
     }
-    .video-container{
-        max-width:400px;
+    .video-container iframe{
+        max-width:500px;
+    }
+    .contact-items a{
+        font-size: 80%;
+    }
+    .contact {
+        font-size: 80%;
+    }
+    .bottom-bar{
+        margin-right:30px;
     }
   }
