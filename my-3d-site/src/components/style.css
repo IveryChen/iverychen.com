@@ -741,7 +741,7 @@ a {
     display:flex;
     margin:20px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-direction: row;
     height:auto;
     min-width: 200px;
@@ -759,6 +759,12 @@ a {
     width:max(40%, 250px);
     margin-top:10%;
     /* overflow:hidden; */
+}
+
+.flex-image-caption-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .flex-image-container-v{
@@ -783,6 +789,7 @@ a {
     width:100%;
     max-width:250px;
     border-radius:5px;
+    padding:20px;
 }
 
 .flex-image-container-h img{
@@ -1094,7 +1101,7 @@ a {
 
 @media (max-width: 768px) {
     .image-text-container {
-      flex-direction: column; 
+      flex-direction: column;
       margin:0px;
     }
     .image-container{

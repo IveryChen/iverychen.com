@@ -104,7 +104,7 @@ const ProjectPage = () => {
                                 </div>
                               </div>
 
-                              <div>
+                              <div className="flex-image-caption-container">
                                 <div className="flex-image-container-h">
                                   {Object.keys(section).filter(key => key.startsWith('image_stack_h_')).map((imgKey, idx) => (
                                     <img
