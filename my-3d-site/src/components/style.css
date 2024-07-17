@@ -787,7 +787,7 @@ a {
     flex-direction: row;
     height:auto;
     width:100%;
-    max-width:250px;
+    /* max-width:250px; */
     border-radius:5px;
     padding:20px;
 }
