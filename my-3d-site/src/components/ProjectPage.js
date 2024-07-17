@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import { useParams, Link } from 'react-router-dom';
 import jsonData from '../data'; 
 import images from '../imageImports'; 
@@ -8,12 +8,55 @@ import VimeoVideoComponent from './VimeoVideoComponent';
 const ProjectPage = () => {
   const { projectName } = useParams(); // Get the dynamic part of the URL
   const project = jsonData.find((item) => item.path === projectName); 
+  
+  const [isVisible, setIsVisible] = useState({
+    section1: false,
+    section2: false,
+    section3: false,
+    section4: false
+});
+
+const section1Ref = useRef(null);
+const section2Ref = useRef(null);
+const section3Ref = useRef(null);
+const section4Ref = useRef(null);
+
+useEffect(() => {
+    const handleScroll = () => {
+        checkVisibility(section1Ref, 'section1');
+        checkVisibility(section2Ref, 'section2');
+        checkVisibility(section3Ref, 'section3');
+        checkVisibility(section4Ref, 'section4');
+    };
+
+    const checkVisibility = (ref, sectionName) => {
+        if (ref.current) {
+            const scrollTop = window.scrollY;
+            const offsetTop = ref.current.offsetTop;
+            const windowHeight = window.innerHeight;
+
+            if (scrollTop > offsetTop - windowHeight / 2) {
+                setIsVisible(prevState => ({
+                    ...prevState,
+                    [sectionName]: true
+                }));
+            }
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+  },[]);
 
   if (!project) {
     return <div>Project not found</div>;
   }
 
-  console.log(project);
+  // console.log(project);
+
   return (
     <div className="project-page">
       <div className="title-card">
@@ -38,7 +81,19 @@ const ProjectPage = () => {
           sectionIndex = key.slice(-1);
           
           return (
-            <div key={sectionIndex} className="section">
+            <div 
+              key={sectionIndex} 
+              className={`section ${isVisible[`section${sectionIndex}`] ? 'is-visible' : ''}`}
+              ref={
+                sectionIndex === '1'
+                  ? section1Ref
+                  : sectionIndex === '2'
+                  ? section2Ref
+                  : sectionIndex === '3'
+                  ? section3Ref
+                  : section4Ref
+              }
+            >
               {project[key].map((section) => {
                 switch (section.type) {
                   case 'section-text':
