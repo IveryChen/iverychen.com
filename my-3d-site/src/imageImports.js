@@ -89,6 +89,13 @@ const images = {
     usd_output4: require('./assets/usd_output4.png'),
     usd_output5: require('./assets/usd_output5.png'),
     reel: require('./assets/reel.jpg'),
+    ascension: require('./assets/ascension.gif'),
+    ascension_demo1: require('./assets/ascension_demo1.png'),
+    ascension_asset1: require('./assets/ascension_asset1.png'),
+    ascension_asset2: require('./assets/ascension_asset2.png'),
+    ascension_asset3: require('./assets/ascension_asset3.png'),
+    ascension_moodboard1: require('./assets/ascension_moodboard1.png'),
+    ascension_moodboard2: require('./assets/ascension_moodboard2.png'),
   };
 
   

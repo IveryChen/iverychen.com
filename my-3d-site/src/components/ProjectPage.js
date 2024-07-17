@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import jsonData from '../data'; 
 import images from '../imageImports'; 
-import videos from '../videoImports'; 
-
+import YouTubeVideoComponent from './YouTubeVideoComponent';
+import VimeoVideoComponent from './VimeoVideoComponent';
 
 const ProjectPage = () => {
   const { projectName } = useParams(); // Get the dynamic part of the URL
@@ -60,12 +60,16 @@ const ProjectPage = () => {
                       </div>
                   );
                   case 'video':
+                    const isYouTube = section.source === 'youtube';
                     return(
-                      <div>
-                        <video width="640" height="360" controls>
-                          <source src={videos[section.content]} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
+                      <div className="video-container">
+                         <div>
+                          {isYouTube ? (
+                            <YouTubeVideoComponent section={section} />
+                          ) : (
+                            <VimeoVideoComponent section={section} />
+                          )}
+                        </div>
                       </div>
                   );
                   case 'list':

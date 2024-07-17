@@ -592,7 +592,8 @@ const jsonData = [
           },
           {
             "type": "video",
-            "content": "panda_video"
+            "content": "panda_video",
+            "source": "vimeo"
           }
         ]
     },
@@ -635,6 +636,7 @@ const jsonData = [
           {
             "type": "video",
             "content": "skim_video",
+            "source": "youtube"
           }
         ],
 
@@ -750,6 +752,11 @@ const jsonData = [
             "image_stack_h_1": "magritte_shader",
             "num_images": 1,
             "descript_image_stack_h": "Shaders we created with scripts",
+          },
+          {
+            "type": "video",
+            "source": "vimeo",
+            "content": "magritte_video"
           },
           {
             "type": "subheading",
@@ -981,8 +988,9 @@ const jsonData = [
               "content": "Context",
           },
           {
-            "type": "video",
-            "content": "crystal_video",
+              "type": "video",
+              "content": "crystal_video",
+              "source": "youtube"
           }
         ]
     },
@@ -1104,6 +1112,86 @@ const jsonData = [
         "description": "Tech Art Reel",
         "categories": ["Blender", "Maya","Houdini", "Substance Painter", "Nuke", "Unity", "Katana", "Premiere Pro", "After Effects"]
     },
+    {
+      "id": 13,
+      "path": "ascension",
+      "image": "ascension",
+      "title": "Ascension",
+      "deployed": "https://brownrisdgames.itch.io/ascension",
+      "duration": "a 4 month project", 
+      "time": "Jan 2022",
+      "team": "Ivery Chen (3D Environment Artist), Nicole Strubinski (Producer, 3D Artist), Evan Samuel Mickelson (Programmer, Level Designer, and Producer), Ayman Benjelloun Touimi (Programmer), Seong-Heon Jung (Programmer), Dexter McChesney (Level and Gameplay Designer), Healey Koch (3D Animator and Artist), Catherine Hackl (3D Character Artist), Zhiying Shi (3D Asset Artist), Melody Yu (UI/UX Designer, 3D Environmental Design), Ashley Chung (UI/UX Designer), Zackary Entwistle (Sound Designer), Christine Baek (Sound Designer), David Jung (Sound Designer)",
+      "role": "3D Environment Artist",
+      "tools": "Blender, Unity",
+      "eventName": "Ascension",
+      "description": "A first person shooting game in zero gravity",
+      "categories": ["Blender", "Unity"],
+      "section1":[
+        {
+          "type":"section-text",
+          "content":"Context"
+        },
+        {
+          "type":"text",
+          "content":"Play as a cute space explorer in a zero-gravity space station! Use your ray gun to ascend through the twists and turns and knock evil aliens out of your way!          "
+        },
+
+        
+        {
+          "type": "text",
+          "content":"I created versatile assets, including 6 different tiles to be used to set dress out first person shooting game scene. I also created other assets such as tables and assembled one out of the three scenes using Unity."
+        }
+      ],
+      "section2": [
+        {
+          "type":"section-text",
+          "content":"Research"
+        },
+        {
+          "type":"text",
+          "content":"Below are Miro board inspirations we've gathered as a team as we design the game together."
+        },
+        {
+          "type": "image-stack-v-container",
+          "image_stack_v_1": "ascension_moodboard1",
+          "image_stack_v_2": "ascension_moodboard2",
+          "num_images": 2,
+          "descript_image_stack_v": "Miro Board Concepts",
+        }
+      ],
+      "section3": [
+        {
+          "type":"section-text",
+          "content":"Process"
+        },
+        {
+          "type": "image-stack-h-container",
+          "image_stack_h_1": "ascension_asset1",
+          "image_stack_h_2": "ascension_asset2",
+          "image_stack_h_3": "ascension_asset3",
+          "num_images": 3,
+          "descript_image_stack_h": "Modular assets in progess",
+        },
+        {
+          "type": "image-stack-h-container",
+          "image_stack_h_1": "ascension_demo1",
+          "num_images": 1,
+          "descript_image_stack_h": "Ascension gameplay to show assembled environment",
+        }
+      ],
+      "section4": [
+        {
+          "type":"section-text",
+          "content":"Solution"
+        },
+        {
+          "type":"video",
+          "source": "youtube",
+          "content":"ascension_video"
+        }
+
+      ]
+  },
 
 ];
 

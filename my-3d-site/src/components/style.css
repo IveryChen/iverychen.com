@@ -678,7 +678,6 @@ a {
     text-align: center;
 }
 
-
 .extra-info-container{
     padding:20px;
     display:flex;
@@ -716,6 +715,19 @@ a {
     min-width:400px;
     overflow:hidden;
     border-radius:20px;
+}
+
+.video-container{
+    display:flex;
+    /* margin-top:10px; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:auto;
+    width:auto;
+    min-width:400px;
+    overflow:hidden;
+    border-radius:5px;
 }
 
 .section-container{
