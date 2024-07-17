@@ -13,7 +13,7 @@ function AboutPage() {
             <div className="about-description-text">
               <h2 className="heading">LOOK</h2>
               <br></br>
-              <p className="italics-thin">Ivery is a fullstack software engineer, tech artist, 3D animator, and ARVR/Graphics Unity Developer. She loves anything 3D and Interactive. Outside of that, she likes to do fashion photography and watch movies, work out and eat Chinese food.</p>
+              <p className="italics-thin">Ivery is a fullstack software engineer, tech artist, 3D animator, and ARVR/Graphics Unity Developer. She loves creative tools, ARVR, and anything 3D + Interactive. Outside of that, she likes to do fashion photography and watch movies, work out and eat Chinese food.</p>
             </div>
           </div>
         </section>

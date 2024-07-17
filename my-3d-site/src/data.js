@@ -47,9 +47,9 @@ const jsonData = [
             },
             {
               "type": "list",
-              "content_list_1": "A More users navigating to past events",
-              "content_list_2": "B More activity (comments, comment replies, photos) on past events",
-              "content_list_3": "C Users connecting with one another from past events"
+              "content_list_1": "More users navigating to past events",
+              "content_list_2": "More activity (comments, comment replies, photos) on past events",
+              "content_list_3": "Users connecting with one another from past events"
             },
             {
               "type": "subheading",
@@ -117,7 +117,7 @@ const jsonData = [
             {
               "type": "image-text-h-container-left",
               "content_stack_1": "The app doesn’t have a ‘viral factor’ that incentivises users to open and browse through the app",
-              "content_stack_2": "To make Partiful feel more like a social media platform, we created a feed version that aims to encourage users to shift their focus from events alone to the attendees",
+              "content_stack_2": "To make Partiful feel more like a social media platform, we created a feed version that aims to encourage users to shift their focus from events alone to the attendees.",
               "image_stack_h_1": "partiful_notif_past",
               "image_stack_h_2": "partiful_notif_expanded_past",
               "num_images": 2,
@@ -126,7 +126,7 @@ const jsonData = [
             {
               "type": "image-text-h-container-left",
               "content_stack_1": "Interviewees reflect that the app has to offer more than event management. There has to be something more motivating for users to download the app",
-              "content_stack_2": "To add to the fun brand image of Partiful, a map similar to Snapchat’s Snap-map is shown here. One can see past events and where they are located geographically. Animation can indicate whether a party is happening soon, and eventually a heat-map can be used to help hosts and users alike visualise trend and event patterns. This solution was the founders’ favourite as it makes Partiful more powerful of a party management platform that offers data analytics",
+              "content_stack_2": "To add to the fun brand image of Partiful, a map similar to Snapchat’s Snap-map is shown here. One can see past events and where they are located geographically. Animation can indicate whether a party is happening soon, and eventually a heat-map can be used to help hosts and users alike visualise trend and event patterns. This solution was the founders’ favourite as it makes Partiful more powerful of a party management platform that offers data analytics.",
               "image_stack_h_1": "partiful_map_design",
               "image_stack_h_2": "partiful_map_design_past",
               "num_images": 2,
@@ -268,11 +268,11 @@ const jsonData = [
           },
           {
             "type": "list",
-            "content_list_1": "A Reduce visual clutter and repetition",
-            "content_list_2": "B Implement filter functionality for better search experience",
-            "content_list_3": "C Reorganise object hierarchy",
-            "content_list_4": "D Design uniform event template",
-            "content_list_5": "E Design for responsive screens, for laptop, iPad and iPhone",
+            "content_list_1": "Reduce visual clutter and repetition",
+            "content_list_2": "Implement filter functionality for better search experience",
+            "content_list_3": "Reorganise object hierarchy",
+            "content_list_4": "Design uniform event template",
+            "content_list_5": "Design for responsive screens, for laptop, iPad and iPhone",
           },
           {
             "type": "subheading",

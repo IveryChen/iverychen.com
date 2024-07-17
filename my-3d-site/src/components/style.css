@@ -1,7 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Proxima Nova', sans-serif; 
+    /* font-family: 'Proxima Nova', sans-serif;  */
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     color:#ffffff ;
     background-color: #EFEFEC;
     overflow-x: hidden; 
