@@ -926,7 +926,6 @@ const jsonData = [
             "type": "text",
             "content": "There aren't always existing solutions out there, sometimes it takes a very long time to do research, to try out methods, but the trial and error is always worth it and is part of learning!"
           },
-          
         ]
     },
     {
@@ -1021,6 +1020,72 @@ const jsonData = [
           {
             "type": "text",
             "content": "Developed Holofilter in Javascript, a web interaction system that uses screen gyroscopes to enhance user engagement with a mixture of 2D SVGs and 3D assets integrating Three.js."
+          }
+        ],
+        "section2": [
+          {
+            "type": "section-text",
+            "content": "Research",
+          },
+          {
+          "type": "subheading",
+          "content": "Learning USD system",
+          },
+          {
+            "type": "text",
+            "content": "The biggest challenge for me is that I haven't previously worked with USD files before. After failing to install OpenUSD, I decided to swtich to Houdini Karma which has a tool similar to OpenUSD. Using that I was able to debug my code. I also looked into USD documentation to learn how to bind materials."
+          }
+          ],
+        "section3": [
+          {
+            "type": "section-text",
+            "content": "Process",
+          },
+          {
+            "type": "subheading",
+            "content": "The Approach"
+          },
+          {
+            "type": "list",
+            "content_list_1": "The code creates a copy of the input usd file, creates a material from the texture files and bind the material to the output mesh in the usd. For this project, I chose to output a .usd file. ",
+            "content_list_2": "I created a class called `Material`, a class called `Mesh`, and a dictionary called `meshes` that has key value pairs of name -> Mesh.",
+            "content_list_3": "The script accounts for missing textures and meshes by reporting it in the terminal.",
+            "content_list_4": "The main call to `create_materials()` is at the bottom of the file. `create_materials()` goes through every file in the input directory, `extract_info` to properly extract the file_name and file_types of the files, populates the `meshes` dictionary, and goes through all items in `meshes` to `create_use_material()`. It also makes a call to `output_dependency_graph()`, which prints out the dependency graph in the terminal with error messages for missing textures or meshes.",
+            "content_list_5": "Inside `create_usd_material()`, `copy_usd_file()` is called to make a duplicate of the input usd file, create Shaders and bind to the output usd file that is located in ./Assets/materials.",
+            "content_list_6": "`check_materials()` can be called to check if a material is correctly bounded to a mesh."
+          }
+        ],
+        "section4": [
+          {
+            "type": "section-text",
+            "content": "Solution",
+          },
+          {
+            "type": "subheading",
+            "content": "What were some of the assumptions?"
+          },
+          {
+            "type": "text",
+            "content": "Inside `create_usd_material`, assumption is made that for the MetallicRoughnessTexture, two separate inputs of `metallic` and `roughness` are created. I dug around online to find some information about which channel they each are and decided to gow ith `b` and `g` for metallic and roughness respectively."
+          },
+          {
+            "type": "subheading",
+            "content": "Outcome"
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "usd_output4",
+            "image_stack_h_2": "usd_output5",
+            "num_images": 2,
+            // "descript_image_stack_h": "Example output USD files with binded materials",
+          },
+          {
+            "type": "image-stack-h-container",
+            "image_stack_h_1": "usd_output3",
+            "image_stack_h_2": "usd_output1",
+            "image_stack_h_3": "usd_output2",
+            "num_images": 3,
+            "descript_image_stack_h": "Example output USD files with binded materials",
           }
         ]
     },

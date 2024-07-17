@@ -83,6 +83,11 @@ const images = {
     crystal2: require('./assets/crystal2.png'),
     usd: require('./assets/usd.png'),
     usd_structure: require('./assets/usd_structure.png'),
+    usd_output1: require('./assets/usd_output1.png'),
+    usd_output2: require('./assets/usd_output2.png'),
+    usd_output3: require('./assets/usd_output3.png'),
+    usd_output4: require('./assets/usd_output4.png'),
+    usd_output5: require('./assets/usd_output5.png'),
     reel: require('./assets/reel.jpg'),
   };
 
