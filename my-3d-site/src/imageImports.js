@@ -5,6 +5,7 @@ const images = {
     ivery: require('./assets/ivery.png'),
     intro: require('./assets/intro.png'),
     menu_icon:  require('./assets/menu_icon.png'),
+    ballmaze: require('./assets/ballmaze.png'),
     partiful: require('./assets/partiful_mu.png'),
     partiful_problem: require('./assets/partiful_problem.png'),
     partiful_sketch1: require('./assets/partiful_sketch1.png'),

@@ -1110,10 +1110,21 @@ const jsonData = [
         "tools": "Blender, Maya, Houdini, Substance Painter, Nuke, Unity, Katana, Premiere Pro, After Effects",
         "eventName": "Tech Artist Reel",
         "description": "Tech Art Reel",
-        "categories": ["Blender", "Maya","Houdini", "Substance Painter", "Nuke", "Unity", "Katana", "Premiere Pro", "After Effects"]
+        "categories": ["Blender", "Maya","Houdini", "Substance Painter", "Nuke", "Unity", "Katana", "Premiere Pro", "After Effects"],
+        "section1": [
+          {
+            "type":"section-text",
+            "content":"Context"
+          },
+          {
+            "type":"video",
+            "source": "vimeo",
+            "content":"reel_video"
+          }
+        ]
     },
     {
-      "id": 13,
+      "id": 14,
       "path": "ascension",
       "image": "ascension",
       "title": "Ascension",
@@ -1125,7 +1136,7 @@ const jsonData = [
       "tools": "Blender, Unity",
       "eventName": "Ascension",
       "description": "A first person shooting game in zero gravity",
-      "categories": ["Blender", "Unity"],
+      "categories": ["Unity", "Game Design", "Blender"],
       "section1":[
         {
           "type":"section-text",
@@ -1135,8 +1146,6 @@ const jsonData = [
           "type":"text",
           "content":"Play as a cute space explorer in a zero-gravity space station! Use your ray gun to ascend through the twists and turns and knock evil aliens out of your way!          "
         },
-
-        
         {
           "type": "text",
           "content":"I created versatile assets, including 6 different tiles to be used to set dress out first person shooting game scene. I also created other assets such as tables and assembled one out of the three scenes using Unity."
@@ -1189,9 +1198,76 @@ const jsonData = [
           "source": "youtube",
           "content":"ascension_video"
         }
-
       ]
   },
+  {
+    "id": 15,
+    "path": "ballmaze",
+    "image": "ballmaze",
+    "title": "Ballmaze",
+    "deployed": "https://simmer.io/@IveryChen/ballmaze",
+    "duration": "a 1 month project", 
+    "time": "Nov 2021",
+    "team": "Ivery Chen",
+    "role": "3D Asset Creation, Game Design, Game Programming, Level Design",
+    "tools": "Blender, Unity",
+    "eventName": "ballmaze",
+    "description": "A Unity 3D game for the web",
+    "categories": ["Unity", "Game Design", "Blender"],
+    "section1":[
+      {
+        "type":"section-text",
+        "content":"Context"
+      },
+      {
+        "type":"text",
+        "content":"BallMaze is a solo original game inspired by the traditional ball-in-a-maze game, except you are inside! By moving around, you can tilt the maze to get the ball to the Bunny! Modelled, animated, scripted in Blender and Unity. "
+      }
+    ],
+    "section2":[
+      {
+        "type":"section-text",
+        "content":"Research"
+      },
+      {
+        "type":"text",
+        "content":"As my first Unity project, I watched numerous Youtube tutorials. I learned how to script for Unity, use Animation controller, Animate in Blender for game purposes, design levels and creating assets for splash screen as well as creating UI that reflects current gamestate."
+      }
+    ],
+    "section3":[
+      {
+        "type":"section-text",
+        "content":"Process"
+      },
+      {
+        "type":"text",
+        "content":"I modelled, scripted the game. I wanted it to be slightly frustrating - as the traditional ball-in-a-maze game is. I learnt Unity for this project.        "
+      },
+      {
+        "type":"subheading",
+        "content":"Things I've learned",
+      },
+      {
+        "type":"list",
+        "content_list_1": "Model swapping - changing the model when the bot is killed",
+        "content_list_2": "Fake gravity/weight script",
+        "content_list_3": "Randomly spawn lightning",
+        "content_list_4": "Particle effects for robot death",
+        "content_list_5": "Unity UI/Canvas"
+      }
+    ],
+    "section4":[
+      {
+        "type":"section-text",
+        "content":"Solution"
+      },
+      {
+        "type":"video",
+        "source":"vimeo",
+        "content":"ballmaze_video"
+      }
+    ]
+  }
 
 ];
 
