@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import jsonData from '../data'; 
 import images from '../imageImports'; 
+import videos from '../videoImports'; 
+
 
 const ProjectPage = () => {
   const { projectName } = useParams(); // Get the dynamic part of the URL
@@ -56,16 +58,25 @@ const ProjectPage = () => {
                       <div key={sectionIndex} className="fine-text">
                         {section.content}
                       </div>
-                    );
+                  );
+                  case 'video':
+                    return(
+                      <div>
+                        <video width="640" height="360" controls>
+                          <source src={videos[section.content]} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                  );
                   case 'list':
                     return (
-                      <div>
+                      <ul>
                         {Object.keys(section).filter(key => key.startsWith('content_list_')).map((content, idx) => (
-                          <div key={idx} className="fine-text" >
+                            <li key={idx} className="fine-text" >
                             {section[content]}
-                          </div>
+                            </li>
                         ))}
-                      </div>
+                      </ul>
                     );
                   case 'image':
                     return (

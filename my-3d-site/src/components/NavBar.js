@@ -38,7 +38,7 @@ const NavBar = () => {
   };
 
   return (
-    <header>
+    <header className="navbar">
         <Link to="/" className="logo">IVERY CHEN</Link>
         <div className="menu-toggle-container">
           <input type="checkbox" id="menu-toggle" className="menu-toggle-checkbox" />
@@ -51,14 +51,6 @@ const NavBar = () => {
             <a href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing" className="menu-item" target="_blank" rel="noopener noreferrer">resume</a>
           </nav>
         </div>
-        {/* <label htmlFor="menu-toggle" className="menu-toggle" onClick={toggleDropDown}>
-          <img className="menu-icon" src={images["menu_icon"]} alt="Menu" />
-        </label> 
-        <nav className="dropdown" id="dropdown">
-          <Link to="/#selected-work" className="menu-item" onClick={() => scrollToDiv('selected-work')}>work</Link>
-          <Link to="/about" className="menu-item">about</Link>
-          <a href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing" className="menu-item" target="_blank" rel="noopener noreferrer">resume</a>
-        </nav> */}
         <nav className="menu" id="menu">
           <Link to="/#selected-work" className="menu-item" onClick={() => scrollToDiv('selected-work')}>work</Link>
           <Link to="/about" className="menu-item">about</Link>
