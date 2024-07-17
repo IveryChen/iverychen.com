@@ -1136,7 +1136,7 @@ const jsonData = [
       "tools": "Blender, Unity",
       "eventName": "Ascension",
       "description": "A first person shooting game in zero gravity",
-      "categories": ["Unity", "Game Design", "Blender"],
+      "categories": ["Unity", "Game Design", "Blender", "C#"],
       "section1":[
         {
           "type":"section-text",
@@ -1213,7 +1213,7 @@ const jsonData = [
     "tools": "Blender, Unity",
     "eventName": "ballmaze",
     "description": "A Unity 3D game for the web",
-    "categories": ["Unity", "Game Design", "Blender"],
+    "categories": ["Unity", "Game Design", "Blender", "C#"],
     "section1":[
       {
         "type":"section-text",
