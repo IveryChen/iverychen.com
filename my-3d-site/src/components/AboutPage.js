@@ -50,7 +50,7 @@ function AboutPage() {
         </section>
 
         <section className="about-section">
-          <div className="title-image-container">
+          <div className="image-container">
             <img src={images["smiley_balloon"]} alt={"smiley balloon"} className="title-image" />
           </div>
         </section>
