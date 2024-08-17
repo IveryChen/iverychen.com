@@ -25,3 +25,5 @@ yarn-error.log*
 *.obj
 *.blend
 *.glb
+*.mp4
+*.mov
