@@ -25,8 +25,6 @@ const App = () => {
         </main>
         <BottomBar className="BottomBar" />
       </Router>
-
-      {/* <MainPage /> */}
     </div>
   );
 };
