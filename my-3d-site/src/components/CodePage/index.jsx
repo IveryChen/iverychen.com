@@ -1,8 +1,10 @@
-import Card from "../../components/Card";
 import React from "react";
+import { Link } from "react-router-dom";
+
 import jsonData from "../../data";
 import images from "../../imageImports";
-import { Link } from "react-router-dom";
+import Card from "../../components/Card";
+import "./CodePage.css";
 
 const CodePage = () => {
   return (
