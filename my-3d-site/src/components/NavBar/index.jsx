@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
-import images from "../imageImports";
+import "../style.css";
+import images from "../../imageImports";
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

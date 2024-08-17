@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import AboutPage from "./components/AboutPage.jsx";
-import BottomBar from "./components/BottomBar.jsx";
-import CodePage from "./components/CodePage.jsx";
-import MainPage from "./components/MainPage.jsx";
-import NavBar from "./components/NavBar.jsx";
-import ProjectPage from "./components/ProjectPage.jsx";
+import AboutPage from "./components/AboutPage";
+import BottomBar from "./components/BottomBar";
+import CodePage from "./components/CodePage";
+import MainPage from "./components/MainPage";
+import NavBar from "./components/NavBar";
+import ProjectPage from "./components/ProjectPage";
 
 import "./App.css";
 

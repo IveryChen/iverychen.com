@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import categoryColours from "../categoryColours";
+import categoryColours from "../../categoryColours";
 import RoundedImage from "./RoundedImage";
 
 const StyledRoundedImage = styled(RoundedImage)`

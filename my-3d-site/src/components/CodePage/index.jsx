@@ -1,7 +1,7 @@
-import Card from "./Card";
+import Card from "../../components/Card";
 import React from "react";
-import jsonData from "../data";
-import images from "../imageImports";
+import jsonData from "../../data";
+import images from "../../imageImports";
 import { Link } from "react-router-dom";
 
 const CodePage = () => {
