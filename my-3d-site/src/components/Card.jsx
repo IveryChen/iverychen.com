@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import styled from "@emotion/styled";
+import React from "react";
+import { Link } from "react-router-dom";
 
-import categoryColours from '../categoryColours';
-import RoundedImage from './RoundedImage';
+import categoryColours from "../categoryColours";
+import RoundedImage from "./RoundedImage";
 
 const StyledRoundedImage = styled(RoundedImage)`
   @media (min-width: 768px) {
@@ -35,19 +35,20 @@ export default class Card extends React.PureComponent {
             </div>
             <div className="categories">
               {categories.map((category, index) => (
-                <div 
+                <div
                   key={index}
                   className="category"
-                  style={{ backgroundColor: categoryColours[category] || "#FFFFFF" }}>
+                  style={{
+                    backgroundColor: categoryColours[category] || "#FFFFFF",
+                  }}
+                >
                   <span className="category-text">{category}</span>
                 </div>
               ))}
             </div>
           </div>
         </Link>
-      </div >
-
+      </div>
     );
   }
 }
-

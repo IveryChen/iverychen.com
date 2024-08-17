@@ -1,4 +1,3 @@
-// src/components/NavBar.js
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -31,10 +30,6 @@ const NavBar = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const scrollToDiv = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <header className="navbar">
       <Link to="/" className="logo">
@@ -63,12 +58,8 @@ const NavBar = () => {
           id="dropdown"
           ref={dropdownRef}
         >
-          <Link
-            to="/#selected-work"
-            className="menu-item"
-            onClick={() => scrollToDiv("selected-work")}
-          >
-            work
+          <Link to="/code" className="menu-item">
+            code
           </Link>
           <Link to="/about" className="menu-item">
             about
@@ -84,12 +75,7 @@ const NavBar = () => {
         </nav>
       </div>
       <nav className="menu" id="menu">
-        <Link
-          to="/code"
-          // to="/#selected-work"
-          className="menu-item"
-          // onClick={() => scrollToDiv("selected-work")}
-        >
+        <Link to="/code" className="menu-item">
           code
         </Link>
         <Link to="/about" className="menu-item">
