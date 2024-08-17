@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import categoryColours from "../../categoryColours";
 import RoundedImage from "./RoundedImage";
+import "./Card.css";
 
 const StyledRoundedImage = styled(RoundedImage)`
   @media (min-width: 768px) {
