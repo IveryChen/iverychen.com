@@ -8,7 +8,7 @@ import "./CodePage.css";
 
 const CodePage = () => {
   return (
-    <div className="main-page">
+    <div>
       <div className="filter-bar">
         <div id="selected-work">SELECTED WORK</div>
       </div>
