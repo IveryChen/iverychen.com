@@ -146,15 +146,6 @@ a {
   padding: 20px;
 }
 
-.main-page {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  background-color: #efefec;
-}
-
 .about {
   width: 80vw;
   height: auto;
