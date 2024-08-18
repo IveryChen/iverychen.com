@@ -21,7 +21,7 @@
 
 .card-wrapper:hover {
   transform: translate(5px, -5px);
-  background: #f8ff77b6;
+  /* background: #f8ff77b6; */
 }
 
 .canvas {
