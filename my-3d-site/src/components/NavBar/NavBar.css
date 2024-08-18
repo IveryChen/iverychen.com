@@ -85,7 +85,7 @@
   }
 
   .dropdown.active {
-    display: none;
+    display: flex;
   }
 }
 
