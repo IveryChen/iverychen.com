@@ -27,7 +27,7 @@ export default class Card extends React.PureComponent {
       if (context) {
         const rc = rough.canvas(canvas);
 
-        rc.rectangle(2, 1, 296, 146, {
+        rc.rectangle(1, 1, 296, 146, {
           roughness: 0.8,
           strokeWidth: 0.8,
         });
