@@ -9,6 +9,7 @@ export default class VideoPlayer extends React.PureComponent {
     return (
       <div className="video-container">
         <video
+          controls
           autoplay
           muted
           src={`https://d2skwsfewsc9s1.cloudfront.net/Videos/${url}.mp4`}
