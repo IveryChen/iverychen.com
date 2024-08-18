@@ -11,6 +11,7 @@ const config = [
   "Marathon_switch",
   "Monday_bus_1",
   "Monday_corridor_2",
+  "Marathon_threesteps",
   "Monday_duck_2",
   "Monday_garden",
   "Monday_garden_2",
@@ -18,7 +19,7 @@ const config = [
   "Monday_clothes",
   "Monday_meatshop",
   "Monday_raccoon",
-  "Monday_subway_1",
+  // "Monday_subway_1",
   "Monday_subway_2",
 ];
 
