@@ -1,4 +1,6 @@
 .all-videos {
+  padding: 20px;
   display: flex;
-  flex: flex-wrap;
+  flex-wrap: wrap;
+  gap: 8px;
 }

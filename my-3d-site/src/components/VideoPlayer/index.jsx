@@ -8,9 +8,10 @@ export default class VideoPlayer extends React.PureComponent {
 
     return (
       <div className="video-container">
-        <div className="video" controls>
-          <video src={url} type="video/mp4" />
-        </div>
+        <video
+          src={`https://d2skwsfewsc9s1.cloudfront.net/Videos/${url}.mp4`}
+          type="video/mp4"
+        />
       </div>
     );
   }
