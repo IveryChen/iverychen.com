@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import "../style.css";
 import images from "../../imageImports";
 
@@ -11,11 +12,11 @@ const NavBar = () => {
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (
-        dropdownRef.current && // Check if dropdownRef is valid
-        !dropdownRef.current.contains(event.target) && // Click outside dropdown
-        event.target !== menuIconRef.current // Click is not on menu icon
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        event.target !== menuIconRef.current
       ) {
-        setDropdownOpen(false); // Close dropdown if clicked outside
+        setDropdownOpen(false);
       }
     };
 
