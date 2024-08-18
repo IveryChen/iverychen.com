@@ -5,22 +5,24 @@ import VideoPlayer from "../../components/VideoPlayer";
 import "./MainPage.css";
 
 const config = [
+  "Monday_meatshop",
+  "Monday_clothes",
+  "Monday_raccoon",
+  "Monday_duck_2",
+
   "Marathon_ring",
-  "Marathon_rock",
+  "Monday_garden",
   "Marathon_surprise",
+  "Monday_subway_2",
+
   "Marathon_switch",
-  "Monday_bus_1",
+  "Monday_garden_2",
   "Monday_corridor_2",
   "Marathon_threesteps",
-  "Monday_duck_2",
-  "Monday_garden",
-  "Monday_garden_2",
+  "Marathon_rock",
   "Monday_kid",
-  "Monday_clothes",
-  "Monday_meatshop",
-  "Monday_raccoon",
+  "Monday_bus_1",
   // "Monday_subway_1",
-  "Monday_subway_2",
 ];
 
 export default class MainPage extends React.PureComponent {
