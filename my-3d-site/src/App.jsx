@@ -23,7 +23,7 @@ const App = () => {
             <Route path="/project/:projectName" element={<ProjectPage />} />
           </Routes>
         </main>
-        <BottomBar className="BottomBar" />
+        <BottomBar />
       </Router>
     </div>
   );

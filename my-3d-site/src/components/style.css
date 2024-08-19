@@ -1,24 +1,20 @@
 body {
   margin: 0;
   padding: 0;
-  /* font-family: 'Proxima Nova', sans-serif;  */
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  color: #ffffff;
   background-color: #efefec;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 header {
-  height: 60px;
-  background-color: #f6f6f5;
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
   padding-left: 10%;
 }
 
@@ -400,21 +396,6 @@ a {
   justify-content: space-between;
   padding: max (60%, 50px);
   margin-right: 100px;
-}
-
-.contact {
-  font-size: 15px;
-  font-weight: 600;
-  color: black;
-  margin-left: 10px;
-  width: auto;
-}
-
-.contact-items {
-  display: flex;
-  justify-content: center;
-  justify-content: flex-end;
-  /* padding-right: 60vw; */
 }
 
 .title-image {
