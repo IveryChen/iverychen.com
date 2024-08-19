@@ -27,7 +27,7 @@ const VideoLoader = ({ videoUrls }) => {
       }
     };
 
-    const videoElements = document.querySelectorAll(".video");
+    const videoElements = Array.from(document.getElementsByClassName("video"));
     videoElements.forEach((video) => {
       video.addEventListener("loadeddata", handleLoadedData);
     });
@@ -38,6 +38,10 @@ const VideoLoader = ({ videoUrls }) => {
       });
     };
   }, [totalVideos]);
+
+  console.log("totalVideos", totalVideos);
+  console.log("loadedVideos.current", loadedVideos.current);
+  console.log("loadingProgress", loadingProgress);
 
   return (
     <div>
