@@ -1,10 +1,9 @@
-import { map } from "lodash";
 import React from "react";
 
-import VideoPlayer from "../../components/VideoPlayer";
+import VideoLoader from "./VideoLoader";
 import "./MainPage.css";
 
-const config = [
+const videoUrls = [
   "Monday_meatshop",
   "Monday_clothes",
   "Monday_raccoon",
@@ -20,18 +19,11 @@ const config = [
   "Monday_kid",
   "Marathon_threesteps",
   "Marathon_rock",
-
   // "Monday_subway_1",
 ];
 
 export default class MainPage extends React.PureComponent {
   render() {
-    return (
-      <div className="all-videos">
-        {map(config, (url) => (
-          <VideoPlayer key={url} url={url} />
-        ))}
-      </div>
-    );
+    return <VideoLoader videoUrls={videoUrls} />;
   }
 }
