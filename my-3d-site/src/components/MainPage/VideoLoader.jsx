@@ -39,20 +39,24 @@ const VideoLoader = ({ videoUrls }) => {
     };
   }, [totalVideos]);
 
-  console.log("totalVideos", totalVideos);
-  console.log("loadedVideos.current", loadedVideos.current);
-  console.log("loadingProgress", loadingProgress);
-
   return (
-    <div>
-      {isLoading && (
+    <div className="progress-container">
+      {
         <div className="progress-bar">
           <div
             className="progress"
             style={{ width: `${loadingProgress}%` }}
           ></div>
         </div>
-      )}
+      }
+      {/* {isLoading && (
+        <div className="progress-bar">
+          <div
+            className="progress"
+            style={{ width: `${loadingProgress}%` }}
+          ></div>
+        </div>
+      )} */}
       <div className="all-videos">
         {map(videoUrls, (url) => (
           <VideoPlayer key={url} url={url} />
