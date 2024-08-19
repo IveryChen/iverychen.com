@@ -41,23 +41,18 @@ const VideoLoader = ({ videoUrls }) => {
 
   return (
     <div className="progress-container">
-      {
+      {isLoading && (
         <div className="progress-bar">
           <div
             className="progress"
             style={{ width: `${loadingProgress}%` }}
           ></div>
         </div>
-      }
-      {/* {isLoading && (
-        <div className="progress-bar">
-          <div
-            className="progress"
-            style={{ width: `${loadingProgress}%` }}
-          ></div>
-        </div>
-      )} */}
-      <div className="all-videos">
+      )}
+      <div
+        className="all-videos"
+        style={{ opacity: isLoading ? 0 : 1, transition: "opacity 0.3s ease" }}
+      >
         {map(videoUrls, (url) => (
           <VideoPlayer key={url} url={url} />
         ))}
