@@ -40,7 +40,7 @@ const VideoLoader = ({ videoUrls }) => {
   }, [totalVideos]);
 
   return (
-    <div className="progress-container">
+    <div className="video-progress">
       {isLoading && (
         <div className="progress-bar">
           <div

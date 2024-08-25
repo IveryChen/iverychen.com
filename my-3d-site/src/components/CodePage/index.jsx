@@ -8,7 +8,7 @@ import "./CodePage.css";
 
 const CodePage = () => {
   return (
-    <div>
+    <>
       <div className="filter-bar">
         <div id="selected-work">SELECTED WORK</div>
       </div>
@@ -26,7 +26,7 @@ const CodePage = () => {
           </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -10,10 +10,11 @@
   left: 50%;
 }
 
-.progress-container {
-  height: 100vh;
+.video-progress {
+  height: auto;
   position: relative;
   width: 100vw;
+  overflow-y: hidden;
 }
 
 .progress {
@@ -23,6 +24,7 @@
 }
 
 .all-videos {
+  overflow-y: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 20px;
