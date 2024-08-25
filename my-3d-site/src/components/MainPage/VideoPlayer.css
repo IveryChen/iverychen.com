@@ -1,9 +1,8 @@
-.video {
+.thumbnail-container {
   display: flex;
 }
 
-.video video {
+.thumbnail-container video {
   width: 100%;
-  border-radius: 0;
-  border: none;
+  height: 100%;
 }
