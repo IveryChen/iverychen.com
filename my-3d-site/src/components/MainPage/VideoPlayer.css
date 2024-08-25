@@ -1,10 +1,9 @@
 .video {
-  flex: 1 1 calc(33.333% - 16px);
+  display: flex;
 }
 
 .video video {
   width: 100%;
-  height: auto;
   border-radius: 0;
   border: none;
 }
