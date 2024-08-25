@@ -25,11 +25,15 @@ export default class Card extends React.PureComponent {
     if (canvas) {
       const context = canvas.getContext("2d");
       if (context) {
+        const devicePixelRatio = window.devicePixelRatio || 1;
+        canvas.width = 296 * devicePixelRatio;
+        canvas.height = 146 * devicePixelRatio;
+        context.scale(devicePixelRatio, devicePixelRatio);
         const rc = rough.canvas(canvas);
 
-        rc.rectangle(1, 1, 296, 146, {
-          roughness: 2,
-          strokeWidth: 0.8,
+        rc.rectangle(4, 2, 292, 144, {
+          roughness: 1,
+          strokeWidth: 1.2,
         });
       } else {
         console.error("Failed to get canvas context");
