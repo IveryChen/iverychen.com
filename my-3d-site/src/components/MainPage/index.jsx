@@ -19,7 +19,6 @@ const videoUrls = [
   "Monday_kid",
   "Marathon_threesteps",
   "Marathon_rock",
-  // "Monday_subway_1",
 ];
 
 export default class MainPage extends React.PureComponent {
