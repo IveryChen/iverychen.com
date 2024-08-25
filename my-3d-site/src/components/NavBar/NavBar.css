@@ -24,7 +24,7 @@
 
 .menu-toggle {
   cursor: pointer;
-  display: none;
+  display: block;
 }
 
 .menu-icon {
@@ -73,23 +73,13 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .dropdown {
-    display: none;
-  }
-
-  .dropdown.active {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .menu {
     display: flex;
+  }
+
+  .menu-toggle {
+    display: none;
   }
 
   .dropdown.active {
