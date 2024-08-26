@@ -258,24 +258,6 @@ a {
   color: white; /* New text color on hover */
 }
 
-/* 
-.hover-effect {
-    transform: translate(-5px, -5px); 
-} */
-
-.filter-bar {
-  margin-top: 150px;
-  /* padding-left:200px;
-    padding-right:200px; */
-  height: 80px;
-  width: 60vw;
-  color: 1010ff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 300 300px;
-}
-
 #selected-work {
   font-family: "Miller Banner Extra Condensed", sans-serif;
   font-weight: 700;
