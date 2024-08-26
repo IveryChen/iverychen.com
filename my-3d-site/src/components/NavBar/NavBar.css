@@ -56,18 +56,19 @@
 .menu-item {
   cursor: pointer;
   font-size: 16px;
-  margin: 5px 0;
-  padding: 4px 6px;
+  margin: 4px;
+  padding: 4px;
   text-decoration: none;
 }
 
 .menu-item:hover {
-  background-color: lightgray;
+  font-style: italic;
+  color: rgb(116, 116, 116);
 }
 
 .menu a {
   font-weight: 700;
-  padding: 20px;
+  padding: 12px;
 }
 .menu {
   display: none;
