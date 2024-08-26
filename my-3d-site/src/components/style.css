@@ -577,12 +577,6 @@ a {
   border-radius: inherit;
 }
 
-.event-name {
-  font-size: 18px;
-  font-weight: 600;
-  text-align: left;
-}
-
 .section {
   display: flex;
   flex-direction: column;

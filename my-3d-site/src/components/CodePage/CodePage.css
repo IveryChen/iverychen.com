@@ -1,14 +1,23 @@
-.filter-bar {
-  align-items: center;
-  color: 1010ff;
-  display: flex;
-  height: 80px;
-  justify-content: center;
+.card {
+  border-radius: 3px;
+  display: inline-block;
+  height: 360px;
+  padding: 12px;
+  transition: transform 0.3s ease;
+  width: 400px;
 }
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+}
+
+.filter-bar {
+  align-items: center;
+  color: 1010ff;
+  display: flex;
+  height: 80px;
   justify-content: center;
 }
