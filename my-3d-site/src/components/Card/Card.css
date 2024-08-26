@@ -1,20 +1,31 @@
 .card {
   border-radius: 3px;
   display: inline-block;
-  height: 360px;
+  height: 330px;
   padding: 12px;
   transition: transform 0.3s ease;
-  width: 400px;
+  width: 330px;
 }
 
 .card-wrapper {
   border-radius: 3px;
   display: inline-block;
   height: 400px;
-  margin: 20px;
   position: relative;
   transition: transform 0.3s ease;
-  width: 436px;
+  width: 360px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    height: 400px;
+    width: 400px;
+  }
+  .card-wrapper {
+    height: 400px;
+    margin: 20px;
+    width: 436px;
+  }
 }
 
 .card-wrapper:hover {
@@ -22,11 +33,11 @@
 }
 
 .canvas {
-  z-index: 1;
   height: 98%;
   left: 0px;
   pointer-events: none;
   position: absolute;
   top: 0px;
   width: 98%;
+  z-index: 1;
 }
