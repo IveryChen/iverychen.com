@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import "./NavBar.css";
 import images from "../../imageImports";
@@ -8,6 +8,7 @@ const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const menuIconRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -30,6 +31,8 @@ const NavBar = () => {
   const toggleDropDown = () => {
     setDropdownOpen(!dropdownOpen);
   };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <header className="navbar">
@@ -59,10 +62,16 @@ const NavBar = () => {
           id="dropdown"
           ref={dropdownRef}
         >
-          <Link to="/code" className="menu-item">
+          <Link
+            to="/code"
+            className={`menu-item ${isActive("/code") ? "active" : ""}`}
+          >
             code
           </Link>
-          <Link to="/about" className="menu-item">
+          <Link
+            to="/about"
+            className={`menu-item ${isActive("/about") ? "active" : ""}`}
+          >
             about
           </Link>
           <a
@@ -76,10 +85,16 @@ const NavBar = () => {
         </nav>
       </div>
       <nav className="menu" id="menu">
-        <Link to="/code" className="menu-item">
+        <Link
+          to="/code"
+          className={`menu-item ${isActive("/code") ? "active" : ""}`}
+        >
           code
         </Link>
-        <Link to="/about" className="menu-item">
+        <Link
+          to="/about"
+          className={`menu-item ${isActive("/about") ? "active" : ""}`}
+        >
           about
         </Link>
         <a

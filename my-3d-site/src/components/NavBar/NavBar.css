@@ -61,15 +61,19 @@
   text-decoration: none;
 }
 
-.menu-item:hover {
+.menu-item:hover,
+.menu-item.active {
   font-style: italic;
-  color: rgb(116, 116, 116);
+  background: linear-gradient(45deg, #f06, #3b9cd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .menu a {
-  font-weight: 700;
   padding: 12px;
 }
+
 .menu {
   display: none;
 }
