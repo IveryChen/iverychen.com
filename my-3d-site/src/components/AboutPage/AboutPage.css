@@ -15,11 +15,6 @@
   padding: 30px;
 }
 
-.about-description-text {
-  padding: 40px;
-  width: 100%;
-}
-
 .about-subsection {
   align-items: left;
   padding-bottom: 20px;
@@ -67,11 +62,5 @@
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-around;
-  }
-
-  .about-description-image,
-  .about-description-text {
-    max-width: none;
-    width: 60%;
   }
 }

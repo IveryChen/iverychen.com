@@ -34,9 +34,10 @@ export default class AboutPage extends React.PureComponent {
                 alt="Ivery's profile pic"
               />
             </Card>
-            <div className="about-description-text">
+            <Card height="400px" width="350px">
               <div
                 style={{
+                  padding: "20px",
                   fontStyle: "italic",
                   fontWeight: "500",
                   textAlign: "left",
@@ -48,7 +49,7 @@ export default class AboutPage extends React.PureComponent {
                 fashion photography, make animated films, watch movies, work out
                 and eat good Chinese food.
               </div>
-            </div>
+            </Card>
           </div>
         </section>
 
