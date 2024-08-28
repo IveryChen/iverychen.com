@@ -7,15 +7,6 @@
   width: 330px;
 }
 
-.card-wrapper {
-  border-radius: 3px;
-  display: inline-block;
-  height: 400px;
-  position: relative;
-  transition: transform 0.3s ease;
-  width: 360px;
-}
-
 @media (min-width: 768px) {
   .card {
     height: 400px;

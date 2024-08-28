@@ -1,5 +1,7 @@
 import { map } from "lodash";
 import React from "react";
+
+import Card from "../../components/Card";
 import images from "../../imageImports";
 
 import "./AboutPage.css";
@@ -24,9 +26,11 @@ export default class AboutPage extends React.PureComponent {
       <div>
         <section className="about-section">
           <div className="about-description">
-            <div className="about-description-image">
-              <img src={images["ivery"]} alt="Ivery's profile pic" />
-            </div>
+            <Card height="400px" width="350px">
+              <div className="about-description-image">
+                <img src={images["ivery"]} alt="Ivery's profile pic" />
+              </div>
+            </Card>
             <div className="about-description-text">
               <div
                 style={{
