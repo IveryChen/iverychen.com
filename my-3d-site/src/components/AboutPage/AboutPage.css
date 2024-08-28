@@ -1,26 +1,116 @@
-/* about-section
- */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
-/* about-description */
+.about-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 75%;
+  padding: 30px;
+}
 
-/* about-description-image */
+.about-description-image {
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  max-width: 350px;
+  min-width: 400px;
+  max-height: 500px;
+  object-fit: contain;
+}
 
-/* about-description-text */
+.about-description-text {
+  width: 100%;
+  padding: 40px;
+}
 
-/* italics-thin */
+.about-description-image img {
+  max-width: max(30%, 350px);
+  max-height: max(30%, 400px);
+  border-radius: 20px;
+}
 
-/* heading */
+.about-subsection {
+  padding-bottom: 20px;
+  align-items: left;
+  text-align: left;
+}
 
-/* about-details */
+.about-details {
+  padding-left: 10%;
+  padding-right: 10%;
+}
 
-/* about-subsection */
+.italics-thin {
+  color: black;
+  font-style: italic;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 20px;
+}
 
-/* subheading */
+.italics-bold {
+  color: black;
+  font-weight: 800;
+}
 
-/* italics-bold */
+.heading {
+  font-size: 50px;
+  font-weight: 750;
+  margin: 10px;
+  color: black;
+}
 
-/* image-container */
+.subheading {
+  font-size: 24px;
+  margin-left: 20px;
+}
 
-/* title-image */
+.image-container {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40%;
+  width: 100%;
+  min-width: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+}
 
-/* TODO: remove the font styling things those should not be classes */
+.title-image {
+  max-width: 80%;
+  padding: 7px;
+  height: auto;
+  border-radius: inherit;
+  transition: filter 0.3s ease-out;
+}
+
+@media (min-width: 768px) {
+  .about-description {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .about-description-image,
+  .about-description-text {
+    width: 50%;
+    max-width: none;
+  }
+
+  .about-description-image {
+    margin-right: 20px;
+  }
+}

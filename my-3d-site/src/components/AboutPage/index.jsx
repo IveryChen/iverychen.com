@@ -1,6 +1,8 @@
 import React from "react";
 import images from "../../imageImports";
 
+import "./AboutPage.css";
+
 export default class AboutPage extends React.PureComponent {
   render() {
     return (

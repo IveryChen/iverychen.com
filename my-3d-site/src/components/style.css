@@ -60,59 +60,6 @@ a {
   left: 15%;
 }
 
-.about-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.about-details {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.about-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 75%;
-  padding: 30px;
-}
-
-.about-description-image {
-  display: flex;
-  margin: 30px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 20px;
-  max-width: 350px;
-  min-width: 400px;
-  max-height: 500px;
-  object-fit: contain;
-}
-
-.about-description-text {
-  width: 100%;
-  padding: 40px;
-}
-
-.about-description-image img {
-  max-width: max(30%, 350px);
-  max-height: max(30%, 400px);
-  border-radius: 20px;
-}
-
-.about-subsection {
-  padding-bottom: 20px;
-  align-items: left;
-  text-align: left;
-}
-
 .intro {
   text-align: left;
   line-height: 1.5;
@@ -350,32 +297,12 @@ a {
   margin-bottom: 50%;
 }
 
-.heading {
-  font-size: 50px;
-  font-weight: 750;
-  margin: 10px;
-  color: black;
-}
-
 .italics-section-text,
 .italics {
   color: black;
   font-style: italic;
   font-weight: 700;
   text-align: left;
-}
-
-.italics-thin {
-  color: black;
-  font-style: italic;
-  font-weight: 500;
-  text-align: left;
-  padding-left: 20px;
-}
-
-.italics-bold {
-  color: black;
-  font-weight: 800;
 }
 
 .normal {
@@ -425,19 +352,6 @@ a {
   width: 100%;
   max-width: 1000px;
   min-width: 420px;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.image-container {
-  display: flex;
-  margin-top: 10px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 40%;
-  width: 100%;
-  min-width: 300px;
   overflow: hidden;
   border-radius: 20px;
 }
@@ -518,14 +432,6 @@ a {
   height: auto;
   padding: 7px;
   border-radius: 5px;
-}
-
-.title-image {
-  max-width: 80%;
-  padding: 7px;
-  height: auto;
-  border-radius: inherit;
-  transition: filter 0.3s ease-out;
 }
 
 .image-overlay {
@@ -770,24 +676,6 @@ a {
   background-color: #efefec;
 }
 
-@media (min-width: 768px) {
-  .about-description {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-
-  .about-description-image,
-  .about-description-text {
-    width: 50%;
-    max-width: none;
-  }
-
-  .about-description-image {
-    margin-right: 20px;
-  }
-}
-
 @media (max-width: 768px) {
   #selected-work {
     font-size: 20px;
@@ -839,10 +727,7 @@ a {
   .section {
     max-width: 360px;
   }
-  .subheading {
-    font-size: 24px;
-    margin-left: 20px;
-  }
+
   .small-text {
     font-size: 80%;
   }
