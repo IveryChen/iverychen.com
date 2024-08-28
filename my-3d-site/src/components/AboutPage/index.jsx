@@ -47,7 +47,6 @@ export default class AboutPage extends React.PureComponent {
 
         <section className="about-section">
           <div className="about-details">
-            {/* Subsection 1: Education */}
             <div className="about-subsection">
               <h3 className="subheading">Education</h3>
               {map(education, ([degree, school]) => {
@@ -60,7 +59,13 @@ export default class AboutPage extends React.PureComponent {
                     }}
                   >
                     {degree}
-                    <span className="italics-bold">{school}</span>
+                    <span
+                      style={{
+                        fontWeight: "700",
+                      }}
+                    >
+                      {school}
+                    </span>
                   </div>
                 );
               })}
@@ -78,7 +83,13 @@ export default class AboutPage extends React.PureComponent {
                     }}
                   >
                     {title}
-                    <span className="italics-bold">{company}</span>
+                    <span
+                      style={{
+                        fontWeight: "700",
+                      }}
+                    >
+                      {company}
+                    </span>
                   </div>
                 );
               })}
@@ -93,10 +104,16 @@ export default class AboutPage extends React.PureComponent {
                   textAlign: "left",
                 }}
               >
-                <span className="italics-bold">Code:</span> C++, C#, Java,
-                Python, Java, OpenCV, JavaScript, Typescript, AWS, Scala,
-                Three.js, React, HTML, CSS, Git, WebGL, GLSL, SQL, AFrame, Qt,
-                Linux
+                <span
+                  style={{
+                    fontWeight: "700",
+                  }}
+                >
+                  Code:
+                </span>
+                C++, C#, Java, Python, Java, OpenCV, JavaScript, Typescript,
+                AWS, Scala, Three.js, React, HTML, CSS, Git, WebGL, GLSL, SQL,
+                AFrame, Qt, Linux
               </div>
               <div
                 style={{
@@ -105,11 +122,17 @@ export default class AboutPage extends React.PureComponent {
                   textAlign: "left",
                 }}
               >
-                <span className="italics-bold">Tools:</span> Figma, Unity,
-                Blender, Maya, Houdini, Nuke, Katana, Arnold, Substance Painter,
-                Motion Capture, Marvellous Designer, C4D, Max MSP, ROS, Adobe
-                Suite(Premiere Pro, AfterEffects, Photoshop, Illustrator,
-                Audition, Animator), DaVinci Resolve, Arduino
+                <span
+                  style={{
+                    fontWeight: "700",
+                  }}
+                >
+                  Tools:
+                </span>
+                Figma, Unity, Blender, Maya, Houdini, Nuke, Katana, Arnold,
+                Substance Painter, Motion Capture, Marvellous Designer, C4D, Max
+                MSP, ROS, Adobe Suite(Premiere Pro, AfterEffects, Photoshop,
+                Illustrator, Audition, Animator), DaVinci Resolve, Arduino
               </div>
             </div>
           </div>
