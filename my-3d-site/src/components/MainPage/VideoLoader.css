@@ -26,7 +26,13 @@
 .all-videos {
   overflow-y: hidden;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
   padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .all-videos {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
 }
