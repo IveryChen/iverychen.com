@@ -36,19 +36,6 @@
   font-size: 24px;
 }
 
-.image-container {
-  align-items: center;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  height: 40%;
-  justify-content: center;
-  margin-top: 10px;
-  min-width: 300px;
-  overflow: hidden;
-  width: 100%;
-}
-
 .title-image {
   border-radius: inherit;
   height: auto;

@@ -29,7 +29,7 @@ export default class AboutPage extends React.PureComponent {
             <Card height="400px" width="350px">
               <img
                 width="350px"
-                height="400px"
+                height="inherit"
                 src={images["ivery"]}
                 alt="Ivery's profile pic"
               />
@@ -52,7 +52,6 @@ export default class AboutPage extends React.PureComponent {
             </Card>
           </div>
         </section>
-
         <section className="about-section">
           <div className="about-details">
             <div className="about-subsection">
@@ -78,7 +77,6 @@ export default class AboutPage extends React.PureComponent {
                 );
               })}
             </div>
-
             <div className="about-subsection">
               <h3 className="subheading">Work</h3>
               {map(jobs, ([title, company]) => {
@@ -102,7 +100,6 @@ export default class AboutPage extends React.PureComponent {
                 );
               })}
             </div>
-
             <div className="about-subsection">
               <h3 className="subheading">Skills</h3>
               <div
@@ -145,16 +142,11 @@ export default class AboutPage extends React.PureComponent {
             </div>
           </div>
         </section>
-
-        <section className="about-section">
-          <div className="image-container">
-            <img
-              src={images["smiley_balloon"]}
-              alt={"smiley balloon"}
-              className="title-image"
-            />
-          </div>
-        </section>
+        <img
+          src={images["smiley_balloon"]}
+          alt={"smiley balloon"}
+          className="title-image"
+        />
       </div>
     );
   }
