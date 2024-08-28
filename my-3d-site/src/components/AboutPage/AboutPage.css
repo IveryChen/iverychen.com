@@ -15,31 +15,9 @@
   padding: 30px;
 }
 
-.about-description-image {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 30px;
-
-  max-height: 500px;
-  max-width: 350px;
-  min-width: 400px;
-
-  object-fit: contain;
-  overflow: hidden;
-}
-
 .about-description-text {
   padding: 40px;
   width: 100%;
-}
-
-.about-description-image img {
-  height: inherit;
-  width: inherit;
-  /* max-height: max(30%, 400px);
-  max-width: max(30%, 350px); */
 }
 
 .about-subsection {
