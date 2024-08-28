@@ -35,11 +35,11 @@ export default class AboutPage extends React.PureComponent {
                   textAlign: "left",
                 }}
               >
-                Ivery is a fullstack software engineer, tech artist, 3D
-                animator, and ARVR/Graphics Unity Developer. She loves creative
-                tools, ARVR, and anything 3D + Interactive. Outside of that, she
-                likes to do fashion photography and watch movies, work out and
-                eat Chinese food.
+                Hi! My name is Ivery and I'm a fullstack software engineer, tech
+                artist, 3D animator, and ARVR/Graphics Unity Developer. I love
+                creative tools, ARVR, and anything 3D + Interactive. I also do
+                fashion photography, make animated films, watch movies, work out
+                and eat good Chinese food.
               </div>
             </div>
           </div>
