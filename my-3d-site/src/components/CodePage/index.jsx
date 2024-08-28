@@ -12,7 +12,6 @@ import RoundedImage from "./RoundedImage";
 
 const StyledRoundedImage = styled(RoundedImage)`
   @media (min-width: 768px) {
-    height: auto;
     margin-bottom: 10px;
   }
 `;
@@ -39,7 +38,7 @@ const CodePage = () => {
                     image={images[item.image]}
                     eventName={item.eventName}
                     width="100%"
-                    height="65%"
+                    height="220px"
                     border="1.5px"
                     borderstyle="solid"
                     bordercolor="black"

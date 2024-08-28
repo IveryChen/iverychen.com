@@ -1,7 +1,7 @@
 .card {
   border-radius: 3px;
   display: inline-block;
-  height: 330px;
+  height: 360px;
   padding: 12px;
   transition: transform 0.3s ease;
   width: 330px;
@@ -22,7 +22,7 @@
     width: 400px;
   }
   .card-wrapper {
-    height: 400px;
+    height: 440px;
     margin: 20px;
     width: 436px;
   }

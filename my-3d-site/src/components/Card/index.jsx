@@ -3,6 +3,10 @@ import rough from "roughjs";
 
 import "./Card.css";
 
+const devicePixelRatio = window.devicePixelRatio || 1;
+const height = 144;
+const width = 296;
+
 export default class Card extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -14,13 +18,12 @@ export default class Card extends React.PureComponent {
     if (canvas) {
       const context = canvas.getContext("2d");
       if (context) {
-        const devicePixelRatio = window.devicePixelRatio || 1;
-        canvas.width = 296 * devicePixelRatio;
-        canvas.height = 146 * devicePixelRatio;
+        canvas.width = width * devicePixelRatio;
+        canvas.height = height * devicePixelRatio;
         context.scale(devicePixelRatio, devicePixelRatio);
         const rc = rough.canvas(canvas);
 
-        rc.rectangle(4, 2, 292, 144, {
+        rc.rectangle(4, 2, width - 4, 146 - 4, {
           roughness: 1,
           strokeWidth: 1.2,
         });
