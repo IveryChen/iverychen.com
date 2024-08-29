@@ -46,7 +46,7 @@
 
 @media (min-width: 768px) {
   .about-description {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
     justify-content: space-around;
   }
