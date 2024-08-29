@@ -28,28 +28,27 @@ export default class AboutPage extends React.PureComponent {
           <div className="about-description">
             <Card height="400px" width="350px">
               <img
-                width="350px"
-                height="inherit"
+                width="420px"
+                height="430px"
                 src={images["ivery"]}
                 alt="Ivery's profile pic"
               />
             </Card>
-            <Card height="400px" width="350px">
-              <div
-                style={{
-                  padding: "20px",
-                  fontStyle: "italic",
-                  fontWeight: "500",
-                  textAlign: "left",
-                }}
-              >
-                Hi! My name is Ivery and I'm a fullstack software engineer, tech
-                artist, 3D animator, and ARVR/Graphics Unity Developer. I love
-                creative tools, ARVR, and anything 3D + Interactive. I also do
-                fashion photography, make animated films, watch movies, work out
-                and eat good Chinese food.
-              </div>
-            </Card>
+            <div
+              style={{
+                fontStyle: "italic",
+                fontWeight: "500",
+                padding: "20px",
+                textAlign: "left",
+                width: "350px",
+              }}
+            >
+              Hi! My name is Ivery and I'm a fullstack software engineer, tech
+              artist, 3D animator, and ARVR/Graphics Unity Developer. I love
+              creative tools, ARVR, and anything 3D + Interactive. I also do
+              fashion photography, make animated films, watch movies, work out
+              and eat good Chinese food.
+            </div>
           </div>
         </section>
         <section className="about-section">
