@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { IoMenu } from "react-icons/io5";
 
 import "./NavBar.css";
 import images from "../../imageImports";
@@ -50,12 +51,7 @@ const NavBar = () => {
           className="menu-toggle"
           onClick={toggleDropDown}
         >
-          <img
-            ref={menuIconRef}
-            className="menu-icon"
-            src={images["menu_icon"]}
-            alt="Menu"
-          />
+          <IoMenu size={36} color="#ffffff" />
         </label>
         <nav
           className={`dropdown ${dropdownOpen ? "active" : ""}`}

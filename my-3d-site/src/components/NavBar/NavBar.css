@@ -1,5 +1,6 @@
 .navbar {
   background: transparent;
+  mix-blend-mode: difference;
   padding: 20px;
   padding-bottom: 0;
   position: sticky;
@@ -8,6 +9,7 @@
 }
 
 .logo {
+  color: white;
   font-size: 24px;
   font-stretch: semi-expanded;
   font-weight: 850;
@@ -34,16 +36,16 @@
 }
 
 .dropdown {
+  background-color: black;
   display: none;
-  position: absolute;
-  top: 1;
-  right: 0;
-  background-color: white;
-  padding: 8px;
-  z-index: 1;
   opacity: 0;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 1;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
 }
 
 .dropdown.active {
@@ -54,6 +56,7 @@
 }
 
 .menu-item {
+  color: white;
   cursor: pointer;
   font-size: 16px;
   margin: 4px;
@@ -63,11 +66,12 @@
 
 .menu-item:hover,
 .menu-item.active {
-  font-style: italic;
   background: linear-gradient(45deg, #f06, #3b9cd4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: invert();
+  font-style: italic;
 }
 
 .menu a {
