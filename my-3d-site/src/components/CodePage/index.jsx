@@ -22,11 +22,6 @@ const StyledRoundedImage = styled(RoundedImage)`
 const CodePage = () => {
   return (
     <>
-      <div className="filter-bar">
-        <Text fontSize="24px" fontWeight={540}>
-          Selected Work
-        </Text>
-      </div>
       <div className="cards">
         {jsonData.map((item, index) => (
           <Link to={`/project/${item.path}`} key={item.id}>

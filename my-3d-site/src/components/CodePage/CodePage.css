@@ -4,11 +4,3 @@
   gap: 30px;
   justify-content: center;
 }
-
-.filter-bar {
-  align-items: center;
-  color: 1010ff;
-  display: flex;
-  height: 80px;
-  justify-content: center;
-}
