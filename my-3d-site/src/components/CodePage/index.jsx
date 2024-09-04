@@ -7,6 +7,7 @@ import categoryColours from "../../categoryColours";
 import images from "../../imageImports";
 import Card from "../../components/Card";
 
+import Box from "../Box";
 import Text from "../Text";
 
 import "./CodePage.css";
@@ -55,18 +56,23 @@ const CodePage = () => {
                     </div>
                     <div className="categories">
                       {item.categories.map((category, index) => (
-                        <div
+                        <Box
                           key={index}
+                          alignItems="center"
+                          borderColor="#514f59"
+                          borderRadius="2px"
+                          boxShadow="inset 0 0 0 1px #514f59"
+                          display="inline-flex"
+                          lineHeight="30px"
                           className="category"
-                          style={{
-                            backgroundColor:
-                              categoryColours[category] || "#FFFFFF",
-                          }}
+                          backgroundColor={
+                            categoryColours[category] || "#FFFFFF"
+                          }
                         >
                           <Text fontSize="10px" padding="4px">
                             {category}
                           </Text>
-                        </div>
+                        </Box>
                       ))}
                     </div>
                   </div>

@@ -608,16 +608,6 @@ a {
     1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
-.category {
-  align-items: center;
-  background-color: white;
-  border-color: #514f59;
-  border-radius: 20px;
-  box-shadow: inset 0 0 0 1px #514f59;
-  display: inline-flex;
-  line-height: 30px;
-}
-
 .category span {
   font-size: 12px;
   font-style: bold;
