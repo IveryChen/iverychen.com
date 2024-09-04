@@ -35,6 +35,7 @@ function render(props, ref) {
       color="gray.0"
       fontFamily="Inter"
       fontSize="14px"
+      fontWeight={600}
       lineHeight="14px"
       ref={ref}
       {...props}

@@ -4,6 +4,9 @@ import React from "react";
 import Card from "../../components/Card";
 import images from "../../imageImports";
 
+import Box from "../Box";
+import Text from "../Text";
+
 import "./AboutPage.css";
 
 const education = [
@@ -32,21 +35,15 @@ export default class AboutPage extends React.PureComponent {
               src={images["ivery"]}
               alt="Ivery's profile pic"
             />
-            <div
-              style={{
-                fontStyle: "italic",
-                fontWeight: "500",
-                padding: "20px",
-                textAlign: "left",
-                width: "350px",
-              }}
-            >
-              Hi! My name is Ivery and I'm a fullstack software engineer, tech
-              artist, 3D animator, and ARVR/Graphics Unity Developer. I love
-              creative tools, ARVR, and anything 3D + Interactive. I also do
-              fashion photography, make animated films, watch movies, work out
-              and eat good Chinese food.
-            </div>
+            <Box display="flex" p="14px">
+              <Text fontWeight={500} textAlign="start">
+                Hi! My name is Ivery and I'm a fullstack software engineer, tech
+                artist, 3D animator, and ARVR/Graphics Unity Developer. I love
+                creative tools, ARVR, and anything 3D + Interactive. I also do
+                fashion photography, make animated films, watch movies, work out
+                and eat good Chinese food.
+              </Text>
+            </Box>
           </div>
         </section>
         <section className="about-section">
@@ -55,22 +52,12 @@ export default class AboutPage extends React.PureComponent {
               <h3 className="subheading">Education</h3>
               {map(education, ([degree, school]) => {
                 return (
-                  <div
-                    style={{
-                      fontStyle: "italic",
-                      fontWeight: "500",
-                      textAlign: "left",
-                    }}
-                  >
-                    {degree}
-                    <span
-                      style={{
-                        fontWeight: "700",
-                      }}
-                    >
-                      {school}
-                    </span>
-                  </div>
+                  <Box display="flex">
+                    <Text fontStyle="italic" fontWeight={500} textAlign="left">
+                      {degree}
+                    </Text>
+                    <Text fontWeight={700}>{school}</Text>
+                  </Box>
                 );
               })}
             </div>
@@ -78,64 +65,34 @@ export default class AboutPage extends React.PureComponent {
               <h3 className="subheading">Work</h3>
               {map(jobs, ([title, company]) => {
                 return (
-                  <div
-                    style={{
-                      fontStyle: "italic",
-                      fontWeight: "500",
-                      textAlign: "left",
-                    }}
-                  >
-                    {title}
-                    <span
-                      style={{
-                        fontWeight: "700",
-                      }}
-                    >
-                      {company}
-                    </span>
-                  </div>
+                  <Box display="flex">
+                    <Text fontStyle="italic" fontWeight={500} textAlign="left">
+                      {title}
+                    </Text>
+                    <Text fontWeight={700}>{company}</Text>
+                  </Box>
                 );
               })}
             </div>
             <div className="about-subsection">
               <h3 className="subheading">Skills</h3>
-              <div
-                style={{
-                  fontStyle: "italic",
-                  fontWeight: "500",
-                  textAlign: "left",
-                }}
-              >
-                <span
-                  style={{
-                    fontWeight: "700",
-                  }}
-                >
+              <Text fontStyle="italic" fontWeight={500} textAlign="left">
+                <Text fontWeight={700} fontStyle="bold">
                   Code:
-                </span>
+                </Text>
                 C++, C#, Java, Python, Java, OpenCV, JavaScript, Typescript,
                 AWS, Scala, Three.js, React, HTML, CSS, Git, WebGL, GLSL, SQL,
                 AFrame, Qt, Linux
-              </div>
-              <div
-                style={{
-                  fontStyle: "italic",
-                  fontWeight: "500",
-                  textAlign: "left",
-                }}
-              >
-                <span
-                  style={{
-                    fontWeight: "700",
-                  }}
-                >
+              </Text>
+              <Text fontStyle="italic" fontWeight={500} textAlign="left">
+                <Text fontWeight={700} fontStyle="bold">
                   Tools:
-                </span>
+                </Text>
                 Figma, Unity, Blender, Maya, Houdini, Nuke, Katana, Arnold,
                 Substance Painter, Motion Capture, Marvellous Designer, C4D, Max
                 MSP, ROS, Adobe Suite(Premiere Pro, AfterEffects, Photoshop,
                 Illustrator, Audition, Animator), DaVinci Resolve, Arduino
-              </div>
+              </Text>
             </div>
           </div>
         </section>
