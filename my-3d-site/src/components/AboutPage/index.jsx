@@ -49,50 +49,86 @@ export default class AboutPage extends React.PureComponent {
         <section className="about-section">
           <div className="about-details">
             <div className="about-subsection">
-              <h3 className="subheading">Education</h3>
-              {map(education, ([degree, school]) => {
-                return (
-                  <Box display="flex">
-                    <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                      {degree}
-                    </Text>
-                    <Text fontWeight={700}>{school}</Text>
-                  </Box>
-                );
-              })}
+              <Box display="grid" gap="8px">
+                <Text
+                  fontStyle="bold"
+                  fontSize="24px"
+                  fontWeight={500}
+                  textAlign="left"
+                >
+                  Education
+                </Text>
+                {map(education, ([degree, school]) => {
+                  return (
+                    <Box display="flex">
+                      <Text
+                        fontStyle="italic"
+                        fontWeight={500}
+                        textAlign="left"
+                      >
+                        {degree}
+                      </Text>
+                      <Text fontWeight={700}>{school}</Text>
+                    </Box>
+                  );
+                })}
+              </Box>
             </div>
             <div className="about-subsection">
-              <h3 className="subheading">Work</h3>
-              {map(jobs, ([title, company]) => {
-                return (
-                  <Box display="flex">
-                    <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                      {title}
-                    </Text>
-                    <Text fontWeight={700}>{company}</Text>
-                  </Box>
-                );
-              })}
+              <Box display="grid" gap="8px">
+                <Text
+                  fontStyle="bold"
+                  fontSize="24px"
+                  fontWeight={500}
+                  textAlign="left"
+                >
+                  Work
+                </Text>
+                {map(jobs, ([title, company]) => {
+                  return (
+                    <Box display="flex">
+                      <Text
+                        fontStyle="italic"
+                        fontWeight={500}
+                        textAlign="left"
+                      >
+                        {title}
+                      </Text>
+                      <Text fontWeight={700}>{company}</Text>
+                    </Box>
+                  );
+                })}
+              </Box>
             </div>
             <div className="about-subsection">
-              <h3 className="subheading">Skills</h3>
-              <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                <Text fontWeight={700} fontStyle="bold">
-                  Code:
+              <Box display="grid" gap="8px">
+                <Text
+                  fontStyle="bold"
+                  fontSize="24px"
+                  fontWeight={500}
+                  textAlign="left"
+                >
+                  Skills
                 </Text>
-                C++, C#, Java, Python, Java, OpenCV, JavaScript, Typescript,
-                AWS, Scala, Three.js, React, HTML, CSS, Git, WebGL, GLSL, SQL,
-                AFrame, Qt, Linux
-              </Text>
-              <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                <Text fontWeight={700} fontStyle="bold">
-                  Tools:
+                <Text fontStyle="italic" fontWeight={500} textAlign="left">
+                  <Text fontWeight={700} fontStyle="bold">
+                    Code:
+                  </Text>
+                  C++, C#, Java, Python, Java, OpenCV, JavaScript, Typescript,
+                  AWS, Scala, Three.js, React, HTML, CSS, Git, WebGL, GLSL, SQL,
+                  AFrame, Qt, Linux
                 </Text>
-                Figma, Unity, Blender, Maya, Houdini, Nuke, Katana, Arnold,
-                Substance Painter, Motion Capture, Marvellous Designer, C4D, Max
-                MSP, ROS, Adobe Suite(Premiere Pro, AfterEffects, Photoshop,
-                Illustrator, Audition, Animator), DaVinci Resolve, Arduino
-              </Text>
+                <Text fontStyle="italic" fontWeight={500} textAlign="left">
+                  <Text fontWeight={700} fontStyle="bold">
+                    Tools:
+                  </Text>
+                  Figma, Unity, Blender, Maya, Houdini, Nuke, Katana, Arnold,
+                  Substance Painter, Motion Capture, Marvellous Designer, C4D,
+                  Max MSP, ROS, Adobe Suite(Premiere Pro, AfterEffects,
+                  Photoshop, Illustrator, Audition, Animator), DaVinci Resolve,
+                  Arduino
+                </Text>
+              </Box>
             </div>
           </div>
         </section>

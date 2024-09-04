@@ -66,7 +66,7 @@
 
 .menu-item:hover,
 .menu-item.active {
-  background: linear-gradient(45deg, #f06, #3b9cd4);
+  background: linear-gradient(45deg, rgb(248, 4, 102), #3b9cd4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
