@@ -10,18 +10,6 @@ body {
   overflow-y: auto;
 }
 
-.ss02 {
-  font-feature-settings: "ss02" 1;
-}
-
-.cv08 {
-  font-feature-settings: "cv08" 1;
-}
-
-.cv05 {
-  font-feature-settings: "cv05" 1;
-}
-
 header {
   align-items: center;
   display: flex;

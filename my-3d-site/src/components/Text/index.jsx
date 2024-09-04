@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
+import "@fontsource/inter";
 import React from "react";
-
 import { compose, system, typography } from "styled-system";
 
 import Box from "../Box";
@@ -33,9 +33,9 @@ function render(props, ref) {
   return (
     <Text
       color="gray.0"
-      fontFamily="sansSerif"
-      fontSize="md"
-      lineHeight="md"
+      fontFamily="Inter"
+      fontSize="14px"
+      lineHeight="14px"
       ref={ref}
       {...props}
     />

@@ -2,8 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 
-import "./NavBar.css";
+import Text from "../Text";
 import images from "../../imageImports";
+
+import "./NavBar.css";
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -37,9 +39,12 @@ const NavBar = () => {
 
   return (
     <header className="navbar">
-      <Link to="/" className="logo">
+      <Text color="white" fontSize="24px" fontWeight={850}>
+        Ivery Chen
+      </Text>
+      {/* <Link to="/" className="logo">
         IVERY CHEN
-      </Link>
+      </Link> */}
       <div className="menu-toggle-container">
         <input
           type="checkbox"
