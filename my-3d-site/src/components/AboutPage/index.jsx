@@ -26,14 +26,12 @@ export default class AboutPage extends React.PureComponent {
       <div>
         <section className="about-section">
           <div className="about-description">
-            <Card height="400px" width="350px">
-              <img
-                width="420px"
-                height="430px"
-                src={images["ivery"]}
-                alt="Ivery's profile pic"
-              />
-            </Card>
+            <img
+              width="auto"
+              height="430px"
+              src={images["ivery"]}
+              alt="Ivery's profile pic"
+            />
             <div
               style={{
                 fontStyle: "italic",
