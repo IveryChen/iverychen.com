@@ -41,7 +41,7 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <Link to="/">
-        <Text color="white" fontSize="32px" fontWeight={950}>
+        <Text color="white" fontSize="72px" fontWeight="800">
           IVERY CHEN
         </Text>
       </Link>
