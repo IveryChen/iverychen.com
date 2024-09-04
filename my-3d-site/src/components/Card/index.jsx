@@ -54,7 +54,10 @@ export default class Card extends React.PureComponent {
     return (
       <StyledBox
         style={{
-          borderRadius: "3px",
+          borderWidth: "1px",
+          borderStyle: "solid",
+          borderColor: "black",
+          backgroundColor: "white",
           display: "inline-block",
           height: { height },
           position: "relative",
@@ -62,7 +65,6 @@ export default class Card extends React.PureComponent {
           width: { width },
         }}
       >
-        <canvas ref={this.canvasRef} className="canvas" />
         {children}
       </StyledBox>
     );
