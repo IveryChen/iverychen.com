@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 
+import Box from "../Box";
 import Text from "../Text";
 import images from "../../imageImports";
 

@@ -1,60 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap">
-    <link rel="stylesheet" href="https://use.typekit.net/oda7fpf.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/oda7fpf.css" />
+
     <title>Your Website</title>
     <style></style>
-   
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <a href="index.html" class="logo">IVERY CHEN</a>
-        <label for="menu-toggle" class="menu-toggle" onclick="toggleDropDown()">
-            <img class="menu-icon" src="my-3d-site/src/assets/menu_icon.png">
-        </label>
-        <nav class="dropdown" id="dropdown">
-            <a href="#selected-work" class="menu-item" onclick="scrollToDiv('selected-work')">WORK</a>
-            <!-- <a href="art.html" class="menu-item">ART</a> -->
-            <a href="about.html" class="menu-item">ABOUT</a>
-            <a href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing" class="menu-item" target="_blank">RESUME</a>
-        </nav>
-        <nav class="menu" id="menu">
-            <a href="#selected-work" class="menu-item" onclick="scrollToDiv('selected-work')">WORK</a>
-            <!-- <a href="art.html" class="menu-item">ART</a> -->
-            <a href="about.html" class="menu-item">ABOUT</a>
-            <a href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing" class="menu-item" target="_blank">RESUME</a>
-        </nav>
+      <a href="index.html" class="logo">IVERY CHEN</a>
+      <label for="menu-toggle" class="menu-toggle" onclick="toggleDropDown()">
+        <img class="menu-icon" src="my-3d-site/src/assets/menu_icon.png" />
+      </label>
+      <nav class="dropdown" id="dropdown">
+        <a
+          href="#selected-work"
+          class="menu-item"
+          onclick="scrollToDiv('selected-work')"
+          >WORK</a
+        >
+        <!-- <a href="art.html" class="menu-item">ART</a> -->
+        <a href="about.html" class="menu-item">ABOUT</a>
+        <a
+          href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
+          class="menu-item"
+          target="_blank"
+          >RESUME</a
+        >
+      </nav>
+      <nav class="menu" id="menu">
+        <a
+          href="#selected-work"
+          class="menu-item"
+          onclick="scrollToDiv('selected-work')"
+          >WORK</a
+        >
+        <!-- <a href="art.html" class="menu-item">ART</a> -->
+        <a href="about.html" class="menu-item">ABOUT</a>
+        <a
+          href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
+          class="menu-item"
+          target="_blank"
+          >RESUME</a
+        >
+      </nav>
     </header>
     <div class="main-page">
-        <div class="intro">
-            <div class="large-text">HELLO!</div>
-            <div class="intro-tags">
-                <div class="intro-textbox"><span class="normal-text">I'M</span> <span class="name-text" onmousemove="moveText(event)">Ivery&nbsp;Chen,<br></span> <span class="highlight-text" onmousemove="moveText(event)">3D</span>&nbsp;<span class="normal-text">GRAPHICS + </span><br><span class="highlight-text"  onmousemove="moveText(event)">UX</span>&nbsp;<span class="normal-text">ENGINEER. </span></div>
-                <div id="floating-texts"></div>
-            </div>
+      <div class="intro">
+        <div class="large-text">HELLO!</div>
+        <div class="intro-tags">
+          <div class="intro-textbox">
+            <span class="normal-text">I'M</span>
+            <span class="name-text" onmousemove="moveText(event)"
+              >Ivery&nbsp;Chen,<br
+            /></span>
+            <span class="highlight-text" onmousemove="moveText(event)">3D</span
+            >&nbsp;<span class="normal-text">GRAPHICS + </span><br /><span
+              class="highlight-text"
+              onmousemove="moveText(event)"
+              >UX</span
+            >&nbsp;<span class="normal-text">ENGINEER. </span>
+          </div>
+          <div id="floating-texts"></div>
         </div>
-        <div class="filter-bar">
-            <div id="selected-work">SELECTED WORK</div>
-            <!-- <div class="filters">
+      </div>
+      <div class="filter-bar">
+        <div id="selected-work">Selected Work</div>
+        <!-- <div class="filters">
                 <a class="menu-item">All</a>
                 <a class="menu-item">UIUX</a>
                 <a class="menu-item">Unity</a>
                 <a class="menu-item">Graphics</a>
                 <a class="menu-item">3D</a>
             </div> -->
-        </div>
-        
-        <div id="cards"></div>
-            <!-- Ivery is a 3D engineer and UX engineer who loves anything 3D and interactive. Previously tech artist @ Pixar, AR/VR developer @ Bayer and @ NASA, and Research Assistant making prototypes @ Brown HCI Lab. -->
-        <p class="subtext"> developed by Ivery Chen April 2024</p>
+      </div>
 
+      <div id="cards"></div>
+      <!-- Ivery is a 3D engineer and UX engineer who loves anything 3D and interactive. Previously tech artist @ Pixar, AR/VR developer @ Bayer and @ NASA, and Research Assistant making prototypes @ Brown HCI Lab. -->
+      <p class="subtext">developed by Ivery Chen April 2024</p>
     </div>
 
     <script src="script.js" defer></script>
-</body>
+  </body>
 </html>
