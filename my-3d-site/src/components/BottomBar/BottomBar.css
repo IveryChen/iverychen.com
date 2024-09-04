@@ -4,13 +4,6 @@
   z-index: 1000;
 }
 
-.contact {
-  font-size: 15px;
-  font-weight: 700;
-  margin-left: 10px;
-  width: auto;
-}
-
 .contact-items {
   display: flex;
   justify-content: flex-end;

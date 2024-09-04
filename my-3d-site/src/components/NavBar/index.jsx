@@ -40,7 +40,7 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <Link to="/">
-        <Text color="white" fontSize="32px" fontWeight={750}>
+        <Text color="white" fontSize="32px" fontWeight={950}>
           IVERY CHEN
         </Text>
       </Link>
