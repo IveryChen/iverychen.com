@@ -1,13 +1,25 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
   background-color: #efefec;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.ss02 {
+  font-feature-settings: "ss02" 1;
+}
+
+.cv08 {
+  font-feature-settings: "cv08" 1;
+}
+
+.cv05 {
+  font-feature-settings: "cv05" 1;
 }
 
 header {
