@@ -39,12 +39,11 @@ const NavBar = () => {
 
   return (
     <header className="navbar">
-      <Text color="white" fontSize="24px" fontWeight={850}>
-        Ivery Chen
-      </Text>
-      {/* <Link to="/" className="logo">
-        IVERY CHEN
-      </Link> */}
+      <Link to="/">
+        <Text color="white" fontSize="32px" fontWeight={750}>
+          IVERY CHEN
+        </Text>
+      </Link>
       <div className="menu-toggle-container">
         <input
           type="checkbox"
@@ -67,13 +66,13 @@ const NavBar = () => {
             to="/code"
             className={`menu-item ${isActive("/code") ? "active" : ""}`}
           >
-            code
+            Code
           </Link>
           <Link
             to="/about"
             className={`menu-item ${isActive("/about") ? "active" : ""}`}
           >
-            about
+            About
           </Link>
           <a
             href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
@@ -81,7 +80,7 @@ const NavBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            resume
+            Resume
           </a>
         </nav>
       </div>
@@ -90,13 +89,13 @@ const NavBar = () => {
           to="/code"
           className={`menu-item ${isActive("/code") ? "active" : ""}`}
         >
-          code
+          Code
         </Link>
         <Link
           to="/about"
           className={`menu-item ${isActive("/about") ? "active" : ""}`}
         >
-          about
+          About
         </Link>
         <a
           href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
@@ -104,7 +103,7 @@ const NavBar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          resume
+          Resume
         </a>
       </nav>
     </header>

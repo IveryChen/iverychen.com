@@ -7,6 +7,8 @@ import categoryColours from "../../categoryColours";
 import images from "../../imageImports";
 import Card from "../../components/Card";
 
+import Text from "../Text";
+
 import "./CodePage.css";
 import RoundedImage from "./RoundedImage";
 
@@ -15,11 +17,14 @@ const StyledRoundedImage = styled(RoundedImage)`
     margin-bottom: 10px;
   }
 `;
+
 const CodePage = () => {
   return (
     <>
       <div className="filter-bar">
-        <div id="selected-work">SELECTED WORK</div>
+        <Text fontSize="24px" fontWeight={540}>
+          Selected Work
+        </Text>
       </div>
       <div className="cards">
         {jsonData.map((item, index) => (
@@ -58,7 +63,9 @@ const CodePage = () => {
                               categoryColours[category] || "#FFFFFF",
                           }}
                         >
-                          <span className="category-text">{category}</span>
+                          <Text fontSize="10px" padding="4px">
+                            {category}
+                          </Text>
                         </div>
                       ))}
                     </div>
