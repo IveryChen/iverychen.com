@@ -52,17 +52,17 @@ const CodePage = () => {
                     <div className="categories">
                       {item.categories.map((category, index) => (
                         <Box
-                          key={index}
                           alignItems="center"
-                          borderColor="#514f59"
-                          borderRadius="2px"
-                          boxShadow="inset 0 0 0 1px #514f59"
-                          display="inline-flex"
-                          lineHeight="30px"
-                          className="category"
                           backgroundColor={
                             categoryColours[category] || "#FFFFFF"
                           }
+                          borderColor="#514f59"
+                          borderRadius="6px"
+                          boxShadow="inset 0 0 0 1px #514f59"
+                          className="category"
+                          display="inline-flex"
+                          key={index}
+                          lineHeight="30px"
                         >
                           <Text fontSize="10px" padding="4px">
                             {category}
