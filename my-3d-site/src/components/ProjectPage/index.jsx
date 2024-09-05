@@ -1,9 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
+
 import jsonData from "../../data";
 import images from "../../imageImports";
+
 import YouTubeVideoComponent from "../YouTubeVideoComponent";
 import VimeoVideoComponent from "../VimeoVideoComponent";
+import Box from "../Box";
 
 const ProjectPage = () => {
   const { projectName } = useParams(); // Get the dynamic part of the URL
@@ -55,8 +58,6 @@ const ProjectPage = () => {
     return <div>Project not found</div>;
   }
 
-  // console.log(project);
-
   return (
     <div className="project-page">
       <div className="title-card">
@@ -64,11 +65,17 @@ const ProjectPage = () => {
         <div className="italics">
           {project.duration}, <span className="normal">{project.time}</span>
         </div>
-        <div className="title-image-container">
+        <Box className="title-image-container">
           <img
             src={images[project.image]}
             alt={project.eventName}
-            className="title-image"
+            style={{
+              borderRadius: "inherit",
+              height: "auto",
+              maxWidth: "80%",
+              padding: "7px",
+              transition: "filter 0.3s ease-out",
+            }}
           />
           <div className="image-overlay">
             <a
@@ -80,7 +87,7 @@ const ProjectPage = () => {
               {project.title.toLowerCase()} <span>↗</span>{" "}
             </a>
           </div>
-        </div>
+        </Box>
         <div className="extra-info-container">
           <div className="italics">
             Team: <span className="normal">{project.team}</span>
