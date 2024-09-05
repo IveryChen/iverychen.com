@@ -39,7 +39,7 @@ const CodePage = () => {
                     image={images[item.image]}
                     eventName={item.eventName}
                     width="100%"
-                    height="220px"
+                    height="auto"
                     border="1.5px"
                     borderstyle="solid"
                     bordercolor="black"
