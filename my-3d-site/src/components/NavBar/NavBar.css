@@ -1,18 +1,10 @@
 .navbar {
-  background: transparent;
-  mix-blend-mode: difference;
+  background-color: #efefec;
   padding: 10px;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid black;
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-.logo {
-  color: white;
-  font-size: 24px;
-  font-stretch: semi-expanded;
-  font-weight: 850;
 }
 
 .menu-toggle-container {
@@ -56,7 +48,6 @@
 }
 
 .menu-item {
-  color: white;
   cursor: pointer;
   font-size: 16px;
   margin: 4px;
@@ -70,7 +61,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  /* filter: invert(); */
   font-style: italic;
 }
 

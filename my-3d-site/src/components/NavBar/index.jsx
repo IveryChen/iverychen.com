@@ -41,7 +41,7 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <Link to="/">
-        <Text color="white" fontSize="72px" fontWeight="800">
+        <Text fontSize="72px" fontWeight="800">
           IVERY CHEN
         </Text>
       </Link>
@@ -56,7 +56,7 @@ const NavBar = () => {
           className="menu-toggle"
           onClick={toggleDropDown}
         >
-          <IoMenu size={36} color="#ffffff" />
+          <IoMenu size={36} />
         </label>
         <nav
           className={`dropdown ${dropdownOpen ? "active" : ""}`}
