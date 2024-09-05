@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
@@ -7,6 +8,12 @@ import Text from "../Text";
 import images from "../../imageImports";
 
 import "./NavBar.css";
+
+const StyledLogo = styled(Text)`
+  @media (min-width: 768px) {
+    font-size: 72px;
+  }
+`;
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -41,9 +48,9 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <Link to="/">
-        <Text fontSize="72px" fontWeight="800">
+        <StyledLogo fontSize="32px" fontWeight="800">
           IVERY CHEN
-        </Text>
+        </StyledLogo>
       </Link>
       <div className="menu-toggle-container">
         <input
