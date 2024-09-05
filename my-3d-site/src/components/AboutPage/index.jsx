@@ -15,6 +15,16 @@ const StyledBox = styled(Box)`
   }
 `;
 
+const StyledText = styled(Text)`
+  font-size: 12px;
+  font-weight: 400;
+  text-align: start;
+
+  @media (min-width: 900px) {
+    font-size: 20px;
+  }
+`;
+
 const education = [
   ["B.A Computer Science @", "Brown University (2024)"],
   ["B.F.A Film/Animation/Video @", "Rhode Island School of Design (2024)"],
@@ -48,14 +58,20 @@ export default class AboutPage extends React.PureComponent {
               alt="Ivery's profile pic"
             />
           </Box>
-          <Box display="flex" p="14px">
-            <Text fontWeight={500} textAlign="start">
-              Hi! My name is Ivery and I'm a fullstack software engineer, tech
-              artist, 3D animator, and ARVR/Graphics Unity Developer. I love
-              creative tools, ARVR, and anything 3D + Interactive. I also do
-              fashion photography, make animated films, watch movies, work out
-              and eat good Chinese food.
-            </Text>
+          <Box>
+            <Box display="flex" flexDirection="column" gap="8px" p="14px">
+              <StyledText>
+                ① My name is Ivery and I'm a full-stack software engineer, tech
+                artist, 3D animator, and ARVR/Graphics Unity Developer.
+              </StyledText>
+              <StyledText>
+                ② I love creative tools, ARVR, and anything 3D + Interactive.
+              </StyledText>
+              <StyledText>
+                ③ I also do fashion photography, make animated films, watch
+                movies, work out and eat good Chinese food.
+              </StyledText>
+            </Box>
           </Box>
           {/* <StyledBox
             alignItems="center"
