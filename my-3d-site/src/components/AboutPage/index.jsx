@@ -39,7 +39,7 @@ export default class AboutPage extends React.PureComponent {
           gridTemplateColumns="1fr 1fr"
           justifyContent="center"
         >
-          <Box aspectRatio={1} borderRight="1px solid black" width="680px">
+          <Box aspectRatio={1} borderRight="1px solid black" width="50vw">
             <img
               height="100%"
               width="100%"
