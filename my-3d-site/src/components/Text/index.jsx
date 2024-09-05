@@ -25,7 +25,6 @@ const Text = styled(Box)(
     whiteSpace,
     wordBreak
   ),
-  (props) => props.truncate && truncateProps,
   (props) => {
     const config = [
       props.ss03 && "ss03",
@@ -51,9 +50,17 @@ const Text = styled(Box)(
       .filter(Boolean)
       .join(",");
 
-    return {
-      fontFeatureSettings: config,
-    };
+    const result = {};
+
+    if (config) {
+      result.fontFeatureSettings = config;
+    }
+
+    if (props.truncate) {
+      return { ...truncateProps, ...result };
+    }
+
+    return result;
   }
 );
 
