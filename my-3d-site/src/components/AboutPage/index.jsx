@@ -1,13 +1,19 @@
+import styled from "@emotion/styled";
 import { map } from "lodash";
 import React from "react";
 
-import Card from "../../components/Card";
 import images from "../../imageImports";
 
 import Box from "../Box";
 import Text from "../Text";
 
-import "./AboutPage.css";
+const StyledBox = styled(Box)`
+  @media (min-width: 768px) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+`;
 
 const education = [
   ["B.A Computer Science @", "Brown University (2024)"],
@@ -26,9 +32,22 @@ const jobs = [
 export default class AboutPage extends React.PureComponent {
   render() {
     return (
-      <div>
-        <section className="about-section">
-          <div className="about-description">
+      <>
+        <Box
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          padding="20px"
+        >
+          <StyledBox
+            alignItems="center"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            maxWidth="75%"
+            padding="30px"
+          >
             <img
               width="auto"
               height="430px"
@@ -44,11 +63,18 @@ export default class AboutPage extends React.PureComponent {
                 and eat good Chinese food.
               </Text>
             </Box>
-          </div>
-        </section>
-        <section className="about-section">
-          <div className="about-details">
-            <div className="about-subsection">
+          </StyledBox>
+        </Box>
+        <Box
+          alignItems="center"
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          maxWidth="75%"
+          padding="30px"
+        >
+          <Box paddingLeft="10%" paddingRight="10%">
+            <Box alignItems="left" paddingBottom="20px" textAlign="left">
               <Box display="grid" gap="8px">
                 <Text
                   fontStyle="bold"
@@ -73,8 +99,8 @@ export default class AboutPage extends React.PureComponent {
                   );
                 })}
               </Box>
-            </div>
-            <div className="about-subsection">
+            </Box>
+            <Box alignItems="left" paddingBottom="20px" textAlign="left">
               <Box display="grid" gap="8px">
                 <Text
                   fontStyle="bold"
@@ -99,8 +125,8 @@ export default class AboutPage extends React.PureComponent {
                   );
                 })}
               </Box>
-            </div>
-            <div className="about-subsection">
+            </Box>
+            <Box alignItems="left" paddingBottom="20px" textAlign="left">
               <Box display="grid" gap="8px">
                 <Text
                   fontStyle="bold"
@@ -114,9 +140,8 @@ export default class AboutPage extends React.PureComponent {
                   <Text fontWeight={700} fontStyle="bold">
                     Code:
                   </Text>
-                  C++, C#, Java, Python, Java, OpenCV, JavaScript, Typescript,
-                  AWS, Scala, Three.js, React, HTML, CSS, Git, WebGL, GLSL, SQL,
-                  AFrame, Qt, Linux
+                  C#, C++, Python, OpenCV, JavaScript, Scala, Three.js, React,
+                  HTML, CSS, Git, WebGL, GLSL, SQL, AFrame, Qt, Linux
                 </Text>
                 <Text fontStyle="italic" fontWeight={500} textAlign="left">
                   <Text fontWeight={700} fontStyle="bold">
@@ -129,15 +154,22 @@ export default class AboutPage extends React.PureComponent {
                   Arduino
                 </Text>
               </Box>
-            </div>
-          </div>
-        </section>
+            </Box>
+          </Box>
+        </Box>
+
         <img
           src={images["smiley_balloon"]}
           alt={"smiley balloon"}
-          className="title-image"
+          style={{
+            borderRadius: "inherit",
+            height: "auto",
+            maxWidth: "80%",
+            padding: "7px",
+            transition: "filter 0.3s ease-out",
+          }}
         />
-      </div>
+      </>
     );
   }
 }
