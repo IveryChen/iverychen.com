@@ -10,13 +10,9 @@ import images from "../../imageImports";
 import "./NavBar.css";
 
 const StyledLogo = styled(Text)`
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: ${(props) => props.fontWeight || 800};
 `;
-
-// @media (min-width: 768px) {
-//   font-size: 72px;
-// }
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -51,9 +47,7 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <Link to="/">
-        <StyledLogo fontSize="48px" fontWeight={800}>
-          IVERY CHEN
-        </StyledLogo>
+        <StyledLogo>IVERY CHEN</StyledLogo>
       </Link>
       <div className="menu-toggle-container">
         <input
