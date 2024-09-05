@@ -1,7 +1,6 @@
 import React from "react";
 
 import VideoLoader from "./VideoLoader";
-import "./MainPage.css";
 
 const videoUrls = [
   "Monday_meatshop",

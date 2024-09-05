@@ -21,7 +21,7 @@ const StyledRoundedImage = styled(RoundedImage)`
 
 const CodePage = () => {
   return (
-    <>
+    <Box display="flex" padding="30px">
       <div className="cards">
         {jsonData.map((item, index) => (
           <Link to={`/project/${item.path}`} key={item.id}>
@@ -77,7 +77,7 @@ const CodePage = () => {
           </Link>
         ))}
       </div>
-    </>
+    </Box>
   );
 };
 
