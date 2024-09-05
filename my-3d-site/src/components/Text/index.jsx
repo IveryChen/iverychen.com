@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import "@fontsource/inter";
 import React from "react";
 import { compose, system, typography } from "styled-system";
 
