@@ -12,6 +12,10 @@ import "./NavBar.css";
 const StyledLogo = styled(Text)`
   font-size: 4vw;
   font-weight: ${(props) => props.fontWeight || 800};
+
+  @media (max-width: 768px) {
+    font-size: 7vw;
+  }
 `;
 
 const NavBar = () => {
