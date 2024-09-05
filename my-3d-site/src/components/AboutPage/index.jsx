@@ -25,6 +25,14 @@ const StyledText = styled(Text)`
   }
 `;
 
+const StyledImageBox = styled(Box)`
+  min-height: 30vh;
+
+  @media (min-width: 768px) {
+    min-height: 92vh;
+  }
+`;
+
 const education = [
   ["B.A Computer Science @", "Brown University (2024)"],
   ["B.F.A Film/Animation/Video @", "Rhode Island School of Design (2024)"],
@@ -43,21 +51,38 @@ export default class AboutPage extends React.PureComponent {
   render() {
     return (
       <Box>
+        {/* <StyledBox
+            alignItems="center"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            maxWidth="75%"
+            padding="30px"
+          > */}
         <Box
           borderBottom="1px solid black"
           display="grid"
           gridTemplateColumns="1fr 1fr"
           justifyContent="center"
         >
-          <Box aspectRatio={1} borderRight="1px solid black" width="50vw">
+          <StyledImageBox
+            borderRight="1px solid black"
+            position="relative"
+            width="50vw"
+          >
             <img
-              height="100%"
-              width="100%"
-              objectFit="contain"
-              src={images["ivery"]}
               alt="Ivery's profile pic"
+              style={{
+                height: "100%",
+                left: 0,
+                objectFit: "cover",
+                position: "absolute",
+                top: 0,
+                width: "100%",
+              }}
+              src={images["ivery"]}
             />
-          </Box>
+          </StyledImageBox>
           <Box>
             <Box display="flex" flexDirection="column" gap="8px" p="14px">
               <StyledText>
