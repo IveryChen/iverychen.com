@@ -48,7 +48,7 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <Link to="/">
-        <StyledLogo fontSize="32px" fontWeight="800">
+        <StyledLogo fontSize="48px" cv08 fontWeight={800}>
           IVERY CHEN
         </StyledLogo>
       </Link>
