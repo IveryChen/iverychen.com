@@ -88,10 +88,9 @@ export default class AboutPage extends React.PureComponent {
           display="flex"
           flexDirection="column"
           justifyContent="center"
-          maxWidth="75%"
           padding="30px"
         >
-          <Box paddingLeft="10%" paddingRight="10%">
+          <Box>
             <Box alignItems="left" paddingBottom="20px" textAlign="left">
               <Box display="grid" gap="8px">
                 <Text
