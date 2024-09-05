@@ -10,10 +10,13 @@ import images from "../../imageImports";
 import "./NavBar.css";
 
 const StyledLogo = styled(Text)`
-  @media (min-width: 768px) {
-    font-size: 72px;
-  }
+  font-size: 5vw;
+  font-weight: ${(props) => props.fontWeight || 800};
 `;
+
+// @media (min-width: 768px) {
+//   font-size: 72px;
+// }
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
