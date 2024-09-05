@@ -32,38 +32,40 @@ const jobs = [
 export default class AboutPage extends React.PureComponent {
   render() {
     return (
-      <>
+      <Box>
         <Box
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
+          borderBottom="1px solid black"
+          display="grid"
+          gridTemplateColumns="1fr 1fr"
           justifyContent="center"
-          padding="20px"
         >
-          <StyledBox
+          <Box aspectRatio={1} borderRight="1px solid black" width="680px">
+            <img
+              height="100%"
+              width="100%"
+              objectFit="contain"
+              src={images["ivery"]}
+              alt="Ivery's profile pic"
+            />
+          </Box>
+          <Box display="flex" p="14px">
+            <Text fontWeight={500} textAlign="start">
+              Hi! My name is Ivery and I'm a fullstack software engineer, tech
+              artist, 3D animator, and ARVR/Graphics Unity Developer. I love
+              creative tools, ARVR, and anything 3D + Interactive. I also do
+              fashion photography, make animated films, watch movies, work out
+              and eat good Chinese food.
+            </Text>
+          </Box>
+          {/* <StyledBox
             alignItems="center"
             display="flex"
             flexDirection="column"
             justifyContent="center"
             maxWidth="75%"
             padding="30px"
-          >
-            <img
-              width="auto"
-              height="430px"
-              src={images["ivery"]}
-              alt="Ivery's profile pic"
-            />
-            <Box display="flex" p="14px">
-              <Text fontWeight={500} textAlign="start">
-                Hi! My name is Ivery and I'm a fullstack software engineer, tech
-                artist, 3D animator, and ARVR/Graphics Unity Developer. I love
-                creative tools, ARVR, and anything 3D + Interactive. I also do
-                fashion photography, make animated films, watch movies, work out
-                and eat good Chinese food.
-              </Text>
-            </Box>
-          </StyledBox>
+          > */}
+          {/* </StyledBox> */}
         </Box>
         <Box
           alignItems="center"
@@ -169,7 +171,7 @@ export default class AboutPage extends React.PureComponent {
             transition: "filter 0.3s ease-out",
           }}
         />
-      </>
+      </Box>
     );
   }
 }
