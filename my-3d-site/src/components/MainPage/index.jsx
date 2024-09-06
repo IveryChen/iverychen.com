@@ -3,8 +3,8 @@ import React from "react";
 import VideoLoader from "./VideoLoader";
 
 const videoUrls = [
-  "Monday_meatshop",
   "Monday_clothes",
+  "Monday_meatshop",
   "Monday_raccoon",
   "Monday_duck_2",
   "Marathon_ring",
