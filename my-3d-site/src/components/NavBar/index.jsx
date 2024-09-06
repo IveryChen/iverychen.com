@@ -51,7 +51,9 @@ const NavBar = () => {
   return (
     <header className="navbar">
       <Link to="/">
-        <StyledLogo>IVERY CHEN</StyledLogo>
+        <StyledLogo cv08 tnum>
+          IVERY CHEN
+        </StyledLogo>
       </Link>
       <div className="menu-toggle-container">
         <input
