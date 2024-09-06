@@ -57,11 +57,7 @@
 
 .menu-item:hover,
 .menu-item.active {
-  background: linear-gradient(45deg, rgb(177, 69, 201), #d779d4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-style: italic;
+  font-weight: bold;
 }
 
 .menu a {
