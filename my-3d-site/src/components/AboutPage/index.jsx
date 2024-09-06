@@ -89,13 +89,8 @@ export default class AboutPage extends React.PureComponent {
               gap="8px"
               p="14px"
             >
-              <Text
-                fontStyle="bold"
-                fontSize="24px"
-                fontWeight={500}
-                textAlign="left"
-              >
-                Education
+              <Text fontStyle="bold" fontWeight={500} textAlign="left">
+                ④ Education
               </Text>
               {map(education, ([degree]) => {
                 return (
@@ -112,13 +107,8 @@ export default class AboutPage extends React.PureComponent {
               gap="8px"
               p="14px"
             >
-              <Text
-                fontStyle="bold"
-                fontSize="24px"
-                fontWeight={500}
-                textAlign="left"
-              >
-                Work
+              <Text fontStyle="bold" fontWeight={500} textAlign="left">
+                ⑤ Work
               </Text>
               {map(jobs, ([company]) => {
                 return (
@@ -136,30 +126,18 @@ export default class AboutPage extends React.PureComponent {
               p="14px"
             >
               <Box display="grid" gap="8px">
-                <Text
-                  fontStyle="bold"
-                  fontSize="24px"
-                  fontWeight={500}
-                  textAlign="left"
-                >
-                  Skills
+                <Text fontStyle="bold" fontWeight={500} textAlign="left">
+                  ⑥ Skills
                 </Text>
                 <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                  <Text fontWeight={700} fontStyle="bold">
-                    Code:
-                  </Text>
                   C#, C++, Python, OpenCV, JavaScript, Scala, Three.js, React,
                   HTML, CSS, Git, WebGL, GLSL, SQL, AFrame, Qt, Linux
                 </Text>
                 <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                  <Text fontWeight={700} fontStyle="bold">
-                    Tools:
-                  </Text>
                   Figma, Unity, Blender, Maya, Houdini, Nuke, Katana, Arnold,
                   Substance Painter, Motion Capture, Marvellous Designer, C4D,
                   Max MSP, ROS, Adobe Suite(Premiere Pro, AfterEffects,
-                  Photoshop, Illustrator, Audition, Animator), DaVinci Resolve,
-                  Arduino
+                  Photoshop, Illustrator, Audition, Animator), Arduino
                 </Text>
               </Box>
             </Box>
