@@ -7,24 +7,6 @@ import images from "../../imageImports";
 import Box from "../Box";
 import Text from "../Text";
 
-const StyledBox = styled(Box)`
-  @media (min-width: 768px) {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-`;
-
-const StyledText = styled(Text)`
-  font-size: 12px;
-  font-weight: 400;
-  text-align: start;
-
-  @media (min-width: 900px) {
-    font-size: 20px;
-  }
-`;
-
 const StyledImageBox = styled(Box)`
   min-height: 30vh;
 
@@ -33,142 +15,126 @@ const StyledImageBox = styled(Box)`
   }
 `;
 
+const StyledSection = styled(Box)`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
 const education = [
-  ["B.A Computer Science @", "Brown University (2024)"],
-  ["B.F.A Film/Animation/Video @", "Rhode Island School of Design (2024)"],
+  ["B.A Computer Science @ Brown University (2024)"],
+  ["B.F.A Film/Animation/Video @ Rhode Island School of Design (2024)"],
 ];
 
 const jobs = [
-  ["Associate Software Engineer @", "Tesla"],
-  ["Research Engineer @", "Brown HCI"],
-  ["UX Engineering Intern @", "BMW"],
-  ["Technical Director Intern @", "Pixar"],
-  ["VR Software Engineering Intern @", "Bayer"],
-  ["AR Developer @", "NASA"],
+  ["Associate Software Engineer @ Tesla"],
+  ["Research Engineer @ Brown HCI"],
+  ["Technical Director Intern @ Pixar"],
+  ["VR Software Engineering Intern @ Bayer"],
+  ["AR Developer @ NASA"],
 ];
 
 export default class AboutPage extends React.PureComponent {
   render() {
     return (
-      <Box>
-        {/* <StyledBox
-            alignItems="center"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            maxWidth="75%"
-            padding="30px"
-          > */}
-        <Box
-          borderBottom="1px solid black"
-          display="grid"
-          gridTemplateColumns="1fr 1fr"
-          justifyContent="center"
-        >
-          <StyledImageBox
-            borderRight="1px solid black"
-            position="relative"
-            width="50vw"
-          >
-            <img
-              alt="Ivery's profile pic"
-              style={{
-                height: "100%",
-                left: 0,
-                objectFit: "cover",
-                position: "absolute",
-                top: 0,
-                width: "100%",
-              }}
-              src={images["ivery"]}
-            />
-          </StyledImageBox>
+      <>
+        <StyledSection>
+          <StyledSection borderBottom="1px solid black">
+            <StyledImageBox
+              borderRight="1px solid black"
+              position="relative"
+              width="100vw"
+            >
+              <img
+                alt="Ivery's profile pic"
+                style={{
+                  height: "100%",
+                  left: 0,
+                  objectFit: "cover",
+                  position: "absolute",
+                  top: 0,
+                  width: "100%",
+                }}
+                src={images["ivery"]}
+              />
+            </StyledImageBox>
+          </StyledSection>
           <Box>
-            <Box display="flex" flexDirection="column" gap="8px" p="14px">
-              <StyledText>
+            <Box
+              borderBottom="1px solid black"
+              display="flex"
+              flexDirection="column"
+              gap="8px"
+              p="14px"
+            >
+              <Text fontWeight={500} textAlign="left">
                 ① My name is Ivery and I'm a full-stack software engineer, tech
                 artist, 3D animator, and ARVR/Graphics Unity Developer.
-              </StyledText>
-              <StyledText>
+              </Text>
+              <Text fontWeight={500} textAlign="left">
                 ② I love creative tools, ARVR, and anything 3D + Interactive.
-              </StyledText>
-              <StyledText>
+              </Text>
+              <Text fontWeight={500} textAlign="left">
                 ③ I also do fashion photography, make animated films, watch
                 movies, work out and eat good Chinese food.
-              </StyledText>
+              </Text>
             </Box>
-          </Box>
-          {/* <StyledBox
-            alignItems="center"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            maxWidth="75%"
-            padding="30px"
-          > */}
-          {/* </StyledBox> */}
-        </Box>
-        <Box
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          padding="30px"
-        >
-          <Box>
-            <Box alignItems="left" paddingBottom="20px" textAlign="left">
-              <Box display="grid" gap="8px">
-                <Text
-                  fontStyle="bold"
-                  fontSize="24px"
-                  fontWeight={500}
-                  textAlign="left"
-                >
-                  Education
-                </Text>
-                {map(education, ([degree, school]) => {
-                  return (
-                    <Box display="flex">
-                      <Text
-                        fontStyle="italic"
-                        fontWeight={500}
-                        textAlign="left"
-                      >
-                        {degree}
-                      </Text>
-                      <Text fontWeight={700}>{school}</Text>
-                    </Box>
-                  );
-                })}
-              </Box>
+            <Box
+              borderBottom="1px solid black"
+              display="flex"
+              flexDirection="column"
+              gap="8px"
+              p="14px"
+            >
+              <Text
+                fontStyle="bold"
+                fontSize="24px"
+                fontWeight={500}
+                textAlign="left"
+              >
+                Education
+              </Text>
+              {map(education, ([degree]) => {
+                return (
+                  <Text fontStyle="italic" fontWeight={500} textAlign="left">
+                    {degree}
+                  </Text>
+                );
+              })}
             </Box>
-            <Box alignItems="left" paddingBottom="20px" textAlign="left">
-              <Box display="grid" gap="8px">
-                <Text
-                  fontStyle="bold"
-                  fontSize="24px"
-                  fontWeight={500}
-                  textAlign="left"
-                >
-                  Work
-                </Text>
-                {map(jobs, ([title, company]) => {
-                  return (
-                    <Box display="flex">
-                      <Text
-                        fontStyle="italic"
-                        fontWeight={500}
-                        textAlign="left"
-                      >
-                        {title}
-                      </Text>
-                      <Text fontWeight={700}>{company}</Text>
-                    </Box>
-                  );
-                })}
-              </Box>
+            <Box
+              borderBottom="1px solid black"
+              display="flex"
+              flexDirection="column"
+              gap="8px"
+              p="14px"
+            >
+              <Text
+                fontStyle="bold"
+                fontSize="24px"
+                fontWeight={500}
+                textAlign="left"
+              >
+                Work
+              </Text>
+              {map(jobs, ([company]) => {
+                return (
+                  <Text fontStyle="italic" fontWeight={500} textAlign="left">
+                    {company}
+                  </Text>
+                );
+              })}
             </Box>
-            <Box alignItems="left" paddingBottom="20px" textAlign="left">
+            <Box
+              borderBottom="1px solid black"
+              display="flex"
+              flexDirection="column"
+              gap="8px"
+              p="14px"
+            >
               <Box display="grid" gap="8px">
                 <Text
                   fontStyle="bold"
@@ -198,8 +164,7 @@ export default class AboutPage extends React.PureComponent {
               </Box>
             </Box>
           </Box>
-        </Box>
-
+        </StyledSection>
         <img
           src={images["smiley_balloon"]}
           alt={"smiley balloon"}
@@ -211,7 +176,7 @@ export default class AboutPage extends React.PureComponent {
             transition: "filter 0.3s ease-out",
           }}
         />
-      </Box>
+      </>
     );
   }
 }
