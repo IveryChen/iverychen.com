@@ -1,14 +1,4 @@
-.card {
-  display: inline-block;
-  padding: 12px;
-  transition: transform 0.3s ease;
-}
-
 @media (min-width: 768px) {
-  .card {
-    height: 400px;
-    width: 400px;
-  }
   .card-wrapper {
     height: 440px;
     margin: 20px;

@@ -10,7 +10,6 @@ import Card from "../../components/Card";
 import Box from "../Box";
 import Text from "../Text";
 
-import "./CodePage.css";
 import RoundedImage from "./RoundedImage";
 
 const StyledRoundedImage = styled(RoundedImage)`
@@ -19,10 +18,17 @@ const StyledRoundedImage = styled(RoundedImage)`
   }
 `;
 
+const StyledBox = styled(Box)`
+  @media (min-width: 768px) {
+    width: auto;
+    height: 100%;
+  }
+`;
+
 const CodePage = () => {
   return (
     <Box display="flex" padding="30px">
-      <div className="cards">
+      <Box display="flex" flexWrap="wrap" gap="30px" justifyContent="center">
         {jsonData.map((item, index) => (
           <Link to={`/project/${item.path}`} key={item.id}>
             <Card
@@ -33,16 +39,22 @@ const CodePage = () => {
               description={item.description}
               categories={item.categories}
             >
-              <div className="card">
+              <StyledBox
+                padding="12px"
+                transition="transform 0.3s ease"
+                width="320px"
+                height="340px"
+              >
                 <Link to={`/project/${item.path}`}>
                   <StyledRoundedImage
-                    image={images[item.image]}
-                    eventName={item.eventName}
-                    width="100%"
-                    height="auto"
                     border="1.5px"
-                    borderstyle="solid"
                     bordercolor="black"
+                    borderstyle="solid"
+                    eventName={item.eventName}
+                    height="60%"
+                    image={images[item.image]}
+                    position="relative"
+                    width="100%"
                   />
                   <div className="card-content">
                     <div className="event-name">{item.eventName}</div>
@@ -72,11 +84,11 @@ const CodePage = () => {
                     </div>
                   </div>
                 </Link>
-              </div>
+              </StyledBox>
             </Card>
           </Link>
         ))}
-      </div>
+      </Box>
     </Box>
   );
 };

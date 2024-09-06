@@ -14,13 +14,17 @@ export default class RoundedImage extends React.PureComponent {
 
     return (
       <img
-        src={image}
         alt={eventName}
-        width={width}
-        height={height}
         border={border}
-        borderStyle={borderstyle}
         bordercolor={bordercolor}
+        borderStyle={borderstyle}
+        height={height}
+        left="0"
+        object-fit="cover"
+        position="absolute"
+        src={image}
+        top="0"
+        width={width}
       />
     );
   }

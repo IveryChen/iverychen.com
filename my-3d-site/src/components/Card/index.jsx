@@ -27,7 +27,6 @@ export default class Card extends React.PureComponent {
           borderStyle: "solid",
           borderColor: "black",
           backgroundColor: "white",
-          display: "inline-block",
           height: { height },
           position: "relative",
           transition: "transform 0.3s ease",
