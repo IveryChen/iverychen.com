@@ -1,22 +1,23 @@
 import React from "react";
 
-import "./VideoPlayer.css";
+import Box from "../Box";
 
 export default class VideoPlayer extends React.PureComponent {
   render() {
     const { url } = this.props;
 
     return (
-      <div className="thumbnail-container">
+      <Box display="flex">
         <video
           autoPlay
-          className="video"
           loop
           muted
           src={`https://d2skwsfewsc9s1.cloudfront.net/Videos/${url}.mp4`}
           type="video/mp4"
+          width="100%"
+          height="100%"
         />
-      </div>
+      </Box>
     );
   }
 }
