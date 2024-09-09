@@ -1,6 +1,6 @@
 import React from "react";
 
-import VideoLoader from "./VideoLoader";
+import VideoPlayerContainer from "./VideoPlayerContainer";
 
 const videoUrls = [
   "Monday_clothes",
@@ -22,6 +22,6 @@ const videoUrls = [
 
 export default class MainPage extends React.PureComponent {
   render() {
-    return <VideoLoader videoUrls={videoUrls} />;
+    return <VideoPlayerContainer videoUrls={videoUrls} />;
   }
 }
