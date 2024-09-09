@@ -6,6 +6,17 @@ import Box from "../Box";
 import VideoPlayer from "./VideoPlayer";
 
 export default class VideoPlayerContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeBox: null,
+    };
+  }
+
+  handleClick = (id) => {
+    this.setState({ activeBox: id });
+  };
+
   render() {
     const { videoUrls } = this.props;
 
@@ -18,9 +29,17 @@ export default class VideoPlayerContainer extends React.Component {
           overflow-y="hidden"
           padding="16px"
         >
-          {map(videoUrls, (url) => (
-            <VideoPlayer key={url} url={url} />
-          ))}
+          {map(videoUrls, (url, index) => {
+            return (
+              <VideoPlayer
+                id={index}
+                isActive={this.state.activeBox === index}
+                key={url}
+                onClick={() => this.handleClick(index)}
+                url={url}
+              />
+            );
+          })}
         </Box>
       </Box>
     );
