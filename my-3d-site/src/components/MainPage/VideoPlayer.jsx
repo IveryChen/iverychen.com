@@ -4,9 +4,8 @@ import React from "react";
 import Box from "../Box";
 
 const StyledBox = styled(Box)`
-  position: relative;
   display: grid;
-  transition: all 0.8s ease;
+  position: relative;
 
   ${({ isActive }) =>
     isActive &&
