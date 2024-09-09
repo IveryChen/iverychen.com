@@ -5,6 +5,14 @@ import React from "react";
 import Box from "../Box";
 import VideoPlayer from "./VideoPlayer";
 
+const StyledBox = styled(Box)`
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+`;
+
 export default class VideoPlayerContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -22,13 +30,7 @@ export default class VideoPlayerContainer extends React.Component {
 
     return (
       <Box height="auto" overflowY="hidden" position="relative" width="100vw">
-        <Box
-          display="grid"
-          gap="20px"
-          gridTemplateColumns="repeat(auto-fill, minmax(500px, 1fr))"
-          overflow-y="hidden"
-          padding="16px"
-        >
+        <StyledBox display="grid" gap="20px" overflow-y="hidden" padding="16px">
           {map(videoUrls, (url, index) => {
             return (
               <VideoPlayer
@@ -40,7 +42,7 @@ export default class VideoPlayerContainer extends React.Component {
               />
             );
           })}
-        </Box>
+        </StyledBox>
       </Box>
     );
   }

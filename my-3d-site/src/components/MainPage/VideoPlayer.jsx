@@ -20,6 +20,7 @@ const StyledBox = styled(Box)`
       `
         grid-column: auto;
         grid-row: auto;
+
       `}
   }
 `;
@@ -29,21 +30,21 @@ export default class VideoPlayer extends React.PureComponent {
     const { isActive, url, onClick } = this.props;
 
     const videoStyle = {
+      height: "100%",
       objectFit: "cover",
+      width: "100%",
     };
 
     return (
       <StyledBox isActive={isActive}>
         <video
           autoPlay
-          height="100%"
           loop
           muted
           onClick={onClick}
           src={`https://d2skwsfewsc9s1.cloudfront.net/Videos/${url}.mp4`}
           style={videoStyle}
           type="video/mp4"
-          width="100%"
         />
       </StyledBox>
     );
