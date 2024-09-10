@@ -29,8 +29,14 @@ export default class VideoPlayerContainer extends React.Component {
     const { videoUrls } = this.props;
 
     return (
-      <Box height="auto" overflowY="hidden" position="relative" width="100vw">
-        <StyledBox display="grid" gap="20px" overflow-y="hidden" padding="16px">
+      <Box height="auto" position="relative" width="100vw">
+        <StyledBox
+          gap="20px"
+          padding="16px"
+          position="relative"
+          display="block"
+          height="1000px"
+        >
           {map(videoUrls, (url, index) => {
             return (
               <VideoPlayer
