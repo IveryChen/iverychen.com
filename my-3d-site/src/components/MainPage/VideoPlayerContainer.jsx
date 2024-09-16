@@ -10,7 +10,7 @@ const aspectRatio = 16 / 9;
 const gap = 16;
 const gutter = 16;
 const numVideos = 18;
-const minVideoWidth = 500;
+const minVideoWidth = 600;
 
 export default class VideoPlayerContainer extends React.Component {
   constructor(props) {
