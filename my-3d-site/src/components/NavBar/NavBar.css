@@ -1,32 +1,3 @@
-.navbar {
-  background-color: #efefec;
-  padding: 16px;
-  border-bottom: 1px solid black;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.menu-toggle-container {
-  height: auto;
-  position: relative;
-}
-
-.menu-toggle-checkbox {
-  display: none;
-}
-
-.menu-toggle {
-  cursor: pointer;
-  display: block;
-}
-
-.menu-icon {
-  filter: sepia(0.99) hue-rotate(-10deg) saturate(1.2);
-  height: 30px;
-  width: 30px;
-}
-
 .dropdown {
   background-color: #efefec;
   display: none;
@@ -60,23 +31,7 @@
   font-weight: bold;
 }
 
-.menu a {
-  padding: 12px;
-}
-
-.menu {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
-  .menu {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: none;
-  }
-
   .dropdown.active {
     display: none;
   }

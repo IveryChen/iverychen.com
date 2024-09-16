@@ -9,6 +9,18 @@ import images from "../../imageImports";
 
 import "./NavBar.css";
 
+const StyledBox = styled(Box)`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const StyledMenu = styled(Box)`
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+
 const StyledLogo = styled(Text)`
   font-size: 4vw;
   font-weight: ${(props) => props.fontWeight || 800};
@@ -49,28 +61,33 @@ const NavBar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="navbar">
+    <header
+      style={{
+        backgroundColor: "#efefec",
+        padding: "16px",
+        borderBottom: "1px solid black",
+        position: "sticky",
+        top: "0",
+        zIndex: "1000",
+      }}
+    >
       <Link to="/">
         <StyledLogo cv08 tnum>
           IVERY CHEN
         </StyledLogo>
       </Link>
-      <div className="menu-toggle-container">
-        <input
-          type="checkbox"
-          id="menu-toggle"
-          className="menu-toggle-checkbox"
-        />
-        <label
+      <Box height="auto" position="relative">
+        <Box display="none" type="checkbox" cursor="pointer" />
+        <StyledBox
+          cursor="pointer"
+          display="block"
           htmlFor="menu-toggle"
-          className="menu-toggle"
           onClick={toggleDropDown}
         >
           <IoMenu size={36} />
-        </label>
+        </StyledBox>
         <nav
           className={`dropdown ${dropdownOpen ? "active" : ""}`}
-          id="dropdown"
           ref={dropdownRef}
         >
           <Link
@@ -94,8 +111,8 @@ const NavBar = () => {
             Resume
           </a>
         </nav>
-      </div>
-      <nav className="menu" id="menu">
+      </Box>
+      <StyledMenu display="none" gap="12px">
         <Link
           to="/code"
           className={`menu-item ${isActive("/code") ? "active" : ""}`}
@@ -116,7 +133,7 @@ const NavBar = () => {
         >
           Resume
         </a>
-      </nav>
+      </StyledMenu>
     </header>
   );
 };
