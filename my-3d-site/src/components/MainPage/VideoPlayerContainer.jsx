@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { map } from "lodash";
 import React from "react";
 import Measure from "react-measure";
@@ -10,14 +9,14 @@ import makePosition from "./makePosition";
 const aspectRatio = 16 / 9;
 const gap = 16;
 const gutter = 16;
-const numVideos = 15;
+const numVideos = 18;
 const minVideoWidth = 500;
 
 export default class VideoPlayerContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeBox: 0,
+      activeIndex: 0,
       dimensions: { width: 0, height: 0 },
     };
   }
@@ -33,15 +32,16 @@ export default class VideoPlayerContainer extends React.Component {
     }
   };
   handleClick = (id) => {
-    this.setState({ activeBox: id });
+    this.setState({ activeIndex: id });
   };
 
   render() {
     const { videoUrls } = this.props;
-    const { dimensions, activeBox } = this.state;
+    const { dimensions, activeIndex } = this.state;
     const { width: screenWidth } = dimensions;
 
-    const { videoWidth, videoHeight, positions } = makePosition({
+    const { occupied, positions } = makePosition({
+      activeIndex,
       aspectRatio,
       gap,
       gutter,
@@ -50,13 +50,15 @@ export default class VideoPlayerContainer extends React.Component {
       minVideoWidth,
     });
 
+    console.log(occupied);
+
     return (
       <Measure bounds onResize={this.handleResize}>
         {({ measureRef }) => (
           <Box
-            position="relative"
             display="block"
             height="100vh"
+            position="relative"
             ref={measureRef}
           >
             {map(videoUrls, (url, index) => {
@@ -69,15 +71,16 @@ export default class VideoPlayerContainer extends React.Component {
                   top={0}
                   transform={`translate3d(${positions.pos[index]?.x}px, ${positions.pos[index]?.y}px, 0)`}
                   transition="all 0.3s ease"
+                  // zIndex={activeIndex === index ? 100 : 1}
                 >
                   <VideoPlayer
-                    height={videoHeight}
+                    height={positions.pos[index]?.height}
                     id={index}
-                    isActive={activeBox === index}
+                    isActive={activeIndex === index}
                     key={url}
                     onClick={() => this.handleClick(index)}
                     url={url}
-                    width={videoWidth}
+                    width={positions.pos[index]?.width}
                   />
                 </Box>
               );

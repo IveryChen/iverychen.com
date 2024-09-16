@@ -5,6 +5,7 @@ import Box from "../Box";
 export default class VideoPlayer extends React.PureComponent {
   render() {
     const { id, isActive, url, onClick, width, height } = this.props;
+
     const videoStyle = {
       height: height,
       objectFit: "cover",
