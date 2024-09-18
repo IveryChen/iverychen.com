@@ -15,6 +15,12 @@ const StyledBox = styled(Box)`
   }
 `;
 
+const StyleDropdown = styled(Box)`
+  @media (min-width: 768px) {
+    opacity: 0;
+  }
+`;
+
 const StyledMenu = styled(Box)`
   @media (min-width: 768px) {
     display: flex;
@@ -60,6 +66,11 @@ const NavBar = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  const dropdownStyles = {
+    display: "flex",
+    flexDirection: "column",
+  };
+
   return (
     <header
       style={{
@@ -86,31 +97,47 @@ const NavBar = () => {
         >
           <IoMenu size={36} />
         </StyledBox>
-        <nav
-          className={`dropdown ${dropdownOpen ? "active" : ""}`}
-          ref={dropdownRef}
+        <StyleDropdown
+          backgroundColor="#efefec"
+          opacity={dropdownOpen ? 1 : 0}
+          padding="8px"
+          position="absolute"
+          right={0}
+          transform={dropdownOpen ? "translateY(0)" : "translateY(10px)"}
+          transition="opacity 0.3s ease-out, transform 0.3s ease"
+          zIndex="1"
         >
-          <Link
-            to="/code"
-            className={`menu-item ${isActive("/code") ? "active" : ""}`}
-          >
-            Code
-          </Link>
-          <Link
-            to="/about"
-            className={`menu-item ${isActive("/about") ? "active" : ""}`}
-          >
-            About
-          </Link>
-          <a
-            href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
-            className="menu-item"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
-        </nav>
+          <nav style={dropdownStyles} ref={dropdownRef}>
+            <Box
+              cursor="pointer"
+              font-size="16px"
+              margin="4px"
+              padding="4px"
+              text-decoration="none"
+            >
+              <Link
+                to="/code"
+                className={`menu-item ${isActive("/code") ? "active" : ""}`}
+              >
+                Code
+              </Link>
+            </Box>
+            <Link
+              to="/about"
+              className={`menu-item ${isActive("/about") ? "active" : ""}`}
+            >
+              About
+            </Link>
+            <a
+              href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
+              className="menu-item"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
+          </nav>
+        </StyleDropdown>
       </Box>
       <StyledMenu display="none" gap="12px">
         <Link
