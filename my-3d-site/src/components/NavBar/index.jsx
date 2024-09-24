@@ -15,6 +15,19 @@ const StyledBox = styled(Box)`
   }
 `;
 
+const MenuItem = styled(Link)`
+  cursor: pointer;
+  font-size: 16px;
+  margin: 4px;
+  padding: 4px;
+  text-decoration: none;
+
+  &:hover,
+  &.active {
+    font-weight: bold;
+  }
+`;
+
 const StyleDropdown = styled(Box)`
   @media (min-width: 768px) {
     opacity: 0;
@@ -82,11 +95,11 @@ const NavBar = () => {
         zIndex: "1000",
       }}
     >
-      <Link to="/">
+      <MenuItem to="/">
         <StyledLogo cv08 tnum>
           IVERY CHEN
         </StyledLogo>
-      </Link>
+      </MenuItem>
       <Box height="auto" position="relative">
         <Box display="none" type="checkbox" cursor="pointer" />
         <StyledBox
@@ -115,19 +128,19 @@ const NavBar = () => {
               padding="4px"
               text-decoration="none"
             >
-              <Link
+              <MenuItem
                 to="/code"
                 className={`menu-item ${isActive("/code") ? "active" : ""}`}
               >
                 Code
-              </Link>
+              </MenuItem>
             </Box>
-            <Link
+            <MenuItem
               to="/about"
               className={`menu-item ${isActive("/about") ? "active" : ""}`}
             >
               About
-            </Link>
+            </MenuItem>
             <a
               href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
               className="menu-item"

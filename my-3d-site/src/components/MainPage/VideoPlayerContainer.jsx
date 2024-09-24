@@ -10,7 +10,7 @@ const aspectRatio = 16 / 9;
 const gap = 16;
 const gutter = 16;
 const numVideos = 18;
-const minVideoWidth = 600;
+const minVideoWidth = 500;
 
 export default class VideoPlayerContainer extends React.Component {
   constructor(props) {
@@ -50,8 +50,6 @@ export default class VideoPlayerContainer extends React.Component {
       minVideoWidth,
     });
 
-    console.log(occupied);
-
     return (
       <Measure bounds onResize={this.handleResize}>
         {({ measureRef }) => (
@@ -71,7 +69,6 @@ export default class VideoPlayerContainer extends React.Component {
                   top={0}
                   transform={`translate3d(${positions.pos[index]?.x}px, ${positions.pos[index]?.y}px, 0)`}
                   transition="all 0.3s ease"
-                  // zIndex={activeIndex === index ? 100 : 1}
                 >
                   <VideoPlayer
                     height={positions.pos[index]?.height}
