@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { animated } from "@react-spring/web";
 import { map } from "lodash";
 import React from "react";
 
@@ -24,12 +25,22 @@ const StyledSection = styled(Box)`
   }
 `;
 
+const introduction = [
+  [
+    "My name is Ivery and I'm a full-stack software engineer, tech artist, 3D animator, and ARVR/Graphics Unity Developer.",
+  ],
+  [" I love creative tools, ARVR, and anything 3D + Interactive."],
+  [
+    " I also do fashion photography, make animated films, watch movies, work out and eat good Chinese food.",
+  ],
+];
+
 const education = [
   ["B.A Computer Science @ Brown University (2024)"],
   ["B.F.A Film/Animation/Video @ Rhode Island School of Design (2024)"],
 ];
 
-const jobs = [
+const work = [
   ["Associate Software Engineer @ Tesla"],
   ["Research Engineer @ Brown HCI"],
   ["Technical Director Intern @ Pixar"],
@@ -37,8 +48,41 @@ const jobs = [
   ["AR Developer @ NASA"],
 ];
 
+const skills = [
+  [
+    "C#, C++, Python, OpenCV, JavaScript, Scala, Three.js, React, HTML, CSS, Git, WebGL, GLSL, SQL, AFrame, Qt, Linux",
+  ],
+  [
+    " Figma, Unity, Blender, Maya, Houdini, Nuke, Katana, Substance Painter, Adobe Suite (PR, AE, PS, AI, AU), Arduino",
+  ],
+];
+
+const config = [
+  ["01 — INTRODUCTION", "introduction", introduction],
+  ["02 — EDUCATION", "education", education],
+  ["03 — WORK", "work", work],
+  ["04 — SKILLS", "skills", skills],
+];
+
 export default class AboutPage extends React.PureComponent {
+  state = { expandedSection: null };
+
+  toggleSection = (section) => {
+    this.setState((state) => ({
+      expandedSection: state.expandedSection === section ? null : section,
+    }));
+  };
+
   render() {
+    const { expandedSection } = this.state;
+
+    const animationStyle = (isOpen) => ({
+      height: isOpen ? "auto" : "0",
+      opacity: isOpen ? 1 : 0,
+      overflow: "hidden",
+      transition: "height 0.3s ease, opacity 0.3s ease",
+    });
+
     return (
       <>
         <StyledSection>
@@ -63,84 +107,40 @@ export default class AboutPage extends React.PureComponent {
             </StyledImageBox>
           </StyledSection>
           <Box>
-            <Box
-              borderBottom="1px solid black"
-              display="flex"
-              flexDirection="column"
-              gap="8px"
-              p="14px"
-            >
-              <Text fontWeight={500} textAlign="left">
-                ① My name is Ivery and I'm a full-stack software engineer, tech
-                artist, 3D animator, and ARVR/Graphics Unity Developer.
-              </Text>
-              <Text fontWeight={500} textAlign="left">
-                ② I love creative tools, ARVR, and anything 3D + Interactive.
-              </Text>
-              <Text fontWeight={500} textAlign="left">
-                ③ I also do fashion photography, make animated films, watch
-                movies, work out and eat good Chinese food.
-              </Text>
-            </Box>
-            <Box
-              borderBottom="1px solid black"
-              display="flex"
-              flexDirection="column"
-              gap="8px"
-              p="14px"
-            >
-              <Text fontStyle="bold" fontWeight={500} textAlign="left">
-                ④ Education
-              </Text>
-              {map(education, ([degree]) => {
-                return (
-                  <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                    {degree}
-                  </Text>
-                );
-              })}
-            </Box>
-            <Box
-              borderBottom="1px solid black"
-              display="flex"
-              flexDirection="column"
-              gap="8px"
-              p="14px"
-            >
-              <Text fontStyle="bold" fontWeight={500} textAlign="left">
-                ⑤ Work
-              </Text>
-              {map(jobs, ([company]) => {
-                return (
-                  <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                    {company}
-                  </Text>
-                );
-              })}
-            </Box>
-            <Box
-              borderBottom="1px solid black"
-              display="flex"
-              flexDirection="column"
-              gap="8px"
-              p="14px"
-            >
-              <Box display="grid" gap="8px">
-                <Text fontStyle="bold" fontWeight={500} textAlign="left">
-                  ⑥ Skills
+            {map(config, ([title, type, data], index) => (
+              <Box
+                borderBottom="1px solid black"
+                display="flex"
+                flexDirection="column"
+                gap="8px"
+                key={type}
+                p="14px"
+              >
+                <Text
+                  color="gray"
+                  fontWeight={500}
+                  fontSize={24}
+                  textAlign="left"
+                  onClick={() => this.toggleSection(type)}
+                  width={1600}
+                >
+                  {title}
                 </Text>
-                <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                  C#, C++, Python, OpenCV, JavaScript, Scala, Three.js, React,
-                  HTML, CSS, Git, WebGL, GLSL, SQL, AFrame, Qt, Linux
-                </Text>
-                <Text fontStyle="italic" fontWeight={500} textAlign="left">
-                  Figma, Unity, Blender, Maya, Houdini, Nuke, Katana, Arnold,
-                  Substance Painter, Motion Capture, Marvellous Designer, C4D,
-                  Max MSP, ROS, Adobe Suite(Premiere Pro, AfterEffects,
-                  Photoshop, Illustrator, Audition, Animator), Arduino
-                </Text>
+                <animated.div style={animationStyle(expandedSection === type)}>
+                  {expandedSection === type &&
+                    map(data, ([d]) => (
+                      <Text
+                        fontStyle="italic"
+                        fontWeight={500}
+                        lineHeight={1.5}
+                        textAlign="left"
+                      >
+                        {d}
+                      </Text>
+                    ))}
+                </animated.div>
               </Box>
-            </Box>
+            ))}
           </Box>
         </StyledSection>
         <img
