@@ -7,8 +7,6 @@ import Box from "../Box";
 import Text from "../Text";
 import images from "../../imageImports";
 
-import "./NavBar.css";
-
 const StyledBox = styled(Box)`
   @media (min-width: 768px) {
     display: none;
