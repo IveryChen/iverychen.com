@@ -14,6 +14,7 @@ const StyledBox = styled(Box)`
 `;
 
 const MenuItem = styled(Link)`
+  color: ${(props) => (props.isActive ? "grey" : "black")};
   cursor: pointer;
   font-size: 16px;
   margin: 4px;
@@ -22,7 +23,7 @@ const MenuItem = styled(Link)`
 
   &:hover,
   &.active {
-    font-weight: bold;
+    color: grey;
   }
 `;
 
@@ -99,7 +100,7 @@ const NavBar = () => {
         </StyledLogo>
       </MenuItem>
       <Box height="auto" position="relative">
-        <Box display="none" type="checkbox" cursor="pointer" />
+        <Box cursor="pointer" display="none" type="checkbox" />
         <StyledBox
           cursor="pointer"
           display="block"
@@ -126,51 +127,39 @@ const NavBar = () => {
               padding="4px"
               text-decoration="none"
             >
-              <MenuItem
-                to="/code"
-                className={`menu-item ${isActive("/code") ? "active" : ""}`}
-              >
+              <MenuItem to="/code" isActive={isActive("/code")}>
                 Code
               </MenuItem>
             </Box>
-            <MenuItem
-              to="/about"
-              className={`menu-item ${isActive("/about") ? "active" : ""}`}
-            >
+            <MenuItem to="/about" isActive={isActive("/about")}>
               About
             </MenuItem>
-            <a
+            <MenuItem
+              as="a"
               href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
-              className="menu-item"
               target="_blank"
               rel="noopener noreferrer"
             >
               Resume
-            </a>
+            </MenuItem>
           </nav>
         </StyleDropdown>
       </Box>
       <StyledMenu display="none" gap="12px">
-        <Link
-          to="/code"
-          className={`menu-item ${isActive("/code") ? "active" : ""}`}
-        >
+        <MenuItem to="/code" isActive={isActive("/code")}>
           Code
-        </Link>
-        <Link
-          to="/about"
-          className={`menu-item ${isActive("/about") ? "active" : ""}`}
-        >
+        </MenuItem>
+        <MenuItem to="/about" isActive={isActive("/about")}>
           About
-        </Link>
-        <a
+        </MenuItem>
+        <MenuItem
+          as="a"
           href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
-          className="menu-item"
           target="_blank"
           rel="noopener noreferrer"
         >
           Resume
-        </a>
+        </MenuItem>
       </StyledMenu>
     </header>
   );
