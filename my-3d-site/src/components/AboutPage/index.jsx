@@ -74,7 +74,13 @@ const config = [
 ];
 
 export default class AboutPage extends React.PureComponent {
-  state = { expandedSection: null };
+  state = { expandedSection: null, hoverExpandedSection: null };
+
+  onHoverEnterSection = (section) => {
+    this.setState({ hoverExpandedSection: section });
+  };
+
+  onHoverLeaveSection = () => this.setState({ hoverExpandedSection: null });
 
   toggleSection = (section) => {
     this.setState((state) => ({
@@ -83,13 +89,15 @@ export default class AboutPage extends React.PureComponent {
   };
 
   render() {
-    const { expandedSection } = this.state;
+    const { expandedSection, hoverExpandedSection } = this.state;
+
+    console.log(expandedSection, hoverExpandedSection);
 
     const animationStyle = (isOpen) => ({
       height: isOpen ? "auto" : "0",
       opacity: isOpen ? 1 : 0,
       overflow: "hidden",
-      transition: "height 0.3s ease, opacity 0.3s ease",
+      transition: "height 0.5s ease, opacity 0.5s ease",
     });
 
     return (
@@ -123,6 +131,9 @@ export default class AboutPage extends React.PureComponent {
                 color="dimgray"
                 flexDirection="column"
                 key={type}
+                onClick={() => this.toggleSection(type)}
+                onMouseEnter={() => this.onHoverEnterSection(type)}
+                onMouseLeave={this.onHoverLeaveSection}
                 p="14px"
               >
                 <Text
@@ -130,13 +141,17 @@ export default class AboutPage extends React.PureComponent {
                   fontWeight={500}
                   fontSize={24}
                   textAlign="left"
-                  onClick={() => this.toggleSection(type)}
                   width={1600}
                 >
                   {title}
                 </Text>
-                <animated.div style={animationStyle(expandedSection === type)}>
-                  {expandedSection === type && (
+                <animated.div
+                  style={animationStyle(
+                    expandedSection === type || hoverExpandedSection === type
+                  )}
+                >
+                  {(expandedSection === type ||
+                    hoverExpandedSection === type) && (
                     <Box display="grid" py="10px">
                       {map(data, ([d]) => (
                         <Text
