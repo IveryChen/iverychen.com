@@ -9,7 +9,11 @@ export default function makePosition({
 }) {
   const availableWidth = screenWidth - 2 * gutter;
 
-  const maxCols = Math.floor(availableWidth / (minVideoWidth + gap));
+  const maxCols =
+    Math.floor(availableWidth / (minVideoWidth + gap)) > 3
+      ? 3
+      : Math.floor(availableWidth / (minVideoWidth + gap));
+
   const numRows = Math.ceil(numVideos / maxCols);
 
   let videoWidth = Math.max(
