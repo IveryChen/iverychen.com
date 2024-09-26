@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { animated } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
 import { map } from "lodash";
 import React from "react";
 
@@ -29,7 +29,7 @@ const StyledSectionBox = styled(Box)`
   transition: all 0.3s ease;
 
   &:hover {
-    background: #f0f332;
+    background: #fdff73;
     color: black;
   }
 `;
@@ -73,6 +73,23 @@ const config = [
   ["04 — SKILLS", "skills", skills],
 ];
 
+const AnimatedText = ({ line, index, isOpen }) => {
+  const props = useSpring({
+    opacity: isOpen ? 1 : 0,
+    transform: isOpen ? "translateY(0)" : "translateY(10px)",
+    config: { tension: 220, friction: 120 },
+    delay: index * 100,
+  });
+
+  return (
+    <animated.div style={props}>
+      <Text fontStyle="italic" fontWeight={500} lineHeight={2} textAlign="left">
+        {line}
+      </Text>
+    </animated.div>
+  );
+};
+
 export default class AboutPage extends React.PureComponent {
   state = { expandedSection: null, hoverExpandedSection: null };
 
@@ -90,8 +107,6 @@ export default class AboutPage extends React.PureComponent {
 
   render() {
     const { expandedSection, hoverExpandedSection } = this.state;
-
-    console.log(expandedSection, hoverExpandedSection);
 
     const animationStyle = (isOpen) => ({
       height: isOpen ? "auto" : "0",
@@ -153,15 +168,34 @@ export default class AboutPage extends React.PureComponent {
                   {(expandedSection === type ||
                     hoverExpandedSection === type) && (
                     <Box display="grid" py="10px">
-                      {map(data, ([d]) => (
-                        <Text
-                          fontStyle="italic"
-                          fontWeight={500}
-                          lineHeight={2}
-                          textAlign="left"
-                        >
-                          {d}
-                        </Text>
+                      {map(data, (line, index) => (
+                        <AnimatedText
+                          key={index}
+                          line={line}
+                          index={index}
+                          isOpen={
+                            expandedSection === type ||
+                            hoverExpandedSection === type
+                          }
+                        />
+
+                        // <animated.div
+                        //   key={index}
+                        //   style={springProps(
+                        //     expandedSection === type ||
+                        //       hoverExpandedSection === type,
+                        //     index
+                        //   )}
+                        // >
+                        //   <Text
+                        //     fontStyle="italic"
+                        //     fontWeight={500}
+                        //     lineHeight={2}
+                        //     textAlign="left"
+                        //   >
+                        //     {line}
+                        //   </Text>
+                        // </animated.div>
                       ))}
                     </Box>
                   )}
