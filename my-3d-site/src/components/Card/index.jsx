@@ -5,6 +5,8 @@ import rough from "roughjs";
 import "./Card.css";
 
 const StyledBox = styled.div`
+  transition: all 0.3s ease;
+
   @media (min-width: 768px) {
     height: 440px;
     margin: 20px;
@@ -12,7 +14,8 @@ const StyledBox = styled.div`
   }
 
   &:hover {
-    transform: translate(5px, -5px);
+    box-shadow: -16px 16px black;
+    transform: translate(8px, -8px);
   }
 `;
 
