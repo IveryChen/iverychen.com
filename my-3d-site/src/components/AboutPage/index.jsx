@@ -25,6 +25,15 @@ const StyledSection = styled(Box)`
   }
 `;
 
+const StyledSectionBox = styled(Box)`
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #f0f332;
+    color: black;
+  }
+`;
+
 const introduction = [
   [
     "My name is Ivery and I'm a full-stack software engineer, tech artist, 3D animator, and ARVR/Graphics Unity Developer.",
@@ -108,15 +117,16 @@ export default class AboutPage extends React.PureComponent {
           </StyledSection>
           <Box>
             {map(config, ([title, type, data], index) => (
-              <Box
+              <StyledSectionBox
                 borderBottom="1px solid black"
                 display="flex"
+                color="dimgray"
                 flexDirection="column"
                 key={type}
                 p="14px"
               >
                 <Text
-                  color="gray"
+                  color="inherit"
                   fontWeight={500}
                   fontSize={24}
                   textAlign="left"
@@ -126,19 +136,22 @@ export default class AboutPage extends React.PureComponent {
                   {title}
                 </Text>
                 <animated.div style={animationStyle(expandedSection === type)}>
-                  {expandedSection === type &&
-                    map(data, ([d]) => (
-                      <Text
-                        fontStyle="italic"
-                        fontWeight={500}
-                        lineHeight={1.5}
-                        textAlign="left"
-                      >
-                        {d}
-                      </Text>
-                    ))}
+                  {expandedSection === type && (
+                    <Box display="grid" py="10px">
+                      {map(data, ([d]) => (
+                        <Text
+                          fontStyle="italic"
+                          fontWeight={500}
+                          lineHeight={2}
+                          textAlign="left"
+                        >
+                          {d}
+                        </Text>
+                      ))}
+                    </Box>
+                  )}
                 </animated.div>
-              </Box>
+              </StyledSectionBox>
             ))}
           </Box>
         </StyledSection>
