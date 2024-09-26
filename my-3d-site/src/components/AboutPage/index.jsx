@@ -112,7 +112,6 @@ export default class AboutPage extends React.PureComponent {
                 borderBottom="1px solid black"
                 display="flex"
                 flexDirection="column"
-                gap="8px"
                 key={type}
                 p="14px"
               >
