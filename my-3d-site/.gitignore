@@ -11,6 +11,10 @@
 # production
 /build
 
+# media
+/src/assets/Photography
+/src/assets/Videos
+
 # misc
 .DS_Store
 .env.local
