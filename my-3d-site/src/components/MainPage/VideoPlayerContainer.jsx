@@ -9,7 +9,7 @@ import makePosition from "./makePosition";
 const aspectRatio = 16 / 9;
 const gap = 16;
 const gutter = 16;
-const numVideos = 18;
+const numVideos = 19;
 const minVideoWidth = 300;
 
 export default class VideoPlayerContainer extends React.Component {
