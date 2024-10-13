@@ -86,6 +86,7 @@ const ProjectPage = () => {
       alignItems="center"
       display="flex"
       flexDirection="column"
+      gap="48px"
       justifyContent="center"
     >
       <Box alignItems="center" display="flex" flexDirection="column">
@@ -176,7 +177,6 @@ const ProjectPage = () => {
           ))}
         </Box>
       </Box>
-
       {Object.keys(project).map((key) => {
         let sectionIndex = 0;
         if (key.startsWith("section")) {
@@ -202,10 +202,20 @@ const ProjectPage = () => {
                 switch (section.type) {
                   case "section-text":
                     return (
-                      <h2 key={sectionIndex} className="section-text">
+                      <Text
+                        alignItems="left"
+                        color="black"
+                        display="flex"
+                        fontSize="24px"
+                        fontWeight="600"
+                        gap="4px"
+                        justifyContent="flex-start"
+                        key={sectionIndex}
+                      >
                         <Text
                           alignSelf="center"
                           color="black"
+                          fontSize="inherit"
                           fontStyle="italic"
                           fontWeight="700"
                           textAlign="center"
@@ -213,7 +223,7 @@ const ProjectPage = () => {
                           0{sectionIndex}&nbsp;
                         </Text>
                         {section.content}
-                      </h2>
+                      </Text>
                     );
                   case "subheading":
                     return (
@@ -223,9 +233,18 @@ const ProjectPage = () => {
                     );
                   case "text":
                     return (
-                      <div key={sectionIndex} className="fine-text">
+                      <Text
+                        alignItems="left"
+                        color="#656565"
+                        fontSize="16px"
+                        fontStyle="normal"
+                        fontWeight="400"
+                        key={sectionIndex}
+                        maxWidth="100%"
+                        textAlign="left"
+                      >
                         {section.content}
-                      </div>
+                      </Text>
                     );
                   case "video":
                     const isYouTube = section.source === "youtube";
@@ -252,15 +271,22 @@ const ProjectPage = () => {
                     );
                   case "list":
                     return (
-                      <ul>
+                      <Box display="grid" gap="8px">
                         {Object.keys(section)
                           .filter((key) => key.startsWith("content_list_"))
                           .map((content, idx) => (
-                            <li key={idx} className="fine-text">
+                            <Text
+                              color="#656565"
+                              fontSize="16px"
+                              fontStyle="normal"
+                              fontWeight="400"
+                              key={idx}
+                              maxWidth="100%"
+                            >
                               {section[content]}
-                            </li>
+                            </Text>
                           ))}
-                      </ul>
+                      </Box>
                     );
                   case "image":
                     return (
