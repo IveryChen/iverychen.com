@@ -120,30 +120,25 @@ const NavBar = () => {
           zIndex="1"
         >
           <nav style={dropdownStyles} ref={dropdownRef}>
-            <Box
-              cursor="pointer"
-              font-size="16px"
-              margin="4px"
-              padding="4px"
-              text-decoration="none"
-            >
+            <Box cursor="pointer" display="grid" text-decoration="none">
               <MenuItem to="/code" isActive={isActive("/code")}>
                 Code
               </MenuItem>
+
+              <MenuItem to="/photo" isActive={isActive("/photo")}>
+                Photo
+              </MenuItem>
+              <MenuItem to="/about" isActive={isActive("/about")}>
+                About
+              </MenuItem>
+              <MenuItem
+                to="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </MenuItem>
             </Box>
-            <MenuItem to="/photo" isActive={isActive("/photo")}>
-              Photo
-            </MenuItem>
-            <MenuItem to="/about" isActive={isActive("/about")}>
-              About
-            </MenuItem>
-            <MenuItem
-              to="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resume
-            </MenuItem>
           </nav>
         </StyleDropdown>
       </Box>
