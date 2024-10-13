@@ -1,3 +1,4 @@
+import styled from "@emotion/styled";
 import React from "react";
 import { map } from "lodash";
 
@@ -32,21 +33,23 @@ const images = [
   ["yearbook2.jpg"],
 ];
 
+const StyledBox = styled(Box)`
+  gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+
+  @media (min-width: 768px) {
+          gridTemplateColumns="repeat(auto-fill, minmax(500px, 1fr))"
+  }
+`;
+
 export default class Photo extends React.PureComponent {
   render() {
     return (
-      <Box
-        display="grid"
-        gap="24px"
-        gridTemplateColumns="repeat(auto-fill, minmax(500px, 1fr))"
-        p="24px"
-      >
+      <StyledBox display="grid" gap="24px" p="24px">
         {map(images, ([image, isVertical], index) => (
           <Box alignContent="center" key={index} overflow="hidden">
             <img
               alt={image}
               style={{
-                // height: "auto",
                 aspectRatio: isVertical ? "9/16" : "16/9",
                 objectFit: "contain",
                 objectFit: "cover",
@@ -56,7 +59,7 @@ export default class Photo extends React.PureComponent {
             />
           </Box>
         ))}
-      </Box>
+      </StyledBox>
     );
   }
 }
