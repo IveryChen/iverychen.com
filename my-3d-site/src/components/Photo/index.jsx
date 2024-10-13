@@ -34,17 +34,17 @@ const images = [
 ];
 
 const StyledBox = styled(Box)`
-  gridTemplateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
   @media (min-width: 768px) {
-          gridTemplateColumns="repeat(auto-fill, minmax(500px, 1fr))"
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
 `;
 
 export default class Photo extends React.PureComponent {
   render() {
     return (
-      <StyledBox display="grid" gap="24px" p="24px">
+      <StyledBox display="grid" gap="16px" p="16px">
         {map(images, ([image, isVertical], index) => (
           <Box alignContent="center" key={index} overflow="hidden">
             <img
