@@ -124,7 +124,6 @@ const NavBar = () => {
               <MenuItem to="/code" isActive={isActive("/code")}>
                 Code
               </MenuItem>
-
               <MenuItem to="/photo" isActive={isActive("/photo")}>
                 Photo
               </MenuItem>
