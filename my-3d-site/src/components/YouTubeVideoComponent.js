@@ -4,14 +4,14 @@ import "./style.css";
 
 const YouTubeVideoComponent = ({ section }) => {
   return (
-    <div height="100%" width="100%">
+    <div>
       <iframe
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        height="100%"
+        height={450}
         src={`https://www.youtube.com/embed/${videos[section.content]}`}
         title="YouTube video player"
-        width="100%"
+        width={800}
       ></iframe>
     </div>
   );
