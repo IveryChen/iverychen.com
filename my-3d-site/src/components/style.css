@@ -273,34 +273,8 @@ a {
   margin-right: 100px;
 }
 
-.title-card {
-  display: flex;
-  flex-direction: column;
-  /* padding:20px; */
-  align-items: center;
-  margin: 2%;
-  padding: 5%;
-  padding-top: 100px;
-}
-
 .paragraph {
   margin-bottom: 50%;
-}
-
-.italics-section-text,
-.italics {
-  color: black;
-  font-style: italic;
-  font-weight: 700;
-  text-align: left;
-}
-
-.normal {
-  color: black;
-  font-style: normal;
-  font-weight: 400;
-  padding: 10px;
-  font-style: 21px;
 }
 
 .small-text {
@@ -321,16 +295,6 @@ a {
   text-align: center;
 }
 
-.extra-info-container {
-  padding: 20px;
-  display: flex;
-  min-width: 40vw;
-  max-width: 80%;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
 .title-image-container {
   display: flex;
   /* margin:30px; */
@@ -344,18 +308,6 @@ a {
   min-width: 420px;
   overflow: hidden;
   border-radius: 20px;
-}
-
-.video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: auto;
-  width: auto;
-  min-width: 400px;
-  overflow: hidden;
-  border-radius: 5px;
 }
 
 .section-container {
@@ -422,47 +374,6 @@ a {
   height: auto;
   padding: 7px;
   border-radius: 5px;
-}
-
-.image-overlay {
-  position: absolute;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
-}
-
-.overlay-text {
-  color: white;
-  font-weight: bold;
-  font-style: normal;
-  font-weight: 800;
-  align-items: left;
-  text-align: left;
-  font-size: 28px;
-  margin: 10px;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(to right, #ffffff, #ffffff);
-}
-
-.overlay-text span {
-  font-size: 20px;
-}
-
-.title-image-container:hover .title-image {
-  filter: blur(5px);
-}
-
-.title-image-container:hover .image-overlay {
-  opacity: 1;
-}
-
-.project-page {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 
 .normal-image {
@@ -690,9 +601,7 @@ a {
   .italics-bold {
     font-size: 80%;
   }
-  .italics {
-    font-size: 80%;
-  }
+
   .normal {
     font-size: 90%;
   }
@@ -711,9 +620,7 @@ a {
   .small-text {
     font-size: 80%;
   }
-  .video-container iframe {
-    max-width: 500px;
-  }
+
   .contact-items a {
     font-size: 80%;
   }

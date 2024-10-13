@@ -1,12 +1,27 @@
+import styled from "@emotion/styled";
+import { map } from "lodash";
 import React, { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import jsonData from "../../data";
 import images from "../../imageImports";
 
-import YouTubeVideoComponent from "../YouTubeVideoComponent";
-import VimeoVideoComponent from "../VimeoVideoComponent";
 import Box from "../Box";
+import Text from "../Text";
+import VimeoVideoComponent from "../VimeoVideoComponent";
+import YouTubeVideoComponent from "../YouTubeVideoComponent";
+
+const StyledTitleImage = styled(Box)`
+  &:hover {
+    .title-image {
+      filter: blur(5px);
+    }
+
+    .image-overlay {
+      opacity: 1;
+    }
+  }
+`;
 
 const ProjectPage = () => {
   const { projectName } = useParams();
@@ -60,17 +75,46 @@ const ProjectPage = () => {
     return <div>Project not found</div>;
   }
 
+  const extraInfo = [
+    { label: "Team", value: project.team },
+    { label: "Role", value: project.role },
+    { label: "Tools", value: project.tools },
+  ];
+
   return (
-    <div className="project-page">
-      <div className="title-card">
-        <h1 className="heading">{project.title}</h1>
-        <div className="italics">
-          {project.duration}, <span className="normal">{project.time}</span>
-        </div>
-        <Box className="title-image-container">
+    <Box
+      alignItems="center"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+    >
+      <Box alignItems="center" display="flex" flexDirection="column">
+        <h1>{project.title}</h1>
+        <Text
+          alignSelf="center"
+          color="black"
+          fontStyle="italic"
+          fontWeight="700"
+          textAlign="center"
+        >
+          {project.duration}, {project.time}
+        </Text>
+        <StyledTitleImage
+          alignItems="center"
+          borderRadius="20px"
+          display="flex"
+          flexDirection="column"
+          height="40%"
+          justifyContent="center"
+          maxWidth="1000px"
+          minWidth="420px"
+          overflow="hidden"
+          width="100%"
+        >
           <img
-            src={images[project.image]}
             alt={project.eventName}
+            className="title-image"
+            src={images[project.image]}
             style={{
               borderRadius: "inherit",
               height: "auto",
@@ -79,29 +123,59 @@ const ProjectPage = () => {
               transition: "filter 0.3s ease-out",
             }}
           />
-          <div className="image-overlay">
-            <a
-              href={project.deployed}
+          <Box
+            className="image-overlay"
+            opacity="0"
+            position="absolute"
+            textAlign="center"
+            transition="opacity 0.3s ease-out"
+          >
+            <Text
+              alignItems="left"
+              backgroundClip="text"
+              backgroundOmage="linear-gradient(to right, #ffffff, #ffffff)"
               className="overlay-text"
-              target="_blank"
+              color="white"
+              fontSize="28px"
+              fontStyle="normal"
+              fontWeight="800"
+              margin="10px"
+              textAlign="left"
+              WebkitBackgroundClip="text"
+              href={project.deployed}
               rel="noopener noreferrer"
+              target="_blank"
             >
-              {project.title.toLowerCase()} <span>↗</span>{" "}
-            </a>
-          </div>
+              {project.title.toLowerCase()} ↗
+            </Text>
+          </Box>
+        </StyledTitleImage>
+        <Box
+          alignItems="flex-start"
+          display="flex"
+          flexDirection="column"
+          justifyContent="flex-start"
+          maxWidth="80%"
+          minWidth="40vw"
+          padding="20px"
+        >
+          {map(extraInfo, (info, index) => (
+            <Text
+              key={index}
+              alignSelf="center"
+              color="black"
+              fontStyle="italic"
+              fontWeight="700"
+              textAlign="center"
+            >
+              {info.label}:{" "}
+              <Text fontWeight={400} padding="10px">
+                {info.value}
+              </Text>
+            </Text>
+          ))}
         </Box>
-        <div className="extra-info-container">
-          <div className="italics">
-            Team: <span className="normal">{project.team}</span>
-          </div>
-          <div className="italics">
-            Role: <span className="normal">{project.role}</span>
-          </div>
-          <div className="italics">
-            Tools: <span className="normal">{project.tools}</span>
-          </div>
-        </div>
-      </div>
+      </Box>
 
       {Object.keys(project).map((key) => {
         let sectionIndex = 0;
@@ -129,9 +203,15 @@ const ProjectPage = () => {
                   case "section-text":
                     return (
                       <h2 key={sectionIndex} className="section-text">
-                        <span className="italics-section-text">
+                        <Text
+                          alignSelf="center"
+                          color="black"
+                          fontStyle="italic"
+                          fontWeight="700"
+                          textAlign="center"
+                        >
                           0{sectionIndex}&nbsp;
-                        </span>
+                        </Text>
                         {section.content}
                       </h2>
                     );
@@ -150,7 +230,17 @@ const ProjectPage = () => {
                   case "video":
                     const isYouTube = section.source === "youtube";
                     return (
-                      <div className="video-container">
+                      <Box
+                        alignItems="center"
+                        borderRadius="5px"
+                        display="flex"
+                        flexDirection="column"
+                        height="auto"
+                        justifyContent="center"
+                        minWidth="400px"
+                        overflow="hidden"
+                        width="auto"
+                      >
                         <div>
                           {isYouTube ? (
                             <YouTubeVideoComponent section={section} />
@@ -158,7 +248,7 @@ const ProjectPage = () => {
                             <VimeoVideoComponent section={section} />
                           )}
                         </div>
-                      </div>
+                      </Box>
                     );
                   case "list":
                     return (
@@ -364,7 +454,7 @@ const ProjectPage = () => {
         }
         return null;
       })}
-    </div>
+    </Box>
   );
 };
 
