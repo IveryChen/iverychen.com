@@ -116,7 +116,7 @@ export default class About extends React.PureComponent {
     });
 
     return (
-      <>
+      <Box display="grid" overflow="hidden">
         <StyledSection>
           <StyledSection borderBottom="1px solid black">
             <StyledImageBox
@@ -190,6 +190,7 @@ export default class About extends React.PureComponent {
           src={images["smiley_balloon"]}
           alt={"smiley balloon"}
           style={{
+            justifySelf: "center",
             borderRadius: "inherit",
             height: "auto",
             maxWidth: "80%",
@@ -197,7 +198,7 @@ export default class About extends React.PureComponent {
             transition: "filter 0.3s ease-out",
           }}
         />
-      </>
+      </Box>
     );
   }
 }
