@@ -12,8 +12,8 @@ const images = [
   ["cake2.jpg"],
 
   ["mami7.jpg"],
-  ["nikki.jpeg"],
   ["mami4.jpg"],
+  ["nikki.jpeg"],
 
   //   ["cake1.jpg"],
 
@@ -21,8 +21,9 @@ const images = [
 
   // ["bolex3.png"],
 
-  ["mami5.jpg"],
   ["bolex4.png"],
+  ["mami5.jpg"],
+
   //   ["mami3.jpg"],
 
   //   ["mami6.jpg", true],
@@ -34,9 +35,9 @@ const images = [
   //   ["yearbook1.jpg"],
   //   ["yearbook2.jpg"],
 
-  ["china1.jpg"],
   ["china2.jpg"],
   ["china3.jpg"],
+  ["china1.jpg"],
 ];
 
 export default class Photo extends React.PureComponent {
