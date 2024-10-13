@@ -23,12 +23,13 @@ const images = [
   //   ["glory1.jpg", true],
   //   ["glory3.jpg", true],
   //   ["glory2.jpg"],
-  //   ["mami2.jpg"],
-  //   ["yearbook1.jpg"],
-  //   ["yearbook2.jpg"],
+
   ["china2.jpg"],
   ["china3.jpg"],
   ["china1.jpg"],
+  ["mami2.jpg"],
+  ["yearbook1.jpg"],
+  ["yearbook2.jpg"],
 ];
 
 export default class Photo extends React.PureComponent {
