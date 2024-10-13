@@ -6,6 +6,7 @@ import BottomBar from "./components/BottomBar";
 import Code from "./components/Code";
 import Main from "./components/Main";
 import NavBar from "./components/NavBar";
+import Photo from "./components/Photo";
 import ProjectPage from "./components/ProjectPage";
 
 import "./App.css";
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/" element={<Main />} />
             <Route path="/about" element={<About />} />
             <Route path="/code" element={<Code />} />
+            <Route path="/photo" element={<Photo />} />
             <Route path="/project/:projectName" element={<ProjectPage />} />
           </Routes>
         </main>
