@@ -135,8 +135,7 @@ const NavBar = () => {
               About
             </MenuItem>
             <MenuItem
-              as="a"
-              href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
+              to="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -153,8 +152,7 @@ const NavBar = () => {
           About
         </MenuItem>
         <MenuItem
-          as="a"
-          href="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
+          to="https://drive.google.com/file/d/1D5x3XdFlm3k9ezhSleGG2tEriwrKVXYV/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
