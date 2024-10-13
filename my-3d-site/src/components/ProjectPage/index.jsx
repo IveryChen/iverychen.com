@@ -235,11 +235,11 @@ const ProjectPage = () => {
                         borderRadius="5px"
                         display="flex"
                         flexDirection="column"
-                        height="auto"
+                        height="100%"
                         justifyContent="center"
                         minWidth="400px"
                         overflow="hidden"
-                        width="auto"
+                        width="100%"
                       >
                         <div>
                           {isYouTube ? (
@@ -270,9 +270,15 @@ const ProjectPage = () => {
                           alt={section.image_descript}
                           className="normal-image"
                         />
-                        <div className="small-text">
+                        <Text
+                          color="#656565"
+                          fontSize="14px"
+                          fontStyle="normal"
+                          fontWeight="400"
+                          textAlign="left"
+                        >
                           {section.image_descript}
-                        </div>
+                        </Text>
                       </div>
                     );
                   case "image-text-h-container-left":
@@ -283,16 +289,28 @@ const ProjectPage = () => {
                             <div className="paragraph">
                               <div className="subheading3">Challenge</div>{" "}
                               <br></br>
-                              <div className="small-text">
+                              <Text
+                                color="#656565"
+                                fontSize="14px"
+                                fontStyle="normal"
+                                fontWeight="400"
+                                textAlign="left"
+                              >
                                 {section.content_stack_1}
-                              </div>
+                              </Text>
                             </div>
                             <div className="paragraph">
                               <div className="subheading3">Solution</div>{" "}
                               <br></br>
-                              <div className="small-text">
+                              <Text
+                                color="#656565"
+                                fontSize="14px"
+                                fontStyle="normal"
+                                fontWeight="400"
+                                textAlign="left"
+                              >
                                 {section.content_stack_2}
-                              </div>
+                              </Text>
                             </div>
                           </div>
 
@@ -352,16 +370,28 @@ const ProjectPage = () => {
                             <div className="paragraph">
                               <div className="subheading3">Challenge</div>{" "}
                               <br></br>
-                              <div className="small-text">
+                              <Text
+                                color="#656565"
+                                fontSize="14px"
+                                fontStyle="normal"
+                                fontWeight="400"
+                                textAlign="left"
+                              >
                                 {section.content_stack_1}
-                              </div>
+                              </Text>
                             </div>
                             <div className="paragraph">
                               <div className="subheading3">Solution</div>{" "}
                               <br></br>
-                              <div className="small-text">
+                              <Text
+                                color="#656565"
+                                fontSize="14px"
+                                fontStyle="normal"
+                                fontWeight="400"
+                                textAlign="left"
+                              >
                                 {section.content_stack_2}
-                              </div>
+                              </Text>
                             </div>
                           </div>
                         </div>
@@ -371,12 +401,24 @@ const ProjectPage = () => {
                     return (
                       <div className="image-text-container">
                         <div className="flex-text-container">
-                          <div className="small-text">
+                          <Text
+                            color="#656565"
+                            fontSize="14px"
+                            fontStyle="normal"
+                            fontWeight="400"
+                            textAlign="left"
+                          >
                             {section.content_stack_1}
-                          </div>
-                          <div className="small-text">
+                          </Text>
+                          <Text
+                            color="#656565"
+                            fontSize="14px"
+                            fontStyle="normal"
+                            fontWeight="400"
+                            textAlign="left"
+                          >
                             {section.content_stack_2}
-                          </div>
+                          </Text>
                         </div>
                         <div className="flex-image-container-v">
                           {Object.keys(section)
@@ -392,9 +434,15 @@ const ProjectPage = () => {
                                 }}
                               />
                             ))}
-                          <div className="small-text">
+                          <Text
+                            color="#656565"
+                            fontSize="14px"
+                            fontStyle="normal"
+                            fontWeight="400"
+                            textAlign="left"
+                          >
                             {section.descript_image_stack_v_}
-                          </div>
+                          </Text>
                         </div>
                       </div>
                     );
@@ -416,9 +464,15 @@ const ProjectPage = () => {
                               />
                             ))}
                         </div>
-                        <div className="small-text">
+                        <Text
+                          color="#656565"
+                          fontSize="14px"
+                          fontStyle="normal"
+                          fontWeight="400"
+                          textAlign="left"
+                        >
                           {section.descript_image_stack_h}
-                        </div>
+                        </Text>
                       </div>
                     );
                   case "image-stack-v-container":
@@ -439,9 +493,15 @@ const ProjectPage = () => {
                               />
                             ))}
                         </div>
-                        <div className="small-text">
+                        <Text
+                          color="#656565"
+                          fontSize="14px"
+                          fontStyle="normal"
+                          fontWeight="400"
+                          textAlign="left"
+                        >
                           {section.descript_image_stack_v}
-                        </div>
+                        </Text>
                       </div>
                     );
 

@@ -277,15 +277,6 @@ a {
   margin-bottom: 50%;
 }
 
-.small-text {
-  color: #656565;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
 .caption-text {
   color: #656565;
   font-size: 14px;
@@ -615,10 +606,6 @@ a {
   }
   .section {
     max-width: 360px;
-  }
-
-  .small-text {
-    font-size: 80%;
   }
 
   .contact-items a {
