@@ -10,31 +10,22 @@ const images = [
   ["mami8.jpg"],
   ["mami9.jpeg"],
   ["cake2.jpg"],
-
   ["mami7.jpg"],
   ["mami4.jpg"],
   ["nikki.jpeg"],
-
   //   ["cake1.jpg"],
-
   ["bolex2.png"],
-
   // ["bolex3.png"],
-
   ["bolex4.png"],
   ["mami5.jpg"],
-
   //   ["mami3.jpg"],
-
   //   ["mami6.jpg", true],
   //   ["glory1.jpg", true],
   //   ["glory3.jpg", true],
-
   //   ["glory2.jpg"],
   //   ["mami2.jpg"],
   //   ["yearbook1.jpg"],
   //   ["yearbook2.jpg"],
-
   ["china2.jpg"],
   ["china3.jpg"],
   ["china1.jpg"],
