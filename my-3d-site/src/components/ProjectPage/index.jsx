@@ -9,7 +9,7 @@ import VimeoVideoComponent from "../VimeoVideoComponent";
 import Box from "../Box";
 
 const ProjectPage = () => {
-  const { projectName } = useParams(); // Get the dynamic part of the URL
+  const { projectName } = useParams();
   const project = jsonData.find((item) => item.path === projectName);
 
   const [isVisible, setIsVisible] = useState({
@@ -25,6 +25,8 @@ const ProjectPage = () => {
   const section4Ref = useRef(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const handleScroll = () => {
       checkVisibility(section1Ref, "section1");
       checkVisibility(section2Ref, "section2");
