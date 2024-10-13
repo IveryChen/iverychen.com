@@ -29,7 +29,7 @@ const StyledSectionBox = styled(Box)`
   transition: all 0.3s ease;
 
   &:hover {
-    background: #fdff73;
+    background: #dad0fb;
     color: black;
   }
 `;
@@ -90,7 +90,7 @@ const AnimatedText = ({ line, index, isOpen }) => {
   );
 };
 
-export default class AboutPage extends React.PureComponent {
+export default class About extends React.PureComponent {
   state = { expandedSection: null, hoverExpandedSection: null };
 
   onHoverEnterSection = (section) => {
@@ -178,24 +178,6 @@ export default class AboutPage extends React.PureComponent {
                             hoverExpandedSection === type
                           }
                         />
-
-                        // <animated.div
-                        //   key={index}
-                        //   style={springProps(
-                        //     expandedSection === type ||
-                        //       hoverExpandedSection === type,
-                        //     index
-                        //   )}
-                        // >
-                        //   <Text
-                        //     fontStyle="italic"
-                        //     fontWeight={500}
-                        //     lineHeight={2}
-                        //     textAlign="left"
-                        //   >
-                        //     {line}
-                        //   </Text>
-                        // </animated.div>
                       ))}
                     </Box>
                   )}

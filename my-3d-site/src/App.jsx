@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import AboutPage from "./components/AboutPage";
+import About from "./components/About";
 import BottomBar from "./components/BottomBar";
-import CodePage from "./components/CodePage";
-import MainPage from "./components/MainPage";
+import Code from "./components/Code";
+import Main from "./components/Main";
 import NavBar from "./components/NavBar";
 import ProjectPage from "./components/ProjectPage";
 
@@ -17,9 +17,9 @@ const App = () => {
         <NavBar />
         <main>
           <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/code" element={<CodePage />} />
+            <Route path="/" element={<Main />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/code" element={<Code />} />
             <Route path="/project/:projectName" element={<ProjectPage />} />
           </Routes>
         </main>

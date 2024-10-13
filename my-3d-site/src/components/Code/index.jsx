@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import jsonData from "../../data";
 import categoryColours from "../../categoryColours";
 import images from "../../imageImports";
-import Card from "../../components/Card";
+import Card from "../Card";
 
 import Box from "../Box";
 import Text from "../Text";
@@ -25,7 +25,7 @@ const StyledBox = styled(Box)`
   }
 `;
 
-const CodePage = () => {
+const Code = () => {
   return (
     <Box display="flex" padding="30px">
       <Box display="flex" flexWrap="wrap" gap="30px" justifyContent="center">
@@ -93,4 +93,4 @@ const CodePage = () => {
   );
 };
 
-export default CodePage;
+export default Code;
