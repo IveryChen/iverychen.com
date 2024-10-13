@@ -131,6 +131,9 @@ const NavBar = () => {
                 Code
               </MenuItem>
             </Box>
+            <MenuItem to="/photo" isActive={isActive("/photo")}>
+              Photo
+            </MenuItem>
             <MenuItem to="/about" isActive={isActive("/about")}>
               About
             </MenuItem>
@@ -147,6 +150,9 @@ const NavBar = () => {
       <StyledMenu display="none" gap="12px">
         <MenuItem to="/code" isActive={isActive("/code")}>
           Code
+        </MenuItem>
+        <MenuItem to="/photo" isActive={isActive("/photo")}>
+          Photo
         </MenuItem>
         <MenuItem to="/about" isActive={isActive("/about")}>
           About
