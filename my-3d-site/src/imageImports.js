@@ -5,6 +5,8 @@ const images = {
   cassette_3: require("./assets/cassette_3.png"),
   cassette_4: require("./assets/cassette_4.png"),
   cassette_5: require("./assets/cassette_5.png"),
+  cassette_6: require("./assets/cassette_6.png"),
+  cassette_7: require("./assets/cassette_7.png"),
   lookIvery: require("./assets/lookivery_render12_256.png"),
   lookiveryintro: require("./assets/lookiveryintro.png"),
   lookivery2: require("./assets/lookivery2.png"),
