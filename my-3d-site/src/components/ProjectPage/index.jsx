@@ -132,20 +132,22 @@ const ProjectPage = () => {
             transition="opacity 0.3s ease-out"
           >
             <Text
+              as={"a"}
               alignItems="left"
               backgroundClip="text"
               backgroundOmage="linear-gradient(to right, #ffffff, #ffffff)"
               className="overlay-text"
               color="white"
+              cursor="pointer"
               fontSize="28px"
               fontStyle="normal"
               fontWeight="800"
-              margin="10px"
-              textAlign="left"
-              WebkitBackgroundClip="text"
               href={project.deployed}
+              margin="10px"
               rel="noopener noreferrer"
               target="_blank"
+              textAlign="left"
+              WebkitBackgroundClip="text"
             >
               {project.title.toLowerCase()} ↗
             </Text>
